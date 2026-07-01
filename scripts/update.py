@@ -6,6 +6,7 @@ Data sources (all real, all public):
 1. OpenRouter /api/v1/models         — current pricing, context, AA coding index
 2. HuggingFace /api/models           — discover new model releases by name
 3. HuggingFace model README          — extract SWE-bench scores from model cards
+4. LiveBench / AA Index snapshots    — inlined data from whichllm project
 
 Usage:
     python update.py                   # Full refresh
@@ -39,6 +40,9 @@ try:
 except ImportError:
     print("Missing dependencies. Run: pip install requests")
     sys.exit(1)
+
+# Snapshot-based benchmark sources from whichllm project
+from benchmark_snapshots import match_livebench, match_aa_index
 
 # ---------- Config ----------
 DATA_FILE = Path(__file__).parent.parent / "data" / "models.json"
@@ -538,7 +542,8 @@ def enrich_benchmarks_from_hf(models_data: dict, check_only: bool = False) -> in
     enriched = 0
     # Only enrich models that lack all coding benchmarks
     benchmark_keys = ["swe_bench_verified", "swe_bench_pro", "terminal_bench_2_1",
-                      "livecodebench", "humaneval", "aider_polyglot", "aa_coding_index"]
+                      "livecodebench", "humaneval", "aider_polyglot", "aa_coding_index",
+                      "livebench"]
 
     for m in models_data.get("models", []):
         b = m.setdefault("benchmarks", {})
@@ -598,6 +603,12 @@ def main():
             matched = match_aider_to_local(data.get("models", []), aider_scores)
             log(f"Aider: matched {matched} models")
 
+        # Snapshot-based benchmark sources (LiveBench + AA Index)
+        lb_matched = match_livebench(data.get("models", []), log_fn=log)
+        aa_matched = match_aa_index(data.get("models", []), log_fn=log)
+        log(f"LiveBench snapshot: matched {lb_matched} models")
+        log(f"AA Index snapshot: matched {aa_matched} models")
+
         if not args.discover:
             # Enrich OR-discovered models with benchmarks from HF model cards
             enrich_benchmarks_from_hf(data, check_only=args.check_only)
@@ -627,7 +638,8 @@ def main():
                     m.pop("cost_per_pro_point", None)
 
                 # coding_quality_score: weighted blend
-                weights = {"swe_bench_pro": 0.40, "aider_polyglot": 0.35, "livecodebench": 0.25}
+                weights = {"swe_bench_pro": 0.35, "aider_polyglot": 0.30,
+                           "livecodebench": 0.20, "livebench": 0.15}
                 score = 0.0
                 total_w = 0.0
                 for key, weight in weights.items():

@@ -23,9 +23,10 @@
 
   /* Coding Quality Score: weighted composite of coding-specific benchmarks */
   const QUALITY_WEIGHTS = {
-    swe_bench_pro: 0.40,
-    aider_polyglot: 0.35,
-    livecodebench: 0.25
+    swe_bench_pro: 0.35,
+    aider_polyglot: 0.30,
+    livecodebench: 0.20,
+    livebench: 0.15
   };
 
   function computeQualityScore(m) {
@@ -65,7 +66,7 @@
     } catch (err) {
       console.error(err);
       document.getElementById('table-body').innerHTML =
-        `<tr><td colspan="16" style="text-align:center;padding:2rem;color:var(--danger)">
+        `        <tr><td colspan="17" style="text-align:center;padding:2rem;color:var(--danger)">
           Failed to load data. If viewing locally, serve via <code>python -m http.server</code> or similar.
         </td></tr>`;
       return;
@@ -151,7 +152,7 @@
       if (STATE.filters.hideUnrated) {
         const b = m.benchmarks || {};
         const hasAny = b.swe_bench_pro != null || b.aider_polyglot != null || b.livecodebench != null
-          || b.swe_bench_verified != null || b.terminal_bench_2_1 != null;
+          || b.livebench != null || b.swe_bench_verified != null || b.terminal_bench_2_1 != null;
         if (!hasAny) return false;
       }
 
@@ -192,6 +193,7 @@
     if (key === 'swe_bench_verified') return m.benchmarks?.swe_bench_verified;
     if (key === 'aider_polyglot') return m.benchmarks?.aider_polyglot;
     if (key === 'aa_coding_index') return m.benchmarks?.aa_coding_index;
+    if (key === 'livebench') return m.benchmarks?.livebench;
     if (key === 'terminal_bench') return m.benchmarks?.terminal_bench_2_1;
     if (key === 'context_window') return m.context_window;
     if (key === 'speed') return m.speed_tok_s;
@@ -206,7 +208,7 @@
     document.getElementById('visible-count').textContent = filtered.length;
 
     if (filtered.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="16" style="text-align:center;padding:2rem;color:var(--text-secondary)">No models match your filters.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="17" style="text-align:center;padding:2rem;color:var(--text-secondary)">No models match your filters.</td></tr>`;
       return;
     }
 
@@ -229,6 +231,7 @@
         <td>${pct(b.swe_bench_pro)}</td>
         <td>${pct(b.aider_polyglot)}</td>
         <td>${b.aa_coding_index != null ? b.aa_coding_index.toFixed(0) : '<span class="null-val">—</span>'}</td>
+        <td>${b.livebench != null ? b.livebench.toFixed(1) + '%' : '<span class="null-val">—</span>'}</td>
         <td>${pct(b.swe_bench_verified)}</td>
         <td>${pct(b.terminal_bench_2_1)}</td>
         <td class="cost-per-point">${m.cost_per_quality != null ? '$' + m.cost_per_quality.toFixed(2) : '<span class="null-val">—</span>'}</td>
@@ -410,8 +413,9 @@
               : (key === 'coding_quality' ? 'coding_quality'
                 : (key === 'aider_polyglot' ? 'aider_polyglot'
                   : (key === 'aa_coding_index' ? 'aa_coding_index'
-                    : (key === 'cost_per_quality' ? 'cost_per_quality'
-                      : key)))))));
+              : (key === 'livebench' ? 'livebench'
+                : (key === 'cost_per_quality' ? 'cost_per_quality'
+                : key))))))));
       if (STATE.sortBy === sortKey) {
         th.classList.add(STATE.sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');
       }
