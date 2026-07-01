@@ -21,13 +21,26 @@
     }
   };
 
-  /* Coding Quality Score: weighted composite of coding-specific benchmarks */
+  /* Coding Quality Score: normalized weighted composite */
   const QUALITY_WEIGHTS = {
     swe_bench_pro: 0.35,
     aider_polyglot: 0.30,
     livecodebench: 0.20,
     livebench: 0.15
   };
+  // Per-benchmark normalization ranges (lo → 0, hi → 100)
+  // Prevents easier benchmarks (LCB 85-95) from dominating harder ones (SWE-Pro 40-70)
+  const NORM_RANGES = {
+    swe_bench_pro: [20, 75],
+    aider_polyglot: [30, 90],
+    livecodebench: [20, 95],
+    livebench: [15, 75]
+  };
+
+  function normalizeScore(val, lo, hi) {
+    if (val == null) return null;
+    return Math.max(0, Math.min(100, ((val - lo) / (hi - lo)) * 100));
+  }
 
   function computeQualityScore(m) {
     const b = m.benchmarks || {};
@@ -35,15 +48,16 @@
     let totalWeight = 0;
     let presentCount = 0;
     for (const [key, weight] of Object.entries(QUALITY_WEIGHTS)) {
-      const val = b[key];
-      if (val != null) {
-        score += val * weight;
+      const raw = b[key];
+      if (raw != null) {
+        const [lo, hi] = NORM_RANGES[key];
+        const norm = normalizeScore(raw, lo, hi);
+        score += norm * weight;
         totalWeight += weight;
         presentCount++;
       }
     }
     if (totalWeight < 0.14 || presentCount < 2) return null;
-    // Require at least one of the two hardest benchmarks
     if (b.swe_bench_pro == null && b.aider_polyglot == null) return null;
     return +(score / totalWeight).toFixed(1);
   }

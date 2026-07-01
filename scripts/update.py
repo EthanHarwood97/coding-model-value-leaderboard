@@ -637,16 +637,26 @@ def main():
                 else:
                     m.pop("cost_per_pro_point", None)
 
-                # coding_quality_score: weighted blend (need ≥2 sources)
+                # coding_quality_score: normalized weighted blend
+                # Each benchmark is normalized to 0-100 using fixed anchor points
+                # to prevent easier benchmarks (LCB 85-95) from dominating harder ones (SWE-Pro 40-70)
                 weights = {"swe_bench_pro": 0.35, "aider_polyglot": 0.30,
                            "livecodebench": 0.20, "livebench": 0.15}
+                norm_ranges = {
+                    "swe_bench_pro": (20, 75),
+                    "aider_polyglot": (30, 90),
+                    "livecodebench": (20, 95),
+                    "livebench": (15, 75),
+                }
                 score = 0.0
                 total_w = 0.0
                 present = 0
                 for key, weight in weights.items():
                     val = b.get(key)
                     if val is not None:
-                        score += float(val) * weight
+                        lo, hi = norm_ranges[key]
+                        norm = max(0, min(100, (float(val) - lo) / (hi - lo) * 100))
+                        score += norm * weight
                         total_w += weight
                         present += 1
                 if total_w > 0 and present >= 2 and (b.get("swe_bench_pro") is not None or b.get("aider_polyglot") is not None):
