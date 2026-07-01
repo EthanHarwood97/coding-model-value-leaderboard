@@ -649,7 +649,7 @@ def main():
                         score += float(val) * weight
                         total_w += weight
                         present += 1
-                if total_w > 0 and present >= 2:
+                if total_w > 0 and present >= 2 and (b.get("swe_bench_pro") is not None or b.get("aider_polyglot") is not None):
                     m["coding_quality_score"] = round(score / total_w, 1)
                 else:
                     m.pop("coding_quality_score", None)

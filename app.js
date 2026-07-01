@@ -42,9 +42,9 @@
         presentCount++;
       }
     }
-    if (totalWeight === 0) return null;
-    if (presentCount < 2) return null;  // need at least 2 benchmark sources
-    // Normalize to 0-100 scale (values are already percentages 0-100)
+    if (totalWeight < 0.14 || presentCount < 2) return null;
+    // Require at least one of the two hardest benchmarks
+    if (b.swe_bench_pro == null && b.aider_polyglot == null) return null;
     return +(score / totalWeight).toFixed(1);
   }
 

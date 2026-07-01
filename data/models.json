@@ -33,9 +33,7 @@
         "pricing": "https://api-docs.deepseek.com/quick_start/pricing",
         "benchmark": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
       },
-      "reasoning_level": "standard",
-      "coding_quality_score": 81.4,
-      "cost_per_quality": 0.002
+      "reasoning_level": "standard"
     },
     {
       "name": "DeepSeek V4 Pro",
