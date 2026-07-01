@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Model Value Leaderboard</title>
+  <meta name="description" content="Find the best coding LLM for your budget. Blends SWE-bench, Aider Polyglot, LiveCodeBench, and AA Coding Index for a true coding quality score." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>💸 Coding Model Value Leaderboard</h1>
+        <p class="tagline">Best coding LLMs ranked by quality-per-dollar — no remortgage required.</p>
+      </div>
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a href="https://github.com/EthanHarwood97/coding-model-value-leaderboard" target="_blank" rel="noopener" class="github-link" aria-label="View on GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+        <section id="spotlight" class="spotlight">
+          <div class="spotlight-card">
+            <div class="spotlight-label">🏆 This Week's Value Winner</div>
+            <div class="spotlight-model" id="spotlight-model">Loading...</div>
+            <div class="spotlight-stats" id="spotlight-stats"></div>
+          </div>
+        </section>
+
+        <section id="sources-badge" class="sources-badge">
+          <p>Data sourced from: <strong>Arena AI</strong> (human preference) · <strong>Artificial Analysis</strong> (benchmark composite) · <strong>Aider Polyglot</strong> (multi-language coding) · <strong>SWE-bench</strong> (agentic coding) · <strong>LiveBench</strong> (contamination-free)</p>
+        </section>
+
+    <section id="filters" class="filters">
+      <h2>Filters</h2>
+      <div class="filter-row">
+        <div class="filter-group">
+          <label for="price-max">Max output price ($/1M): <span id="price-max-val">$30</span></label>
+          <input type="range" id="price-max" min="0" max="30" step="0.5" value="30" />
+        </div>
+        <div class="filter-group">
+          <label for="min-pro">Min SWE-bench Pro: <span id="min-pro-val">0%</span></label>
+          <input type="range" id="min-pro" min="0" max="70" step="5" value="0" />
+        </div>
+        <div class="filter-group">
+          <label for="min-context">Min context: <span id="min-context-val">0K</span></label>
+          <input type="range" id="min-context" min="0" max="1000" step="50" value="0" />
+        </div>
+        <div class="filter-group">
+          <label for="license-filter">License:</label>
+          <select id="license-filter">
+            <option value="all">All</option>
+            <option value="open">Open weight only</option>
+            <option value="proprietary">Proprietary only</option>
+          </select>
+        </div>
+          <div class="filter-group">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+              <option value="coding_quality">Coding Quality Score (DESC)</option>
+              <option value="cost_per_pro_point">Cost per Pro Point (ASC)</option>
+              <option value="cost_per_quality">Cost per Quality Point (ASC)</option>
+              <option value="output_price">Output price (ASC)</option>
+              <option value="swe_bench_pro">SWE-bench Pro (DESC)</option>
+              <option value="swe_bench_verified">SWE-bench Verified (DESC)</option>
+              <option value="aider_polyglot">Aider Polyglot (DESC)</option>
+              <option value="terminal_bench">Terminal-Bench (DESC)</option>
+              <option value="aa_coding_index">AA Coding Index (DESC)</option>
+              <option value="reasoning">Reasoning (Standard first)</option>
+              <option value="context_window">Context window (DESC)</option>
+              <option value="speed">Speed (DESC)</option>
+              <option value="released">Recently released</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-reasoning">Reasoning:</label>
+            <select id="filter-reasoning">
+              <option value="all">All</option>
+              <option value="standard">Standard</option>
+              <option value="high">High</option>
+              <option value="thinking">Thinking</option>
+              <option value="adaptive">Adaptive</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="filter-group checkbox-group">
+            <label>
+              <input type="checkbox" id="hide-unrated" />
+              <span>Hide unrated</span>
+            </label>
+          </div>
+      </div>
+    </section>
+
+    <section id="chart-section">
+      <h2>Price vs Coding Quality</h2>
+      <p class="chart-subtitle">Y-axis = <strong>Coding Quality Score</strong> (blend of SWE-bench Pro, Aider Polyglot &amp; LiveCodeBench). Bubble size = context window. Top-left = best value.</p>
+      <div class="chart-container">
+        <canvas id="scatter-chart"></canvas>
+      </div>
+    </section>
+
+    <section id="table-section">
+      <h2>Rankings</h2>
+      <p class="table-info">Showing <span id="visible-count">0</span> of <span id="total-count">0</span> models. Last updated <span id="last-updated">—</span>.</p>
+      <div class="table-wrap">
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th data-sort="name">Model</th>
+              <th data-sort="provider">Provider</th>
+              <th data-sort="output_price">Out $/1M</th>
+              <th data-sort="coding_quality">Quality</th>
+              <th data-sort="swe_bench_pro">SWE-Pro</th>
+              <th data-sort="aider_polyglot">Aider</th>
+              <th data-sort="aa_coding_index">AA Code</th>
+              <th data-sort="swe_bench_verified">SWE-Ver</th>
+              <th data-sort="terminal_bench">Term-Bench</th>
+              <th data-sort="cost_per_quality">$/Qual</th>
+              <th data-sort="cost_per_pro_point">$/Pro Pt</th>
+              <th data-sort="reasoning">Reasoning</th>
+              <th data-sort="context_window">Context</th>
+              <th data-sort="speed">Speed</th>
+              <th data-sort="license">License</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"><tr><td colspan="16" style="text-align:center;padding:2rem;color:var(--text-secondary)">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="methodology">
+      <h2>How Rankings Work</h2>
+      <details>
+        <summary>Click to expand methodology</summary>
+        <p>This leaderboard follows the research consensus on which LLM leaderboards are most trustworthy. We blend <strong>multiple high-signal sources</strong> rather than relying on any single benchmark.</p>
+
+        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 40% SWE-bench Pro, 35% Aider Polyglot, 25% LiveCodeBench. Models missing any component get a proportional score from available data. This rewards models that perform well across diverse coding benchmarks rather than gaming one.</p>
+
+        <p><strong>$/Quality Point</strong> = Output price per million tokens ÷ Coding Quality Score (normalized to 0–100). Lower = better value. This is the most holistic value metric on the page.</p>
+
+        <p><strong>SWE-bench Pro</strong> is the hardest public coding benchmark — real GitHub issues, multi-file fixes, no human hinting. (<a href="https://www.swebench.com/" target="_blank" rel="noopener">source</a>)</p>
+
+        <p><strong>Aider Polyglot</strong> is the gold standard for coding-specific LLM evaluation. It tests 225 real Exercism exercises across Python, Go, Rust, JavaScript, C++, and Java — measuring how well a model edits code without breaking the build. (<a href="https://aider.chat/docs/leaderboards/" target="_blank" rel="noopener">source</a>)</p>
+
+        <p><strong>AA Coding Index</strong> is Artificial Analysis's composite intelligence score, built from MMLU-Pro, GPQA Diamond, MATH-500, HumanEval, and more. Broad coverage across 80+ models. (<a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener">source</a>)</p>
+
+        <p><strong>SWE-bench Verified</strong> is the human-validated subset (~500 issues). Useful but frontier models cluster tightly here.</p>
+
+        <p><strong>LiveCodeBench</strong> measures competitive programming with monthly question refreshes to prevent contamination.</p>
+
+        <p><strong>Terminal-Bench 2.1</strong> measures agentic CLI performance — directly relevant for terminal-based tools.</p>
+
+        <p><strong>$/Pro Point</strong> = Output price per million tokens ÷ SWE-bench Pro score. Lower = better value.</p>
+
+        <p><strong>Speed</strong> is tokens/sec from Artificial Analysis benchmarks where available.</p>
+
+        <p><strong>Prices</strong> are list rates per million tokens (USD). Cache-hit rates shown in the data file but not the table.</p>
+
+        <p><strong>License</strong> indicates whether weights are available (MIT/Apache/etc.) or proprietary API-only.</p>
+
+        <p>Benchmarks sourced from independent evaluators. Some scores are self-reported by providers — see <code>data/models.json</code> source URLs for provenance. <strong>What we avoid:</strong> vendor cherry-picked charts, single-benchmark boards (MMLU alone is saturated), and Reddit polls.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated <span id="footer-updated">—</span> · <a href="https://github.com/EthanHarwood97/coding-model-value-leaderboard" target="_blank" rel="noopener">View on GitHub</a></p>
+    <p class="disclaimer">Prices and benchmarks change. Verify on provider docs before production use.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
