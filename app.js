@@ -33,14 +33,17 @@
     const b = m.benchmarks || {};
     let score = 0;
     let totalWeight = 0;
+    let presentCount = 0;
     for (const [key, weight] of Object.entries(QUALITY_WEIGHTS)) {
       const val = b[key];
       if (val != null) {
         score += val * weight;
         totalWeight += weight;
+        presentCount++;
       }
     }
     if (totalWeight === 0) return null;
+    if (presentCount < 2) return null;  // need at least 2 benchmark sources
     // Normalize to 0-100 scale (values are already percentages 0-100)
     return +(score / totalWeight).toFixed(1);
   }
@@ -151,8 +154,9 @@
       // Hide unrated
       if (STATE.filters.hideUnrated) {
         const b = m.benchmarks || {};
-        const hasAny = b.swe_bench_pro != null || b.aider_polyglot != null || b.livecodebench != null
-          || b.livebench != null || b.swe_bench_verified != null || b.terminal_bench_2_1 != null;
+        const hasAny = b.swe_bench_pro != null || b.aider_polyglot != null
+          || b.livecodebench != null || b.livebench != null
+          || b.swe_bench_verified != null || b.terminal_bench_2_1 != null;
         if (!hasAny) return false;
       }
 
@@ -194,6 +198,7 @@
     if (key === 'aider_polyglot') return m.benchmarks?.aider_polyglot;
     if (key === 'aa_coding_index') return m.benchmarks?.aa_coding_index;
     if (key === 'livebench') return m.benchmarks?.livebench;
+    if (key === 'livecodebench') return m.benchmarks?.livecodebench;
     if (key === 'terminal_bench') return m.benchmarks?.terminal_bench_2_1;
     if (key === 'context_window') return m.context_window;
     if (key === 'speed') return m.speed_tok_s;
@@ -230,6 +235,7 @@
         <td class="quality-score">${m.coding_quality_score != null ? m.coding_quality_score.toFixed(0) : '<span class="null-val">—</span>'}</td>
         <td>${pct(b.swe_bench_pro)}</td>
         <td>${pct(b.aider_polyglot)}</td>
+        <td>${pct(b.livecodebench)}</td>
         <td>${b.aa_coding_index != null ? b.aa_coding_index.toFixed(0) : '<span class="null-val">—</span>'}</td>
         <td>${b.livebench != null ? b.livebench.toFixed(1) + '%' : '<span class="null-val">—</span>'}</td>
         <td>${pct(b.swe_bench_verified)}</td>
@@ -406,16 +412,11 @@
     document.querySelectorAll('th[data-sort]').forEach(th => {
       th.classList.remove('sorted-asc', 'sorted-desc');
       const key = th.dataset.sort;
-      const sortKey = key === 'output_price' ? 'output_price'
-        : (key === 'context_window' ? 'context_window'
-          : (key === 'speed' ? 'speed'
-            : (key === 'reasoning' ? 'reasoning'
-              : (key === 'coding_quality' ? 'coding_quality'
-                : (key === 'aider_polyglot' ? 'aider_polyglot'
-                  : (key === 'aa_coding_index' ? 'aa_coding_index'
-              : (key === 'livebench' ? 'livebench'
-                : (key === 'cost_per_quality' ? 'cost_per_quality'
-                : key))))))));
+      const sortable = ['output_price', 'context_window', 'speed', 'reasoning',
+        'coding_quality', 'aider_polyglot', 'livecodebench', 'aa_coding_index',
+        'livebench', 'cost_per_quality', 'cost_per_pro_point', 'swe_bench_pro',
+        'swe_bench_verified', 'terminal_bench', 'released'];
+      const sortKey = sortable.includes(key) ? key : key;
       if (STATE.sortBy === sortKey) {
         th.classList.add(STATE.sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');
       }

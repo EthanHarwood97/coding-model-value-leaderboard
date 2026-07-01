@@ -637,17 +637,19 @@ def main():
                 else:
                     m.pop("cost_per_pro_point", None)
 
-                # coding_quality_score: weighted blend
+                # coding_quality_score: weighted blend (need ≥2 sources)
                 weights = {"swe_bench_pro": 0.35, "aider_polyglot": 0.30,
                            "livecodebench": 0.20, "livebench": 0.15}
                 score = 0.0
                 total_w = 0.0
+                present = 0
                 for key, weight in weights.items():
                     val = b.get(key)
                     if val is not None:
                         score += float(val) * weight
                         total_w += weight
-                if total_w > 0:
+                        present += 1
+                if total_w > 0 and present >= 2:
                     m["coding_quality_score"] = round(score / total_w, 1)
                 else:
                     m.pop("coding_quality_score", None)
