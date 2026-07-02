@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01",
+  "last_updated": "2026-07-02",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -9,9 +9,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.098,
-        "output_per_1m": 0.196,
-        "cache_hit_per_1m": 0.02,
+        "input_per_1m": 0.09,
+        "output_per_1m": 0.18,
+        "cache_hit_per_1m": 0.018,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -2051,8 +2051,8 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.1",
       "released": "2025-12-23",
       "pricing": {
-        "input_per_1m": 0.29,
-        "output_per_1m": 0.95,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -2551,7 +2551,7 @@
       "pricing": {
         "input_per_1m": 0.6,
         "output_per_1m": 2.5,
-        "cache_hit_per_1m": 0.6,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -2584,7 +2584,7 @@
       "released": "2025-10-23",
       "pricing": {
         "input_per_1m": 0.255,
-        "output_per_1m": 1.0,
+        "output_per_1m": 1.02,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -3083,8 +3083,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B-Thinking-2507",
       "released": "2025-08-28",
       "pricing": {
-        "input_per_1m": 0.08,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.13,
+        "output_per_1m": 1.56,
         "cache_hit_per_1m": 0.08,
         "currency": "USD"
       },
@@ -3786,8 +3786,8 @@
       "huggingface_id": "Qwen/Qwen3-8B",
       "released": "2025-04-28",
       "pricing": {
-        "input_per_1m": 0.05,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.117,
+        "output_per_1m": 0.455,
         "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
@@ -4120,8 +4120,8 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3-0324",
       "released": "2025-03-24",
       "pricing": {
-        "input_per_1m": 0.2,
-        "output_per_1m": 0.77,
+        "input_per_1m": 0.24,
+        "output_per_1m": 0.9,
         "cache_hit_per_1m": 0.135,
         "currency": "USD"
       },
