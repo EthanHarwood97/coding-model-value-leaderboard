@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-03",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -1020,9 +1020,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.55,
-        "output_per_1m": 3.2,
-        "cache_hit_per_1m": 0.11,
+        "input_per_1m": 0.66,
+        "output_per_1m": 3.41,
+        "cache_hit_per_1m": 0.14,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1087,9 +1087,9 @@
       "huggingface_id": "zai-org/GLM-5.1",
       "released": "2026-04-07",
       "pricing": {
-        "input_per_1m": 0.975,
-        "output_per_1m": 4.3,
-        "cache_hit_per_1m": 0.182,
+        "input_per_1m": 0.966,
+        "output_per_1m": 3.036,
+        "cache_hit_per_1m": 0.1794,
         "currency": "USD"
       },
       "context_window": 202752,
@@ -4442,6 +4442,70 @@
       "sources": {
         "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-5",
         "benchmark": null
+      }
+    },
+    {
+      "name": "Poolside: Laguna XS 2.1",
+      "provider": "Poolside",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "poolside/laguna-xs-2.1",
+      "huggingface_id": "poolside/Laguna-XS-2.1",
+      "released": "2026-07-02",
+      "pricing": {
+        "input_per_1m": 0.06,
+        "output_per_1m": 0.12,
+        "cache_hit_per_1m": 0.03,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 32768,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/poolside/laguna-xs-2.1",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Kimi-K2-Instruct",
+      "provider": "moonshotai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": null,
+      "huggingface_id": "moonshotai/Kimi-K2-Instruct",
+      "released": "2025-07-11",
+      "pricing": {
+        "input_per_1m": null,
+        "output_per_1m": null,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": null,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": 47.3,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null
+      },
+      "reasoning_level": null,
+      "tag": "New Release",
+      "best_for": "Newly discovered — needs review",
+      "sources": {
+        "pricing": null,
+        "benchmark": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
       }
     }
   ]
