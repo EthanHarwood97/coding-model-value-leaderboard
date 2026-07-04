@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03",
+  "last_updated": "2026-07-04",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -113,9 +113,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.93,
-        "output_per_1m": 3.0,
-        "cache_hit_per_1m": 0.18,
+        "input_per_1m": 0.91,
+        "output_per_1m": 2.86,
+        "cache_hit_per_1m": 0.169,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -136,10 +136,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.048,
+      "cost_per_pro_point": 0.046,
       "reasoning_level": "standard",
       "coding_quality_score": 72.0,
-      "cost_per_quality": 0.042
+      "cost_per_quality": 0.04
     },
     {
       "name": "Kimi K2.7 Code",
@@ -856,7 +856,7 @@
       "pricing": {
         "input_per_1m": 0.285,
         "output_per_1m": 2.4,
-        "cache_hit_per_1m": null,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1321,8 +1321,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.085,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.08,
+        "output_per_1m": 0.45,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -4498,7 +4498,8 @@
         "terminal_bench_2_1": null,
         "livecodebench": null,
         "humaneval": null,
-        "aa_coding_index": null
+        "aa_coding_index": 47.0,
+        "livebench": 45.9
       },
       "reasoning_level": null,
       "tag": "New Release",
