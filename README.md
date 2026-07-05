@@ -45,10 +45,10 @@ The **Coding Quality Score** blends six coding-specific benchmarks into a single
 
 | Weight | Benchmark | Coverage | What It Measures |
 |--------|-----------|----------|-----------------|
-| **35%** | **SWE-bench Verified** | 51% | Human-validated GitHub issue resolution |
-| **20%** | **SWE-bench Pro** | 8% | Harder GitHub issues, multi-file fixes, no hinting |
-| **15%** | **Aider Polyglot** | 8% | 225 Exercism exercises across Python, Go, Rust, JS, C++, Java |
-| **15%** | **LiveBench** | 27% | Contamination-free global average across math, reasoning, coding |
+| **30%** | **SWE-bench Pro** | 8% | Harder GitHub issues, multi-file fixes, no hinting |
+| **25%** | **Aider Polyglot** | 8% | 225 Exercism exercises across Python, Go, Rust, JS, C++, Java |
+| **20%** | **SWE-bench Verified** | 51% | Human-validated GitHub issue resolution |
+| **10%** | **LiveBench** | 27% | Contamination-free global average across math, reasoning, coding |
 | **10%** | **Terminal-Bench 2.1** | 9% | Agentic CLI performance |
 | **5%** | **SciCode** | 5% | Scientific coding across 16 disciplines |
 

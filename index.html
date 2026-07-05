@@ -148,7 +148,7 @@
         <summary>Click to expand methodology</summary>
         <p>This leaderboard follows the research consensus on which LLM leaderboards are most trustworthy. We blend <strong>multiple high-signal sources</strong> rather than relying on any single benchmark.</p>
 
-        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 35% SWE-bench Verified, 20% SWE-bench Pro, 15% Aider Polyglot, 15% LiveBench, 10% Terminal-Bench 2.1, 5% SciCode. Each benchmark is normalized to 0–100 using calibration anchors so that harder benchmarks (SWE-Pro 40–70%) don't get drowned out by easier ones (LiveCodeBench 85–95%). Models with any single benchmark get a score; more benchmarks = higher confidence.</p>
+        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 30% SWE-bench Pro, 25% Aider Polyglot, 20% SWE-bench Verified, 10% LiveBench, 10% Terminal-Bench 2.1, 5% SciCode. Harder benchmarks (Pro, Aider) get higher weight since they differentiate frontier models better. Models with only one benchmark get a 20% confidence discount. Each benchmark is normalized to 0–100 using calibration anchors.</p>
 
         <p><strong>$/Quality Point</strong> = Output price per million tokens ÷ Coding Quality Score (normalized to 0–100). Lower = better value. This is the most holistic value metric on the page.</p>
 

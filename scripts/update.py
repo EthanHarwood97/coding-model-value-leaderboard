@@ -675,14 +675,14 @@ def main():
 
                 # coding_quality_score: normalized weighted blend
                 # Each benchmark is normalized to 0-100 using fixed anchor points
-                # to prevent easier benchmarks (LCB 85-95) from dominating harder ones (SWE-Pro 40-70)
-                weights = {"swe_bench_verified": 0.35, "swe_bench_pro": 0.20,
-                           "aider_polyglot": 0.15, "livebench": 0.15,
+                # Harder benchmarks (SWE-Pro, Aider) get higher weight for differentiation
+                weights = {"swe_bench_pro": 0.30, "aider_polyglot": 0.25,
+                           "swe_bench_verified": 0.20, "livebench": 0.10,
                            "terminal_bench_2_1": 0.10, "scicode": 0.05}
                 norm_ranges = {
-                    "swe_bench_verified": (25, 90),
                     "swe_bench_pro": (35, 70),
                     "aider_polyglot": (50, 85),
+                    "swe_bench_verified": (25, 90),
                     "livebench": (30, 75),
                     "terminal_bench_2_1": (45, 85),
                     "scicode": (40, 65),
@@ -698,9 +698,12 @@ def main():
                         score += norm * weight
                         total_w += weight
                         present += 1
-                # Require at least 1 benchmark; any benchmark can produce a score
+                # Require at least 1 benchmark; discount single-benchmark scores
                 if total_w > 0 and present >= 1:
-                    m["coding_quality_score"] = round(score / total_w, 1)
+                    final = score / total_w
+                    if present == 1:
+                        final *= 0.80  # 20% confidence discount for single-benchmark
+                    m["coding_quality_score"] = round(final, 1)
                 else:
                     m.pop("coding_quality_score", None)
 

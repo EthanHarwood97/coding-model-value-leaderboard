@@ -23,19 +23,19 @@
 
   /* Coding Quality Score: normalized weighted composite */
   const QUALITY_WEIGHTS = {
-    swe_bench_verified: 0.35,
-    swe_bench_pro: 0.20,
-    aider_polyglot: 0.15,
-    livebench: 0.15,
+    swe_bench_pro: 0.30,
+    aider_polyglot: 0.25,
+    swe_bench_verified: 0.20,
+    livebench: 0.10,
     terminal_bench_2_1: 0.10,
     scicode: 0.05
   };
   // Per-benchmark normalization ranges (lo → 0, hi → 100)
   // Based on actual p10–p90 distributions from the dataset
   const NORM_RANGES = {
-    swe_bench_verified: [25, 90],
     swe_bench_pro: [35, 70],
     aider_polyglot: [50, 85],
+    swe_bench_verified: [25, 90],
     livebench: [30, 75],
     terminal_bench_2_1: [45, 85],
     scicode: [40, 65]
@@ -62,7 +62,9 @@
       }
     }
     if (totalWeight < 0.14 || presentCount < 1) return null;
-    return +(score / totalWeight).toFixed(1);
+    let final = score / totalWeight;
+    if (presentCount === 1) final *= 0.80; // 20% confidence discount for single-benchmark
+    return +final.toFixed(1);
   }
 
   function computeCostPerQuality(m) {
