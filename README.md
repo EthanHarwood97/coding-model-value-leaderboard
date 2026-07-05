@@ -107,6 +107,9 @@ The GitHub Action in `.github/workflows/update.yml` runs daily at 06:00 UTC. It 
 - **[Aider LLM Leaderboard](https://aider.chat/docs/leaderboards/)** — Aider Polyglot coding scores (225 Exercism exercises, 6 languages)
 - **[HuggingFace API](https://huggingface.co/api/models)** — discovers new coding model releases
 - **HuggingFace model READMEs** — extracts SWE-bench scores from official model cards
+- **[BenchLM.ai](https://benchlm.ai)** — SWE-bench Verified scores for 55+ models (live scrape)
+- **[tbench.ai](https://www.tbench.ai)** — Terminal-Bench 2.1 agentic CLI scores (live scrape)
+- **[WhatLLM.org](https://whatllm.org)** — SciCode, Terminal-Bench, and LiveCodeBench scores (live scrape)
 
 The scraper is conservative — it only updates fields with high confidence. New models are added with `null` benchmark fields until their scores can be verified.
 
@@ -201,11 +204,12 @@ Pricing data sourced from:
 
 Benchmark data sourced from:
 - [SWE-bench Verified Leaderboard](https://www.swebench.com/)
+- [BenchLM.ai](https://benchlm.ai) — SWE-bench Verified aggregator (55+ models)
 - [Aider Polyglot Coding Leaderboard](https://aider.chat/docs/leaderboards/) — gold standard for code editing
 - [Artificial Analysis](https://artificialanalysis.ai) — broad benchmark composite, speed, latency
-- [BenchLM.ai](https://benchlm.ai)
 - [LiveBench](https://livebench.ai) — contamination-resistant, questions refresh monthly
-- [Terminal-Bench](https://www.tbench.ai/)
+- [Terminal-Bench](https://www.tbench.ai/) — agentic CLI performance
+- [WhatLLM.org](https://whatllm.org) — multi-benchmark aggregator (SciCode, Terminal-Bench, LiveCodeBench)
 
 ## Disclaimer
 

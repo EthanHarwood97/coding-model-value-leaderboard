@@ -44,6 +44,15 @@ except ImportError:
 # Snapshot-based benchmark sources from whichllm project
 from benchmark_snapshots import match_livebench, match_aa_index
 
+# Live scrapers for additional benchmark sources
+from live_benchmarks import (
+    fetch_benchlm_swe_bench,
+    fetch_tbench_scores,
+    fetch_whatllm_scores,
+    match_live_scores,
+    match_whatllm_multi,
+)
+
 # ---------- Config ----------
 DATA_FILE = Path(__file__).parent.parent / "data" / "models.json"
 USER_AGENT = "coding-model-value-leaderboard/1.0 (+https://github.com/EthanHarwood97/coding-model-value-leaderboard)"
@@ -202,6 +211,7 @@ def openrouter_to_model(or_model: dict) -> Optional[dict]:
             "livecodebench": None,
             "humaneval": None,
             "aa_coding_index": aa_coding_index,
+            "scicode": None,
         },
         "reasoning_level": None,
         "tag": None,
@@ -511,6 +521,7 @@ def discover_new_models(models_data: dict, check_only: bool = False) -> int:
                 "livecodebench": benchmarks.get("livecodebench"),
                 "humaneval": benchmarks.get("humaneval"),
                 "aa_coding_index": None,
+                "scicode": None,
             },
             "reasoning_level": None,
             "tag": "New Release",
@@ -543,7 +554,7 @@ def enrich_benchmarks_from_hf(models_data: dict, check_only: bool = False) -> in
     # Only enrich models that lack all coding benchmarks
     benchmark_keys = ["swe_bench_verified", "swe_bench_pro", "terminal_bench_2_1",
                       "livecodebench", "humaneval", "aider_polyglot", "aa_coding_index",
-                      "livebench"]
+                      "livebench", "scicode"]
 
     for m in models_data.get("models", []):
         b = m.setdefault("benchmarks", {})
@@ -608,6 +619,31 @@ def main():
         aa_matched = match_aa_index(data.get("models", []), log_fn=log)
         log(f"LiveBench snapshot: matched {lb_matched} models")
         log(f"AA Index snapshot: matched {aa_matched} models")
+
+        # Live scrapers for additional benchmark sources
+        # BenchLM.ai — SWE-bench Verified (55+ models)
+        benchlm_scores = fetch_benchlm_swe_bench()
+        if benchlm_scores:
+            blm_matched = match_live_scores(
+                data.get("models", []), benchlm_scores, "swe_bench_verified", log_fn=log
+            )
+            log(f"BenchLM SWE-bench Verified: matched {blm_matched} models")
+
+        # tbench.ai — Terminal-Bench 2.1 (agentic CLI)
+        tbench_scores = fetch_tbench_scores()
+        if tbench_scores:
+            tb_matched = match_live_scores(
+                data.get("models", []), tbench_scores, "terminal_bench_2_1", log_fn=log
+            )
+            log(f"Terminal-Bench 2.1: matched {tb_matched} models")
+
+        # whatllm.org — Multi-benchmark (LiveCodeBench, Terminal-Bench, SciCode)
+        whatllm_scores = fetch_whatllm_scores()
+        if whatllm_scores:
+            wl_matched = match_whatllm_multi(
+                data.get("models", []), whatllm_scores, log_fn=log
+            )
+            log(f"WhatLLM multi-benchmark: matched {wl_matched} fields")
 
         if not args.discover:
             # Enrich OR-discovered models with benchmarks from HF model cards
