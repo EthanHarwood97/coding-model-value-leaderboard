@@ -673,42 +673,54 @@ def main():
                 else:
                     m.pop("cost_per_pro_point", None)
 
-                # coding_quality_score: normalized weighted blend
-                # Models need >=1 coding-specific benchmark; no discount for fewer
-                weights = {"swe_bench_verified": 0.40, "swe_bench_pro": 0.25,
-                           "aider_polyglot": 0.15, "terminal_bench_2_1": 0.10,
-                           "livebench": 0.05, "scicode": 0.05}
+                # Base score from common benchmarks (normalized). Hard benchmarks (Pro, Aider)
+                # are treated as bonus signals — they can only help, never hurt.
+                base_weights = {"swe_bench_verified": 0.50, "terminal_bench_2_1": 0.25,
+                                "livebench": 0.15, "scicode": 0.10}
+                bonus_keys = {"swe_bench_pro": 5.0, "aider_polyglot": 3.0}
                 norm_ranges = {
                     "swe_bench_verified": (25, 90),
-                    "swe_bench_pro": (35, 70),
-                    "aider_polyglot": (50, 85),
                     "terminal_bench_2_1": (45, 85),
                     "livebench": (30, 75),
                     "scicode": (40, 65),
                 }
-                score = 0.0
-                total_w = 0.0
-                present = 0
-                for key, weight in weights.items():
+                # Compute base score
+                base_score = 0.0
+                base_w = 0.0
+                base_count = 0
+                has_primary = False
+                for key, weight in base_weights.items():
                     val = b.get(key)
                     if val is not None:
                         lo, hi = norm_ranges[key]
                         norm = max(0, min(100, (float(val) - lo) / (hi - lo) * 100))
-                        score += norm * weight
-                        total_w += weight
-                        present += 1
-                # Require at least 1 coding-specific benchmark; gentle confidence adjustment
-                coding_keys = {"swe_bench_verified", "swe_bench_pro", "aider_polyglot", "terminal_bench_2_1"}
-                has_coding = any(b.get(k) is not None for k in coding_keys)
-                if total_w > 0 and present >= 1 and has_coding:
-                    final = score / total_w
-                    if present == 1:
-                        final *= 0.88  # 1 benchmark: reduced confidence
-                    elif present == 2:
-                        final *= 0.95  # 2 benchmarks: slight caution
-                    m["coding_quality_score"] = round(final, 1)
-                else:
+                        base_score += norm * weight
+                        base_w += weight
+                        base_count += 1
+                        if key in ("swe_bench_verified", "terminal_bench_2_1"):
+                            has_primary = True
+                if base_w == 0 or not has_primary:
                     m.pop("coding_quality_score", None)
+                else:
+                    # Add bonuses from hard benchmarks (only if above threshold)
+                    bonuses = 0.0
+                    bonus_count = 0
+                    pro_thresholds = {"swe_bench_pro": 45.0, "aider_polyglot": 65.0}
+                    for key, max_bonus in bonus_keys.items():
+                        val = b.get(key)
+                        if val is not None:
+                            bonus_count += 1
+                            threshold = pro_thresholds[key]
+                            if float(val) >= threshold:
+                                bonuses += max_bonus
+                    total_bm = base_count + bonus_count
+                    final = base_score / base_w + bonuses
+                    if total_bm == 1:
+                        final *= 0.88
+                    elif total_bm == 2:
+                        final *= 0.95
+                    final = min(final, 100.0)
+                    m["coding_quality_score"] = round(final, 1)
 
                 # cost_per_quality
                 qs = m.get("coding_quality_score")

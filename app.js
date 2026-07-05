@@ -21,20 +21,19 @@
     }
   };
 
-  /* Coding Quality Score: normalized weighted composite */
-  const QUALITY_WEIGHTS = {
-    swe_bench_verified: 0.40,
-    swe_bench_pro: 0.25,
-    aider_polyglot: 0.15,
-    terminal_bench_2_1: 0.10,
-    livebench: 0.05,
-    scicode: 0.05
+  /* Quality Score: base + bonus system. Hard benchmarks can only help. */
+  const BASE_WEIGHTS = {
+    swe_bench_verified: 0.50,
+    terminal_bench_2_1: 0.25,
+    livebench: 0.15,
+    scicode: 0.10
   };
-  // Per-benchmark normalization ranges (lo → 0, hi → 100)
+  const BONUS_POINTS = {
+    swe_bench_pro: { max: 5, threshold: 45 },
+    aider_polyglot: { max: 3, threshold: 65 }
+  };
   const NORM_RANGES = {
     swe_bench_verified: [25, 90],
-    swe_bench_pro: [35, 70],
-    aider_polyglot: [50, 85],
     terminal_bench_2_1: [45, 85],
     livebench: [30, 75],
     scicode: [40, 65]
@@ -47,26 +46,38 @@
 
   function computeQualityScore(m) {
     const b = m.benchmarks || {};
-    let score = 0;
-    let totalWeight = 0;
-    let presentCount = 0;
-    for (const [key, weight] of Object.entries(QUALITY_WEIGHTS)) {
+    let baseScore = 0;
+    let baseWeight = 0;
+    let baseCount = 0;
+    let hasPrimary = false;
+    for (const [key, weight] of Object.entries(BASE_WEIGHTS)) {
       const raw = b[key];
       if (raw != null) {
         const [lo, hi] = NORM_RANGES[key];
         const norm = normalizeScore(raw, lo, hi);
-        score += norm * weight;
-        totalWeight += weight;
-        presentCount++;
+        baseScore += norm * weight;
+        baseWeight += weight;
+        baseCount++;
+        if (key === "swe_bench_verified" || key === "terminal_bench_2_1") {
+          hasPrimary = true;
+        }
       }
     }
-    if (totalWeight < 0.14 || presentCount < 1) return null;
-    const codingKeys = new Set(["swe_bench_verified", "swe_bench_pro", "aider_polyglot", "terminal_bench_2_1"]);
-    const hasCoding = Object.keys(b).some(k => codingKeys.has(k) && b[k] != null);
-    if (!hasCoding) return null;
-    let final = score / totalWeight;
-    if (presentCount === 1) final *= 0.88;  // 1 benchmark: reduced confidence
-    else if (presentCount === 2) final *= 0.95; // 2 benchmarks: slight caution
+    if (baseCount < 1 || baseWeight < 0.14 || !hasPrimary) return null;
+    let final = baseScore / baseWeight;
+    // Bonus points from hard benchmarks (only if above threshold)
+    let bonusCount = 0;
+    for (const [key, cfg] of Object.entries(BONUS_POINTS)) {
+      const raw = b[key];
+      if (raw != null) {
+        bonusCount++;
+        if (raw >= cfg.threshold) final += cfg.max;
+      }
+    }
+    const totalBenchmarks = baseCount + bonusCount;
+    if (totalBenchmarks === 1) final *= 0.88;
+    else if (totalBenchmarks === 2) final *= 0.95;
+    final = Math.min(final, 100);
     return +final.toFixed(1);
   }
 
