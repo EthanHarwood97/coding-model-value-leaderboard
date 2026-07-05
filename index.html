@@ -116,25 +116,25 @@
         <table id="leaderboard">
           <thead>
             <tr>
-              <th data-sort="name">Model</th>
-              <th data-sort="provider">Provider</th>
-              <th data-sort="output_price">Out $/1M</th>
-              <th data-sort="coding_quality">Quality</th>
-              <th data-sort="swe_bench_pro">SWE-Pro</th>
-              <th data-sort="aider_polyglot">Aider</th>
-              <th data-sort="livecodebench">LCB</th>
-              <th data-sort="aa_coding_index">AA Code</th>
-              <th data-sort="livebench">LiveBench</th>
-              <th data-sort="swe_bench_verified">SWE-Ver</th>
-              <th data-sort="terminal_bench">Term-Bench</th>
-              <th data-sort="scicode">SciCode</th>
-              <th data-sort="cost_per_quality">$/Qual</th>
-              <th data-sort="cost_per_pro_point">$/Pro Pt</th>
-              <th data-sort="reasoning">Reasoning</th>
-              <th data-sort="context_window">Context</th>
-              <th data-sort="speed">Speed</th>
-              <th data-sort="license">License</th>
-              <th>Best For</th>
+              <th data-sort="name" title="Model display name">Model</th>
+              <th data-sort="provider" title="Model provider / builder">Provider</th>
+              <th data-sort="output_price" title="Output price per 1 million tokens (USD)">Out $/1M</th>
+              <th data-sort="coding_quality" title="Weighted composite: 40% SWE-Verified, 25% SWE-Pro, 15% Aider, 10% Term-Bench, 5% LiveBench, 5% SciCode">Quality</th>
+              <th data-sort="swe_bench_pro" title="SWE-bench Pro: real GitHub issues, multi-file fixes, no hinting">SWE-Pro</th>
+              <th data-sort="aider_polyglot" title="Aider Polyglot: 225 Exercism exercises across Python, Go, Rust, JS, C++, Java">Aider</th>
+              <th data-sort="livecodebench" title="LiveCodeBench: competitive programming, contamination-resistant">LCB</th>
+              <th data-sort="aa_coding_index" title="Artificial Analysis composite (MMLU-Pro, GPQA Diamond, MATH-500, HumanEval)">AA Code</th>
+              <th data-sort="livebench" title="LiveBench: contamination-free global average across math, reasoning, coding">LiveBench</th>
+              <th data-sort="swe_bench_verified" title="SWE-bench Verified: human-validated GitHub issue resolution (~500 issues)">SWE-Ver</th>
+              <th data-sort="terminal_bench" title="Terminal-Bench 2.1: agentic CLI performance">Term-Bench</th>
+              <th data-sort="scicode" title="SciCode: scientific coding across 16 disciplines, 288 subproblems">SciCode</th>
+              <th data-sort="cost_per_quality" title="Output price ÷ Coding Quality Score (lower = better value)">$/Qual</th>
+              <th data-sort="cost_per_pro_point" title="Output price ÷ SWE-bench Pro score (lower = better value)">$/Pro Pt</th>
+              <th data-sort="reasoning" title="Model reasoning level: Standard, High, Thinking, Adaptive, Low, Max">Reasoning</th>
+              <th data-sort="context_window" title="Maximum input tokens (context window size)">Context</th>
+              <th data-sort="speed" title="Output tokens per second">Speed</th>
+              <th data-sort="license" title="Open weight (MIT, Apache, etc.) or Proprietary">License</th>
+              <th title="Best use case or strength of this model">Best For</th>
             </tr>
           </thead>
           <tbody id="table-body"><tr><td colspan="17" style="text-align:center;padding:2rem;color:var(--text-secondary)">Loading...</td></tr></tbody>
@@ -148,7 +148,7 @@
         <summary>Click to expand methodology</summary>
         <p>This leaderboard follows the research consensus on which LLM leaderboards are most trustworthy. We blend <strong>multiple high-signal sources</strong> rather than relying on any single benchmark.</p>
 
-        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 30% SWE-bench Pro, 25% Aider Polyglot, 20% SWE-bench Verified, 10% LiveBench, 10% Terminal-Bench 2.1, 5% SciCode. Harder benchmarks (Pro, Aider) get higher weight since they differentiate frontier models better. Models with only one benchmark get a 20% confidence discount. Each benchmark is normalized to 0–100 using calibration anchors.</p>
+        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 40% SWE-bench Verified, 25% SWE-bench Pro, 15% Aider Polyglot, 10% Terminal-Bench 2.1, 5% LiveBench, 5% SciCode. Each benchmark is normalized to 0–100 using calibration anchors. Requires at least 1 coding-specific benchmark; no penalty for fewer benchmarks — weights are proportional to what's available.</p>
 
         <p><strong>$/Quality Point</strong> = Output price per million tokens ÷ Coding Quality Score (normalized to 0–100). Lower = better value. This is the most holistic value metric on the page.</p>
 

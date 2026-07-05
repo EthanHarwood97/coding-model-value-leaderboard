@@ -23,21 +23,20 @@
 
   /* Coding Quality Score: normalized weighted composite */
   const QUALITY_WEIGHTS = {
-    swe_bench_pro: 0.30,
-    aider_polyglot: 0.25,
-    swe_bench_verified: 0.20,
-    livebench: 0.10,
+    swe_bench_verified: 0.40,
+    swe_bench_pro: 0.25,
+    aider_polyglot: 0.15,
     terminal_bench_2_1: 0.10,
+    livebench: 0.05,
     scicode: 0.05
   };
   // Per-benchmark normalization ranges (lo → 0, hi → 100)
-  // Based on actual p10–p90 distributions from the dataset
   const NORM_RANGES = {
+    swe_bench_verified: [25, 90],
     swe_bench_pro: [35, 70],
     aider_polyglot: [50, 85],
-    swe_bench_verified: [25, 90],
-    livebench: [30, 75],
     terminal_bench_2_1: [45, 85],
+    livebench: [30, 75],
     scicode: [40, 65]
   };
 
@@ -62,8 +61,12 @@
       }
     }
     if (totalWeight < 0.14 || presentCount < 1) return null;
+    const codingKeys = new Set(["swe_bench_verified", "swe_bench_pro", "aider_polyglot", "terminal_bench_2_1"]);
+    const hasCoding = Object.keys(b).some(k => codingKeys.has(k) && b[k] != null);
+    if (!hasCoding) return null;
     let final = score / totalWeight;
-    if (presentCount === 1) final *= 0.80; // 20% confidence discount for single-benchmark
+    if (presentCount === 1) final *= 0.88;  // 1 benchmark: reduced confidence
+    else if (presentCount === 2) final *= 0.95; // 2 benchmarks: slight caution
     return +final.toFixed(1);
   }
 

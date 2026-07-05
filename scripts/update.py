@@ -674,17 +674,16 @@ def main():
                     m.pop("cost_per_pro_point", None)
 
                 # coding_quality_score: normalized weighted blend
-                # Each benchmark is normalized to 0-100 using fixed anchor points
-                # Harder benchmarks (SWE-Pro, Aider) get higher weight for differentiation
-                weights = {"swe_bench_pro": 0.30, "aider_polyglot": 0.25,
-                           "swe_bench_verified": 0.20, "livebench": 0.10,
-                           "terminal_bench_2_1": 0.10, "scicode": 0.05}
+                # Models need >=1 coding-specific benchmark; no discount for fewer
+                weights = {"swe_bench_verified": 0.40, "swe_bench_pro": 0.25,
+                           "aider_polyglot": 0.15, "terminal_bench_2_1": 0.10,
+                           "livebench": 0.05, "scicode": 0.05}
                 norm_ranges = {
+                    "swe_bench_verified": (25, 90),
                     "swe_bench_pro": (35, 70),
                     "aider_polyglot": (50, 85),
-                    "swe_bench_verified": (25, 90),
-                    "livebench": (30, 75),
                     "terminal_bench_2_1": (45, 85),
+                    "livebench": (30, 75),
                     "scicode": (40, 65),
                 }
                 score = 0.0
@@ -698,11 +697,15 @@ def main():
                         score += norm * weight
                         total_w += weight
                         present += 1
-                # Require at least 1 benchmark; discount single-benchmark scores
-                if total_w > 0 and present >= 1:
+                # Require at least 1 coding-specific benchmark; gentle confidence adjustment
+                coding_keys = {"swe_bench_verified", "swe_bench_pro", "aider_polyglot", "terminal_bench_2_1"}
+                has_coding = any(b.get(k) is not None for k in coding_keys)
+                if total_w > 0 and present >= 1 and has_coding:
                     final = score / total_w
                     if present == 1:
-                        final *= 0.80  # 20% confidence discount for single-benchmark
+                        final *= 0.88  # 1 benchmark: reduced confidence
+                    elif present == 2:
+                        final *= 0.95  # 2 benchmarks: slight caution
                     m["coding_quality_score"] = round(final, 1)
                 else:
                     m.pop("coding_quality_score", None)

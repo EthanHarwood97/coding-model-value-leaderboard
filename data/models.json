@@ -34,7 +34,7 @@
         "benchmark": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash"
       },
       "reasoning_level": "standard",
-      "coding_quality_score": 83.3,
+      "coding_quality_score": 79.0,
       "cost_per_quality": 0.002
     },
     {
@@ -70,7 +70,7 @@
       },
       "cost_per_pro_point": 0.016,
       "reasoning_level": "standard",
-      "coding_quality_score": 72.4,
+      "coding_quality_score": 74.3,
       "cost_per_quality": 0.012
     },
     {
@@ -105,8 +105,8 @@
       },
       "cost_per_pro_point": 0.02,
       "reasoning_level": "standard",
-      "coding_quality_score": 69.0,
-      "cost_per_quality": 0.017
+      "coding_quality_score": 73.3,
+      "cost_per_quality": 0.016
     },
     {
       "name": "GLM-5.2",
@@ -140,8 +140,8 @@
       },
       "cost_per_pro_point": 0.029,
       "reasoning_level": "standard",
-      "coding_quality_score": 60.2,
-      "cost_per_quality": 0.03
+      "coding_quality_score": 51.4,
+      "cost_per_quality": 0.035
     },
     {
       "name": "Kimi K2.7 Code",
@@ -174,8 +174,8 @@
         "benchmark": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
       },
       "reasoning_level": "thinking",
-      "coding_quality_score": 23.1,
-      "cost_per_quality": 0.152
+      "coding_quality_score": 25.5,
+      "cost_per_quality": 0.137
     },
     {
       "name": "Qwen3.7 Max",
@@ -209,8 +209,8 @@
       },
       "cost_per_pro_point": 0.062,
       "reasoning_level": "standard",
-      "coding_quality_score": 74.9,
-      "cost_per_quality": 0.05
+      "coding_quality_score": 78.0,
+      "cost_per_quality": 0.048
     },
     {
       "name": "Gemini 3.1 Pro",
@@ -245,8 +245,8 @@
       },
       "cost_per_pro_point": 0.221,
       "reasoning_level": "standard",
-      "coding_quality_score": 70.9,
-      "cost_per_quality": 0.169
+      "coding_quality_score": 73.8,
+      "cost_per_quality": 0.163
     },
     {
       "name": "Gemini 3.5 Flash",
@@ -281,8 +281,8 @@
       },
       "cost_per_pro_point": 0.163,
       "reasoning_level": "standard",
-      "coding_quality_score": 60.7,
-      "cost_per_quality": 0.148
+      "coding_quality_score": 67.2,
+      "cost_per_quality": 0.134
     },
     {
       "name": "GPT-5.4 Mini",
@@ -316,8 +316,8 @@
       },
       "cost_per_pro_point": 0.083,
       "reasoning_level": "standard",
-      "coding_quality_score": 49.3,
-      "cost_per_quality": 0.091
+      "coding_quality_score": 55.7,
+      "cost_per_quality": 0.081
     },
     {
       "name": "GPT-5.5",
@@ -351,8 +351,8 @@
       },
       "cost_per_pro_point": 0.512,
       "reasoning_level": "high",
-      "coding_quality_score": 87.6,
-      "cost_per_quality": 0.342
+      "coding_quality_score": 89.6,
+      "cost_per_quality": 0.335
     },
     {
       "name": "Claude Opus 4.8",
@@ -387,8 +387,8 @@
       },
       "cost_per_pro_point": 0.361,
       "reasoning_level": "adaptive",
-      "coding_quality_score": 88.2,
-      "cost_per_quality": 0.283
+      "coding_quality_score": 90.9,
+      "cost_per_quality": 0.275
     },
     {
       "name": "Claude Sonnet 4.6",
@@ -423,8 +423,8 @@
       },
       "cost_per_pro_point": 0.344,
       "reasoning_level": "adaptive",
-      "coding_quality_score": 48.1,
-      "cost_per_quality": 0.312
+      "coding_quality_score": 55.3,
+      "cost_per_quality": 0.271
     },
     {
       "name": "Claude Haiku 4.5",
@@ -458,8 +458,8 @@
       },
       "cost_per_pro_point": 0.127,
       "reasoning_level": "adaptive",
-      "coding_quality_score": 17.7,
-      "cost_per_quality": 0.282
+      "coding_quality_score": 20.0,
+      "cost_per_quality": 0.25
     },
     {
       "name": "MiMo-V2.5",
@@ -492,8 +492,8 @@
         "benchmark": "https://huggingface.co/XiaomiMiMo"
       },
       "reasoning_level": "standard",
-      "coding_quality_score": 41.1,
-      "cost_per_quality": 0.007
+      "coding_quality_score": 45.3,
+      "cost_per_quality": 0.006
     },
     {
       "name": "Codestral",
@@ -559,8 +559,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 57.7,
-      "cost_per_quality": 0.038
+      "coding_quality_score": 63.5,
+      "cost_per_quality": 0.035
     },
     {
       "name": "Qwen: Qwen3.7 Plus",
@@ -594,8 +594,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 64.9,
-      "cost_per_quality": 0.02
+      "coding_quality_score": 71.3,
+      "cost_per_quality": 0.018
     },
     {
       "name": "inclusionAI: Ring-2.6-1T",
@@ -695,8 +695,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 53.2,
-      "cost_per_quality": 0.004
+      "coding_quality_score": 58.5,
+      "cost_per_quality": 0.003
     },
     {
       "name": "Poolside: Laguna M.1",
@@ -730,8 +730,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 58.5,
-      "cost_per_quality": 0.007
+      "coding_quality_score": 64.3,
+      "cost_per_quality": 0.006
     },
     {
       "name": "Qwen: Qwen3.5 Plus 2026-04-20",
@@ -831,8 +831,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 59.6,
-      "cost_per_quality": 0.017
+      "coding_quality_score": 65.5,
+      "cost_per_quality": 0.015
     },
     {
       "name": "Qwen: Qwen3.6 Max Preview",
@@ -900,8 +900,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 79.9,
-      "cost_per_quality": 0.03
+      "coding_quality_score": 76.2,
+      "cost_per_quality": 0.031
     },
     {
       "name": "inclusionAI: Ling-2.6-1T",
@@ -968,7 +968,7 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 48.7,
+      "coding_quality_score": 53.6,
       "cost_per_quality": 0.004
     },
     {
@@ -1070,8 +1070,8 @@
       "reasoning_level": "thinking",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 50.7,
-      "cost_per_quality": 0.067
+      "coding_quality_score": 34.4,
+      "cost_per_quality": 0.099
     },
     {
       "name": "Anthropic: Claude Opus 4.7",
@@ -1106,8 +1106,8 @@
       "reasoning_level": "adaptive",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 61.2,
-      "cost_per_quality": 0.408
+      "coding_quality_score": 58.1,
+      "cost_per_quality": 0.43
     },
     {
       "name": "Z.ai: GLM 5.1",
@@ -1142,8 +1142,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 62.2,
-      "cost_per_quality": 0.049
+      "coding_quality_score": 50.3,
+      "cost_per_quality": 0.06
     },
     {
       "name": "Qwen: Qwen3.6 Plus",
@@ -1177,8 +1177,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 66.2,
-      "cost_per_quality": 0.029
+      "coding_quality_score": 72.8,
+      "cost_per_quality": 0.027
     },
     {
       "name": "Z.ai: GLM 5V Turbo",
@@ -1245,9 +1245,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 3.6,
-      "cost_per_quality": 0.333
+      "open_weight": false
     },
     {
       "name": "MiniMax: MiniMax M2.7",
@@ -1282,8 +1280,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 62.8,
-      "cost_per_quality": 0.011
+      "coding_quality_score": 55.0,
+      "cost_per_quality": 0.013
     },
     {
       "name": "OpenAI: GPT-5.4 Nano",
@@ -1383,9 +1381,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 3.6,
-      "cost_per_quality": 0.125
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3.5-9B",
@@ -1452,8 +1448,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 4.1,
-      "cost_per_quality": 3.659
+      "coding_quality_score": 4.5,
+      "cost_per_quality": 3.333
     },
     {
       "name": "OpenAI: GPT-5.3 Chat",
@@ -1553,8 +1549,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 54.4,
-      "cost_per_quality": 0.018
+      "coding_quality_score": 59.8,
+      "cost_per_quality": 0.017
     },
     {
       "name": "Qwen: Qwen3.5-27B",
@@ -1588,8 +1584,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 58.3,
-      "cost_per_quality": 0.027
+      "coding_quality_score": 64.2,
+      "cost_per_quality": 0.024
     },
     {
       "name": "Qwen: Qwen3.5-122B-A10B",
@@ -1623,8 +1619,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 57.8,
-      "cost_per_quality": 0.036
+      "coding_quality_score": 63.6,
+      "cost_per_quality": 0.033
     },
     {
       "name": "Qwen: Qwen3.5-Flash",
@@ -1691,8 +1687,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 73.8,
-      "cost_per_quality": 0.19
+      "coding_quality_score": 81.2,
+      "cost_per_quality": 0.172
     },
     {
       "name": "Google: Gemini 3.1 Pro Preview",
@@ -1727,8 +1723,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 75.3,
-      "cost_per_quality": 0.159
+      "coding_quality_score": 77.2,
+      "cost_per_quality": 0.155
     },
     {
       "name": "Qwen: Qwen3.5 Plus 2026-02-15",
@@ -1829,8 +1825,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 74.5,
-      "cost_per_quality": 0.006
+      "coding_quality_score": 73.1,
+      "cost_per_quality": 0.007
     },
     {
       "name": "Z.ai: GLM 5",
@@ -1865,8 +1861,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 77.7,
-      "cost_per_quality": 0.025
+      "coding_quality_score": 71.2,
+      "cost_per_quality": 0.027
     },
     {
       "name": "Qwen: Qwen3 Max Thinking",
@@ -1933,8 +1929,8 @@
       "reasoning_level": "adaptive",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 62.3,
-      "cost_per_quality": 0.401
+      "coding_quality_score": 68.5,
+      "cost_per_quality": 0.365
     },
     {
       "name": "Qwen: Qwen3 Coder Next",
@@ -2002,8 +1998,8 @@
       "reasoning_level": "thinking",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 76.0,
-      "cost_per_quality": 0.027
+      "coding_quality_score": 68.7,
+      "cost_per_quality": 0.029
     },
     {
       "name": "MiniMax: MiniMax M2-her",
@@ -2103,8 +2099,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 58.8,
-      "cost_per_quality": 0.238
+      "coding_quality_score": 64.7,
+      "cost_per_quality": 0.216
     },
     {
       "name": "MiniMax: MiniMax M2.1",
@@ -2172,7 +2168,7 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 70.3,
+      "coding_quality_score": 69.8,
       "cost_per_quality": 0.025
     },
     {
@@ -2207,8 +2203,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 62.5,
-      "cost_per_quality": 0.048
+      "coding_quality_score": 68.8,
+      "cost_per_quality": 0.044
     },
     {
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B",
@@ -2308,8 +2304,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 58.8,
-      "cost_per_quality": 0.238
+      "coding_quality_score": 64.7,
+      "cost_per_quality": 0.216
     },
     {
       "name": "Z.ai: GLM 4.6V",
@@ -2344,8 +2340,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 37.8,
-      "cost_per_quality": 0.024
+      "coding_quality_score": 41.6,
+      "cost_per_quality": 0.022
     },
     {
       "name": "OpenAI: GPT-5.1-Codex-Max",
@@ -2379,8 +2375,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 50.5,
-      "cost_per_quality": 0.198
+      "coding_quality_score": 55.5,
+      "cost_per_quality": 0.18
     },
     {
       "name": "Mistral: Mistral Large 3 2512",
@@ -2414,8 +2410,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 35.4,
-      "cost_per_quality": 0.042
+      "coding_quality_score": 39.0,
+      "cost_per_quality": 0.038
     },
     {
       "name": "DeepSeek: DeepSeek V3.2",
@@ -2450,8 +2446,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 36.5,
-      "cost_per_quality": 0.009
+      "coding_quality_score": 23.0,
+      "cost_per_quality": 0.015
     },
     {
       "name": "Anthropic: Claude Opus 4.5",
@@ -2485,8 +2481,8 @@
       "reasoning_level": "adaptive",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 63.8,
-      "cost_per_quality": 0.392
+      "coding_quality_score": 70.1,
+      "cost_per_quality": 0.357
     },
     {
       "name": "OpenAI: GPT-5.1",
@@ -2520,8 +2516,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 50.5,
-      "cost_per_quality": 0.198
+      "coding_quality_score": 55.5,
+      "cost_per_quality": 0.18
     },
     {
       "name": "OpenAI: GPT-5.1 Chat",
@@ -2588,8 +2584,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 50.5,
-      "cost_per_quality": 0.198
+      "coding_quality_score": 55.5,
+      "cost_per_quality": 0.18
     },
     {
       "name": "OpenAI: GPT-5.1-Codex-Mini",
@@ -2657,8 +2653,8 @@
       "reasoning_level": "thinking",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 63.3,
-      "cost_per_quality": 0.039
+      "coding_quality_score": 57.5,
+      "cost_per_quality": 0.043
     },
     {
       "name": "MiniMax: MiniMax M2",
@@ -2693,8 +2689,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 59.4,
-      "cost_per_quality": 0.017
+      "coding_quality_score": 53.9,
+      "cost_per_quality": 0.019
     },
     {
       "name": "OpenAI: o3 Deep Research",
@@ -2728,8 +2724,8 @@
       "reasoning_level": "high",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 41.1,
-      "cost_per_quality": 0.973
+      "coding_quality_score": 45.2,
+      "cost_per_quality": 0.885
     },
     {
       "name": "OpenAI: o4 Mini Deep Research",
@@ -2763,8 +2759,8 @@
       "reasoning_level": "high",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 24.6,
-      "cost_per_quality": 0.325
+      "coding_quality_score": 27.1,
+      "cost_per_quality": 0.295
     },
     {
       "name": "NVIDIA: Llama 3.3 Nemotron Super 49B V1.5",
@@ -2832,8 +2828,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 49.5,
-      "cost_per_quality": 0.035
+      "coding_quality_score": 45.3,
+      "cost_per_quality": 0.038
     },
     {
       "name": "Anthropic: Claude Sonnet 4.5",
@@ -2867,8 +2863,8 @@
       "reasoning_level": "adaptive",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 47.3,
-      "cost_per_quality": 0.317
+      "coding_quality_score": 52.0,
+      "cost_per_quality": 0.288
     },
     {
       "name": "DeepSeek: DeepSeek V3.2 Exp",
@@ -2902,9 +2898,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 51.4,
-      "cost_per_quality": 0.008
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 Max",
@@ -3103,9 +3097,7 @@
       },
       "reasoning_level": "thinking",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 37.3,
-      "cost_per_quality": 0.021
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
@@ -3139,9 +3131,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 30.9,
-      "cost_per_quality": 0.036
+      "open_weight": false
     },
     {
       "name": "MoonshotAI: Kimi K2 0905",
@@ -3175,8 +3165,8 @@
       "reasoning_level": "thinking",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 56.9,
-      "cost_per_quality": 0.044
+      "coding_quality_score": 62.5,
+      "cost_per_quality": 0.04
     },
     {
       "name": "Qwen: Qwen3 30B A3B Thinking 2507",
@@ -3210,9 +3200,7 @@
       },
       "reasoning_level": "thinking",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 15.6,
-      "cost_per_quality": 0.1
+      "open_weight": false
     },
     {
       "name": "DeepSeek: DeepSeek V3.1",
@@ -3345,8 +3333,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 62.3,
-      "cost_per_quality": 0.161
+      "coding_quality_score": 68.5,
+      "cost_per_quality": 0.146
     },
     {
       "name": "OpenAI: GPT-5 Mini",
@@ -3380,8 +3368,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 42.8,
-      "cost_per_quality": 0.047
+      "coding_quality_score": 47.1,
+      "cost_per_quality": 0.042
     },
     {
       "name": "OpenAI: GPT-5 Nano",
@@ -3415,8 +3403,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 12.1,
-      "cost_per_quality": 0.033
+      "coding_quality_score": 13.3,
+      "cost_per_quality": 0.03
     },
     {
       "name": "Mistral: Codestral 2508",
@@ -3484,7 +3472,7 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 57.0,
+      "coding_quality_score": 52.6,
       "cost_per_quality": 0.005
     },
     {
@@ -3519,9 +3507,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 49.8,
-      "cost_per_quality": 0.004
+      "open_weight": false
     },
     {
       "name": "Z.ai: GLM 4.5",
@@ -3556,8 +3542,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 50.7,
-      "cost_per_quality": 0.043
+      "coding_quality_score": 44.5,
+      "cost_per_quality": 0.049
     },
     {
       "name": "Z.ai: GLM 4.5 Air",
@@ -3591,9 +3577,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 39.1,
-      "cost_per_quality": 0.022
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 235B A22B Thinking 2507",
@@ -3627,9 +3611,7 @@
       },
       "reasoning_level": "thinking",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 40.7,
-      "cost_per_quality": 0.037
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 Coder 480B A35B",
@@ -3663,8 +3645,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 37.4,
-      "cost_per_quality": 0.048
+      "coding_quality_score": 41.2,
+      "cost_per_quality": 0.044
     },
     {
       "name": "Qwen: Qwen3 235B A22B Instruct 2507",
@@ -3698,9 +3680,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 32.0,
-      "cost_per_quality": 0.003
+      "open_weight": false
     },
     {
       "name": "MoonshotAI: Kimi K2 0711",
@@ -3735,8 +3715,8 @@
       "reasoning_level": "thinking",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 53.2,
-      "cost_per_quality": 0.043
+      "coding_quality_score": 56.2,
+      "cost_per_quality": 0.041
     },
     {
       "name": "MiniMax: MiniMax M1",
@@ -3803,9 +3783,7 @@
       },
       "reasoning_level": "high",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 72.9,
-      "cost_per_quality": 0.029
+      "open_weight": false
     },
     {
       "name": "Anthropic: Claude Sonnet 4",
@@ -3840,8 +3818,8 @@
       "reasoning_level": "adaptive",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 53.3,
-      "cost_per_quality": 0.281
+      "coding_quality_score": 61.7,
+      "cost_per_quality": 0.243
     },
     {
       "name": "Arcee AI: Coder Large",
@@ -3908,9 +3886,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 49.8,
-      "cost_per_quality": 0.01
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 8B",
@@ -3944,9 +3920,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 35.6,
-      "cost_per_quality": 0.013
+      "open_weight": false
     },
     {
       "name": "Qwen: Qwen3 14B",
@@ -3981,8 +3955,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 39.8,
-      "cost_per_quality": 0.006
+      "coding_quality_score": 32.1,
+      "cost_per_quality": 0.007
     },
     {
       "name": "Qwen: Qwen3 32B",
@@ -4017,7 +3991,7 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 38.7,
+      "coding_quality_score": 40.1,
       "cost_per_quality": 0.007
     },
     {
@@ -4052,9 +4026,7 @@
       },
       "reasoning_level": "standard",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 62.2,
-      "cost_per_quality": 0.029
+      "open_weight": false
     },
     {
       "name": "OpenAI: o4 Mini High",
@@ -4121,8 +4093,8 @@
       "reasoning_level": "high",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 41.1,
-      "cost_per_quality": 0.195
+      "coding_quality_score": 45.2,
+      "cost_per_quality": 0.177
     },
     {
       "name": "OpenAI: o4 Mini",
@@ -4156,8 +4128,8 @@
       "reasoning_level": "high",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 48.7,
-      "cost_per_quality": 0.09
+      "coding_quality_score": 53.6,
+      "cost_per_quality": 0.082
     },
     {
       "name": "OpenAI: GPT-4.1",
@@ -4191,8 +4163,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 7.5,
-      "cost_per_quality": 1.067
+      "coding_quality_score": 8.3,
+      "cost_per_quality": 0.964
     },
     {
       "name": "OpenAI: GPT-4.1 Mini",
@@ -4294,8 +4266,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 37.4,
-      "cost_per_quality": 0.024
+      "coding_quality_score": 28.4,
+      "cost_per_quality": 0.032
     },
     {
       "name": "Cohere: Command A",
@@ -4396,8 +4368,8 @@
       "reasoning_level": "standard",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 17.0,
-      "cost_per_quality": 0.588
+      "coding_quality_score": 18.7,
+      "cost_per_quality": 0.535
     },
     {
       "name": "OpenAI: o3 Mini High",
@@ -4497,8 +4469,8 @@
       "reasoning_level": "high",
       "license": "Proprietary",
       "open_weight": false,
-      "coding_quality_score": 21.4,
-      "cost_per_quality": 0.206
+      "coding_quality_score": 23.6,
+      "cost_per_quality": 0.186
     },
     {
       "name": "DeepSeek: R1",
@@ -4532,9 +4504,7 @@
       },
       "reasoning_level": "high",
       "license": "Proprietary",
-      "open_weight": false,
-      "coding_quality_score": 62.2,
-      "cost_per_quality": 0.04
+      "open_weight": false
     },
     {
       "name": "MiniMax: MiniMax-01",
@@ -4600,9 +4570,7 @@
       "sources": {
         "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-5",
         "benchmark": null
-      },
-      "coding_quality_score": 44.8,
-      "cost_per_quality": 0.223
+      }
     },
     {
       "name": "Poolside: Laguna XS 2.1",
@@ -4668,7 +4636,7 @@
         "pricing": null,
         "benchmark": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
       },
-      "coding_quality_score": 34.6
+      "coding_quality_score": 32.7
     },
     {
       "name": "MiniMax-M3-REAP32-Coder",
