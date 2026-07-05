@@ -34,7 +34,7 @@
         </section>
 
         <section id="sources-badge" class="sources-badge">
-          <p>Data sourced from: <strong>Arena AI</strong> (human preference) · <strong>Artificial Analysis</strong> (benchmark composite) · <strong>Aider Polyglot</strong> (multi-language coding) · <strong>SWE-bench</strong> (agentic coding) · <strong>LiveCodeBench</strong> (competitive programming) · <strong>LiveBench</strong> (contamination-free global average)</p>
+          <p>Data sourced from: <strong>SWE-bench</strong> (agentic coding) · <strong>BenchLM.ai</strong> (SWE-bench Verified) · <strong>Aider Polyglot</strong> (multi-language coding) · <strong>Artificial Analysis</strong> (benchmark composite) · <strong>Terminal-Bench</strong> (agentic CLI) · <strong>SciCode</strong> (scientific coding) · <strong>LiveBench</strong> (contamination-free)</p>
         </section>
 
     <section id="filters" class="filters">
@@ -72,6 +72,7 @@
               <option value="aider_polyglot">Aider Polyglot (DESC)</option>
               <option value="livecodebench">LiveCodeBench (DESC)</option>
               <option value="terminal_bench">Terminal-Bench (DESC)</option>
+              <option value="scicode">SciCode (DESC)</option>
               <option value="aa_coding_index">AA Coding Index (DESC)</option>
               <option value="livebench">LiveBench (DESC)</option>
               <option value="reasoning">Reasoning (Standard first)</option>
@@ -102,7 +103,7 @@
 
     <section id="chart-section">
       <h2>Price vs Coding Quality</h2>
-      <p class="chart-subtitle">Y-axis = <strong>Coding Quality Score</strong> (blend of SWE-bench Pro, Aider Polyglot, LiveCodeBench &amp; LiveBench; requires ≥2 sources). Bubble size = context window. Top-left = best value.</p>
+      <p class="chart-subtitle">Y-axis = <strong>Coding Quality Score</strong> (blend of SWE-bench Verified, SWE-bench Pro, Aider Polyglot, LiveBench, Terminal-Bench &amp; SciCode). Bubble size = context window. Top-left = best value.</p>
       <div class="chart-container">
         <canvas id="scatter-chart"></canvas>
       </div>
@@ -126,6 +127,7 @@
               <th data-sort="livebench">LiveBench</th>
               <th data-sort="swe_bench_verified">SWE-Ver</th>
               <th data-sort="terminal_bench">Term-Bench</th>
+              <th data-sort="scicode">SciCode</th>
               <th data-sort="cost_per_quality">$/Qual</th>
               <th data-sort="cost_per_pro_point">$/Pro Pt</th>
               <th data-sort="reasoning">Reasoning</th>
@@ -146,7 +148,7 @@
         <summary>Click to expand methodology</summary>
         <p>This leaderboard follows the research consensus on which LLM leaderboards are most trustworthy. We blend <strong>multiple high-signal sources</strong> rather than relying on any single benchmark.</p>
 
-        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 35% SWE-bench Pro, 30% Aider Polyglot, 20% LiveCodeBench, 15% LiveBench. Models missing any component get a proportional score from available data. This rewards models that perform well across diverse coding benchmarks rather than gaming one.</p>
+        <p><strong>Coding Quality Score</strong> (0–100) is a weighted composite: 35% SWE-bench Verified, 20% SWE-bench Pro, 15% Aider Polyglot, 15% LiveBench, 10% Terminal-Bench 2.1, 5% SciCode. Each benchmark is normalized to 0–100 using calibration anchors so that harder benchmarks (SWE-Pro 40–70%) don't get drowned out by easier ones (LiveCodeBench 85–95%). Models with any single benchmark get a score; more benchmarks = higher confidence.</p>
 
         <p><strong>$/Quality Point</strong> = Output price per million tokens ÷ Coding Quality Score (normalized to 0–100). Lower = better value. This is the most holistic value metric on the page.</p>
 
@@ -163,6 +165,8 @@
         <p><strong>LiveBench</strong> is a contamination-frozen benchmark with a global average across math, reasoning, language, and coding tasks. Uses 2026 snapshots from <a href="https://livebench.ai" target="_blank" rel="noopener">livebench.ai</a>. (<a href="https://github.com/Andyyyy64/whichllm" target="_blank" rel="noopener">source via whichllm</a>)</p>
 
         <p><strong>Terminal-Bench 2.1</strong> measures agentic CLI performance — directly relevant for terminal-based tools.</p>
+
+        <p><strong>SciCode</strong> tests coding across 16 scientific disciplines (288 subproblems from 80 lab problems) — a unique signal for science-specific coding ability. (<a href="https://artificialanalysis.ai/evaluations/scicode" target="_blank" rel="noopener">source</a>)</p>
 
         <p><strong>$/Pro Point</strong> = Output price per million tokens ÷ SWE-bench Pro score. Lower = better value.</p>
 

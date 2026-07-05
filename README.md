@@ -41,23 +41,25 @@ This leaderboard follows the **research consensus** on which LLM leaderboards ar
 
 ### Coding Quality Score (Composite)
 
-The **Coding Quality Score** blends three coding-specific benchmarks into a single 0–100 score:
+The **Coding Quality Score** blends six coding-specific benchmarks into a single 0–100 score:
 
-| Weight | Benchmark | What It Measures |
-|--------|-----------|-----------------|
-| **40%** | **SWE-bench Pro** | Real GitHub issues, multi-file fixes, no hinting |
-| **35%** | **Aider Polyglot** | 225 Exercism exercises across Python, Go, Rust, JS, C++, Java |
-| **25%** | **LiveCodeBench** | Competitive programming, contamination-resistant |
+| Weight | Benchmark | Coverage | What It Measures |
+|--------|-----------|----------|-----------------|
+| **35%** | **SWE-bench Verified** | 51% | Human-validated GitHub issue resolution |
+| **20%** | **SWE-bench Pro** | 8% | Harder GitHub issues, multi-file fixes, no hinting |
+| **15%** | **Aider Polyglot** | 8% | 225 Exercism exercises across Python, Go, Rust, JS, C++, Java |
+| **15%** | **LiveBench** | 27% | Contamination-free global average across math, reasoning, coding |
+| **10%** | **Terminal-Bench 2.1** | 9% | Agentic CLI performance |
+| **5%** | **SciCode** | 5% | Scientific coding across 16 disciplines |
 
-Models missing any component get a proportional score from available data.
+Each benchmark is normalized to 0–100 using calibration anchors. Models with any single benchmark get a score; more benchmarks = higher confidence.
 
 ### Other Metrics
 
 | Metric | What It Measures |
 |--------|-----------------|
 | **AA Coding Index** | Artificial Analysis composite (MMLU-Pro, GPQA Diamond, MATH-500, HumanEval) |
-| **SWE-bench Verified** | Human-validated subset, ~500 issues |
-| **Terminal-Bench 2.1** | Agentic CLI performance |
+| **LiveCodeBench** | Competitive programming, contamination-resistant |
 | **$/Quality Point** | Output price ÷ Coding Quality Score. Lower = better value |
 | **$/Pro Point** | Output price ÷ SWE-bench Pro score. Lower = better value |
 | **Context** | Max input tokens |

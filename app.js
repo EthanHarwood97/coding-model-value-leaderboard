@@ -23,18 +23,22 @@
 
   /* Coding Quality Score: normalized weighted composite */
   const QUALITY_WEIGHTS = {
-    swe_bench_pro: 0.35,
-    aider_polyglot: 0.30,
-    livecodebench: 0.20,
-    livebench: 0.15
+    swe_bench_verified: 0.35,
+    swe_bench_pro: 0.20,
+    aider_polyglot: 0.15,
+    livebench: 0.15,
+    terminal_bench_2_1: 0.10,
+    scicode: 0.05
   };
   // Per-benchmark normalization ranges (lo → 0, hi → 100)
-  // Prevents easier benchmarks (LCB 85-95) from dominating harder ones (SWE-Pro 40-70)
+  // Based on actual p10–p90 distributions from the dataset
   const NORM_RANGES = {
-    swe_bench_pro: [20, 75],
-    aider_polyglot: [30, 90],
-    livecodebench: [20, 95],
-    livebench: [15, 75]
+    swe_bench_verified: [25, 90],
+    swe_bench_pro: [35, 70],
+    aider_polyglot: [50, 85],
+    livebench: [30, 75],
+    terminal_bench_2_1: [45, 85],
+    scicode: [40, 65]
   };
 
   function normalizeScore(val, lo, hi) {
@@ -57,8 +61,7 @@
         presentCount++;
       }
     }
-    if (totalWeight < 0.14 || presentCount < 2) return null;
-    if (b.swe_bench_pro == null && b.aider_polyglot == null) return null;
+    if (totalWeight < 0.14 || presentCount < 1) return null;
     return +(score / totalWeight).toFixed(1);
   }
 
@@ -170,7 +173,8 @@
         const b = m.benchmarks || {};
         const hasAny = b.swe_bench_pro != null || b.aider_polyglot != null
           || b.livecodebench != null || b.livebench != null
-          || b.swe_bench_verified != null || b.terminal_bench_2_1 != null;
+          || b.swe_bench_verified != null || b.terminal_bench_2_1 != null
+          || b.scicode != null;
         if (!hasAny) return false;
       }
 
@@ -214,6 +218,7 @@
     if (key === 'livebench') return m.benchmarks?.livebench;
     if (key === 'livecodebench') return m.benchmarks?.livecodebench;
     if (key === 'terminal_bench') return m.benchmarks?.terminal_bench_2_1;
+    if (key === 'scicode') return m.benchmarks?.scicode;
     if (key === 'context_window') return m.context_window;
     if (key === 'speed') return m.speed_tok_s;
     if (key === 'reasoning') return reasoningSortValue(m.reasoning_level);
@@ -254,6 +259,7 @@
         <td>${b.livebench != null ? b.livebench.toFixed(1) + '%' : '<span class="null-val">—</span>'}</td>
         <td>${pct(b.swe_bench_verified)}</td>
         <td>${pct(b.terminal_bench_2_1)}</td>
+        <td>${pct(b.scicode)}</td>
         <td class="cost-per-point">${m.cost_per_quality != null ? '$' + m.cost_per_quality.toFixed(2) : '<span class="null-val">—</span>'}</td>
         <td class="cost-per-point">${m.cost_per_pro_point != null ? '$' + m.cost_per_pro_point.toFixed(2) : '<span class="null-val">—</span>'}</td>
         <td class="reasoning-cell">${renderReasoning(m.reasoning_level)}</td>
@@ -429,7 +435,7 @@
       const sortable = ['output_price', 'context_window', 'speed', 'reasoning',
         'coding_quality', 'aider_polyglot', 'livecodebench', 'aa_coding_index',
         'livebench', 'cost_per_quality', 'cost_per_pro_point', 'swe_bench_pro',
-        'swe_bench_verified', 'terminal_bench', 'released'];
+        'swe_bench_verified', 'terminal_bench', 'scicode', 'released'];
       const sortKey = sortable.includes(key) ? key : key;
       if (STATE.sortBy === sortKey) {
         th.classList.add(STATE.sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');
