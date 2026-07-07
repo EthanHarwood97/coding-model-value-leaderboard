@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06",
+  "last_updated": "2026-07-07",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -115,9 +115,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.9086,
-        "output_per_1m": 2.8556,
-        "cache_hit_per_1m": 0.16874,
+        "input_per_1m": 0.9,
+        "output_per_1m": 2.86,
+        "cache_hit_per_1m": 0.17,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -470,7 +470,7 @@
       "pricing": {
         "input_per_1m": 0.105,
         "output_per_1m": 0.28,
-        "cache_hit_per_1m": null,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -1766,7 +1766,7 @@
       "pricing": {
         "input_per_1m": 0.385,
         "output_per_1m": 2.45,
-        "cache_hit_per_1m": null,
+        "cache_hit_per_1m": 0.111,
         "currency": "USD"
       },
       "context_window": 256000,
@@ -1972,7 +1972,7 @@
       "pricing": {
         "input_per_1m": 0.375,
         "output_per_1m": 2.025,
-        "cache_hit_per_1m": null,
+        "cache_hit_per_1m": 0.203,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -4554,7 +4554,7 @@
       "context_window": 1000000,
       "max_output": 128000,
       "benchmarks": {
-        "swe_bench_verified": null,
+        "swe_bench_verified": 85.2,
         "swe_bench_pro": null,
         "terminal_bench_2_1": null,
         "livecodebench": null,
@@ -4568,7 +4568,9 @@
       "sources": {
         "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-5",
         "benchmark": null
-      }
+      },
+      "coding_quality_score": 82.2,
+      "cost_per_quality": 0.122
     },
     {
       "name": "Poolside: Laguna XS 2.1",
@@ -4667,6 +4669,40 @@
         "pricing": null,
         "benchmark": "https://huggingface.co/JANGQ-AI/MiniMax-M3-REAP32-Coder"
       }
+    },
+    {
+      "name": "Tencent: Hy3",
+      "provider": "Tencent",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "tencent/hy3",
+      "huggingface_id": "tencent/Hy3",
+      "released": "2026-07-06",
+      "pricing": {
+        "input_per_1m": 0.2,
+        "output_per_1m": 0.8,
+        "cache_hit_per_1m": 0.5,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": 4.0,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/tencent/hy3",
+        "benchmark": "https://huggingface.co/tencent/Hy3"
+      },
+      "coding_quality_score": 0.0
     }
   ]
 }
