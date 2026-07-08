@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07",
+  "last_updated": "2026-07-08",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -115,9 +115,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.9,
-        "output_per_1m": 2.86,
-        "cache_hit_per_1m": 0.17,
+        "input_per_1m": 0.93,
+        "output_per_1m": 3.0,
+        "cache_hit_per_1m": 0.18,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -138,10 +138,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.046,
+      "cost_per_pro_point": 0.048,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.053
+      "cost_per_quality": 0.056
     },
     {
       "name": "Kimi K2.7 Code",
