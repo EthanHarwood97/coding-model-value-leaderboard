@@ -168,6 +168,8 @@ h2 {
 .spotlight {
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .spotlight-card {
@@ -177,7 +179,7 @@ h2 {
   padding: 1.5rem 2rem;
   text-align: center;
   box-shadow: 0 4px 20px var(--shadow);
-  max-width: 600px;
+  max-width: 480px;
   width: 100%;
 }
 
@@ -384,6 +386,29 @@ tbody tr:last-child td {
 .reasoning-thinking { background: rgba(163, 113, 247, 0.15); color: #a371f7; }
 .reasoning-adaptive { background: rgba(88, 166, 255, 0.15); color: var(--accent); }
 .reasoning-max { background: rgba(248, 81, 73, 0.15); color: var(--danger); }
+
+.frontend-tier-cell {
+  text-align: center;
+}
+
+.frontend-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.fe-tier-s { background: rgba(255, 215, 0, 0.2); color: var(--gold); }
+.fe-tier-a { background: rgba(63, 185, 80, 0.15); color: var(--success); }
+.fe-tier-b { background: rgba(88, 166, 255, 0.15); color: var(--accent); }
+.fe-tier-c { background: var(--bg-tertiary); color: var(--text-tertiary); }
+
+.frontend-spotlight .spotlight-label {
+  color: var(--accent);
+}
 
 .best-for {
   color: var(--text-secondary);

@@ -17,7 +17,8 @@
       minContext: 0,
       license: 'all',
       hideUnrated: false,
-      reasoning: 'all'
+      reasoning: 'all',
+      frontend: 'all'
     }
   };
 
@@ -124,6 +125,12 @@
     return `<span class="reasoning-badge ${cls}">${labels[rl] || rl}</span>`;
   }
 
+  function renderFrontendTier(tier) {
+    if (!tier) return '<span class="null-val">—</span>';
+    const cls = 'fe-tier-' + tier.toLowerCase();
+    return `<span class="frontend-badge ${cls}">${tier}</span>`;
+  }
+
   /* Add computed fields to each model */
   function enrichModels(models) {
     models.forEach(m => {
@@ -157,6 +164,7 @@
   }
 
   function updateSpotlight() {
+    // Value winner
     const candidates = STATE.models.filter(m => m.cost_per_quality != null);
     if (candidates.length === 0) return;
     const winner = candidates.reduce((a, b) =>
@@ -168,6 +176,28 @@
     if (winner.pricing) stats.push(`$${winner.pricing.output_per_1m}/1M out · $${winner.cost_per_quality}/Qual`);
     if (winner.context_window) stats.push(`${formatContext(winner.context_window)} context`);
     document.getElementById('spotlight-stats').textContent = stats.join(' · ');
+
+    // Frontend pick — best value among S/A tier models
+    const feCandidates = STATE.models.filter(m =>
+      m.frontend_tier && ['S', 'A'].includes(m.frontend_tier) && m.pricing
+    );
+    if (feCandidates.length > 0) {
+      const feWinner = feCandidates.reduce((a, b) => {
+        const aTier = frontendTierSortValue(a.frontend_tier);
+        const bTier = frontendTierSortValue(b.frontend_tier);
+        if (aTier !== bTier) return bTier - aTier > 0 ? b : a;
+        return (a.pricing?.output_per_1m ?? Infinity) < (b.pricing?.output_per_1m ?? Infinity) ? a : b;
+      });
+      document.getElementById('frontend-spotlight-model').textContent = feWinner.name;
+      const feStats = [];
+      feStats.push(`Tier ${feWinner.frontend_tier}`);
+      if (feWinner.design2code_score != null) feStats.push(`D2C: ${feWinner.design2code_score.toFixed(3)}`);
+      if (feWinner.pricing) feStats.push(`$${feWinner.pricing.output_per_1m}/1M out`);
+      document.getElementById('frontend-spotlight-stats').textContent = feStats.join(' · ');
+    } else {
+      document.getElementById('frontend-spotlight-model').textContent = 'No data';
+      document.getElementById('frontend-spotlight-stats').textContent = '';
+    }
   }
 
   function getFilteredModels() {
@@ -197,6 +227,16 @@
       // Reasoning level filter
       if (STATE.filters.reasoning !== 'all' && m.reasoning_level !== STATE.filters.reasoning) return false;
 
+      // Frontend tier filter
+      if (STATE.filters.frontend !== 'all') {
+        const tier = m.frontend_tier;
+        if (!tier) return false;
+        if (STATE.filters.frontend === 'S' && tier !== 'S') return false;
+        if (STATE.filters.frontend === 'A+' && frontendTierSortValue(tier) < 3) return false;
+        if (STATE.filters.frontend === 'B+' && frontendTierSortValue(tier) < 2) return false;
+        if (STATE.filters.frontend === 'C+' && frontendTierSortValue(tier) < 1) return false;
+      }
+
       return true;
     });
   }
@@ -222,6 +262,11 @@
     return order[rl] || 0;
   }
 
+  function frontendTierSortValue(tier) {
+    const order = { S: 4, A: 3, B: 2, C: 1 };
+    return order[tier] || 0;
+  }
+
   function getSortValue(m, key) {
     if (key === 'output_price') return m.pricing?.output_per_1m;
     if (key === 'cost_per_pro_point') return m.cost_per_pro_point;
@@ -238,6 +283,8 @@
     if (key === 'context_window') return m.context_window;
     if (key === 'speed') return m.speed_tok_s;
     if (key === 'reasoning') return reasoningSortValue(m.reasoning_level);
+    if (key === 'frontend_tier') return frontendTierSortValue(m.frontend_tier);
+    if (key === 'design2code') return m.design2code_score;
     if (key === 'released') return m.released;
     return m[key];
   }
@@ -248,7 +295,7 @@
     document.getElementById('visible-count').textContent = filtered.length;
 
     if (filtered.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="17" style="text-align:center;padding:2rem;color:var(--text-secondary)">No models match your filters.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="19" style="text-align:center;padding:2rem;color:var(--text-secondary)">No models match your filters.</td></tr>`;
       return;
     }
 
@@ -284,6 +331,8 @@
         <td class="${m.open_weight ? 'license-open' : 'license-proprietary'}">
           ${m.open_weight ? '✓ Open' : 'Proprietary'}
         </td>
+        <td class="frontend-tier-cell">${renderFrontendTier(m.frontend_tier)}</td>
+        <td>${m.design2code_score != null ? m.design2code_score.toFixed(3) : '<span class="null-val">—</span>'}</td>
         <td class="best-for">${escapeHtml(m.best_for || '—')}</td>
       </tr>
     `;
@@ -391,6 +440,11 @@
       render();
     });
 
+    document.getElementById('filter-frontend').addEventListener('change', (e) => {
+      STATE.filters.frontend = e.target.value;
+      render();
+    });
+
     document.getElementById('hide-unrated').addEventListener('change', (e) => {
       STATE.filters.hideUnrated = e.target.checked;
       render();
@@ -451,7 +505,8 @@
       const sortable = ['output_price', 'context_window', 'speed', 'reasoning',
         'coding_quality', 'aider_polyglot', 'livecodebench', 'aa_coding_index',
         'livebench', 'cost_per_quality', 'cost_per_pro_point', 'swe_bench_pro',
-        'swe_bench_verified', 'terminal_bench', 'scicode', 'released'];
+        'swe_bench_verified', 'terminal_bench', 'scicode', 'released',
+        'frontend_tier', 'design2code'];
       const sortKey = sortable.includes(key) ? key : key;
       if (STATE.sortBy === sortKey) {
         th.classList.add(STATE.sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');

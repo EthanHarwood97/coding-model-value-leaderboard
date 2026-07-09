@@ -31,10 +31,15 @@
             <div class="spotlight-model" id="spotlight-model">Loading...</div>
             <div class="spotlight-stats" id="spotlight-stats"></div>
           </div>
+          <div class="spotlight-card frontend-spotlight">
+            <div class="spotlight-label">🎨 Frontend Pick</div>
+            <div class="spotlight-model" id="frontend-spotlight-model">Loading...</div>
+            <div class="spotlight-stats" id="frontend-spotlight-stats"></div>
+          </div>
         </section>
 
         <section id="sources-badge" class="sources-badge">
-          <p>Data sourced from: <strong>SWE-bench</strong> (agentic coding) · <strong>BenchLM.ai</strong> (SWE-bench Verified) · <strong>Aider Polyglot</strong> (multi-language coding) · <strong>Artificial Analysis</strong> (benchmark composite) · <strong>Terminal-Bench</strong> (agentic CLI) · <strong>SciCode</strong> (scientific coding) · <strong>LiveBench</strong> (contamination-free)</p>
+          <p>Data sourced from: <strong>SWE-bench</strong> (agentic coding) · <strong>BenchLM.ai</strong> (SWE-bench Verified) · <strong>Aider Polyglot</strong> (multi-language coding) · <strong>Artificial Analysis</strong> (benchmark composite) · <strong>Terminal-Bench</strong> (agentic CLI) · <strong>SciCode</strong> (scientific coding) · <strong>LiveBench</strong> (contamination-free) · <strong>Design2Code</strong> (UI/frontend fidelity)</p>
         </section>
 
     <section id="filters" class="filters">
@@ -76,6 +81,8 @@
               <option value="aa_coding_index">AA Coding Index (DESC)</option>
               <option value="livebench">LiveBench (DESC)</option>
               <option value="reasoning">Reasoning (Standard first)</option>
+              <option value="frontend_tier">Frontend Tier (S first)</option>
+              <option value="design2code">Design2Code (DESC)</option>
               <option value="context_window">Context window (DESC)</option>
               <option value="speed">Speed (DESC)</option>
               <option value="released">Recently released</option>
@@ -90,6 +97,16 @@
               <option value="thinking">Thinking</option>
               <option value="adaptive">Adaptive</option>
               <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-frontend">Frontend Tier:</label>
+            <select id="filter-frontend">
+              <option value="all">All</option>
+              <option value="S">S only</option>
+              <option value="A+">A or above</option>
+              <option value="B+">B or above</option>
+              <option value="C+">C or above</option>
             </select>
           </div>
           <div class="filter-group checkbox-group">
@@ -134,10 +151,12 @@
               <th data-sort="context_window" title="Maximum input tokens (context window size)">Context</th>
               <th data-sort="speed" title="Output tokens per second">Speed</th>
               <th data-sort="license" title="Open weight (MIT, Apache, etc.) or Proprietary">License</th>
+              <th data-sort="frontend_tier" title="Curated frontend/UI generation quality tier (S/A/B/C) based on practitioner benchmarks and Design2Code">FE Tier</th>
+              <th data-sort="design2code" title="Design2Code benchmark: visual fidelity of generated HTML/CSS to original designs (0–1 scale)">D2C</th>
               <th title="Best use case or strength of this model">Best For</th>
             </tr>
           </thead>
-          <tbody id="table-body"><tr><td colspan="17" style="text-align:center;padding:2rem;color:var(--text-secondary)">Loading...</td></tr></tbody>
+          <tbody id="table-body">        <tr><td colspan="19" style="text-align:center;padding:2rem;color:var(--text-secondary)">Loading...</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -167,6 +186,10 @@
         <p><strong>Terminal-Bench 2.1</strong> measures agentic CLI performance — directly relevant for terminal-based tools.</p>
 
         <p><strong>SciCode</strong> tests coding across 16 scientific disciplines (288 subproblems from 80 lab problems) — a unique signal for science-specific coding ability. (<a href="https://artificialanalysis.ai/evaluations/scicode" target="_blank" rel="noopener">source</a>)</p>
+
+        <p><strong>Frontend Tier (FE Tier)</strong> is a curated rating (S/A/B/C) of each model's ability to generate polished, production-quality frontend/UI code. Based on practitioner benchmarks (GenDesigns, BuildFastWithAI, Builder.io) and the Design2Code academic benchmark. S = exceptional, A = strong, B = capable, C = weak. Models with no data show "—".</p>
+
+        <p><strong>Design2Code (D2C)</strong> is an academic benchmark (NAACL 2025) that evaluates how well a model generates HTML/CSS that visually matches a reference webpage. Scored 0–1 (higher = better fidelity). Currently limited to a handful of models. (<a href="https://llm-stats.com/benchmarks/design2code" target="_blank" rel="noopener">source</a>)</p>
 
         <p><strong>$/Pro Point</strong> = Output price per million tokens ÷ SWE-bench Pro score. Lower = better value.</p>
 
