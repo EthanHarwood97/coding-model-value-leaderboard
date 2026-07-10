@@ -112,7 +112,8 @@
       "coding_quality_score": 82.4,
       "cost_per_quality": 0.015,
       "frontend_tier": "B",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 78.1
     },
     {
       "name": "GLM-5.2",
@@ -260,7 +261,8 @@
       "coding_quality_score": 86.2,
       "cost_per_quality": 0.139,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 83.9
     },
     {
       "name": "Gemini 3.5 Flash",
@@ -298,7 +300,8 @@
       "coding_quality_score": 85.0,
       "cost_per_quality": 0.106,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 83.6
     },
     {
       "name": "GPT-5.4 Mini",
@@ -335,7 +338,8 @@
       "coding_quality_score": 71.2,
       "cost_per_quality": 0.063,
       "frontend_tier": null,
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 76.6
     },
     {
       "name": "GPT-5.5",
@@ -372,7 +376,8 @@
       "coding_quality_score": 100.0,
       "cost_per_quality": 0.3,
       "frontend_tier": "S",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 81.2
     },
     {
       "name": "Claude Opus 4.8",
@@ -627,7 +632,8 @@
       "coding_quality_score": 71.3,
       "cost_per_quality": 0.018,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.0
     },
     {
       "name": "inclusionAI: Ring-2.6-1T",
@@ -1131,7 +1137,8 @@
       "coding_quality_score": 41.8,
       "cost_per_quality": 0.096,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.4
     },
     {
       "name": "Anthropic: Claude Opus 4.7",
@@ -1244,7 +1251,8 @@
       "coding_quality_score": 72.8,
       "cost_per_quality": 0.027,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 78.8
     },
     {
       "name": "Z.ai: GLM 5V Turbo",
@@ -1388,7 +1396,8 @@
       "license": "Proprietary",
       "open_weight": false,
       "frontend_tier": null,
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 81.2
     },
     {
       "name": "Z.ai: GLM 5 Turbo",
@@ -1531,7 +1540,8 @@
       "coding_quality_score": 4.5,
       "cost_per_quality": 3.333,
       "frontend_tier": "S",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 81.2
     },
     {
       "name": "OpenAI: GPT-5.3 Chat",
@@ -1822,7 +1832,8 @@
       "coding_quality_score": 75.3,
       "cost_per_quality": 0.159,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 83.9
     },
     {
       "name": "Qwen: Qwen3.5 Plus 2026-02-15",
@@ -1892,7 +1903,8 @@
       "license": "Proprietary",
       "open_weight": false,
       "frontend_tier": null,
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.0
     },
     {
       "name": "MiniMax: MiniMax M2.5",
@@ -2040,7 +2052,8 @@
       "coding_quality_score": 68.5,
       "cost_per_quality": 0.365,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 77.3
     },
     {
       "name": "Qwen: Qwen3 Coder Next",
@@ -2113,7 +2126,8 @@
       "coding_quality_score": 70.6,
       "cost_per_quality": 0.032,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 78.5
     },
     {
       "name": "MiniMax: MiniMax M2-her",
@@ -2220,7 +2234,8 @@
       "coding_quality_score": 64.7,
       "cost_per_quality": 0.216,
       "frontend_tier": "A",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.5
     },
     {
       "name": "MiniMax: MiniMax M2.1",
@@ -2400,7 +2415,8 @@
       "license": "Proprietary",
       "open_weight": false,
       "frontend_tier": "B",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.5
     },
     {
       "name": "OpenAI: GPT-5.2",
@@ -2437,7 +2453,8 @@
       "coding_quality_score": 64.7,
       "cost_per_quality": 0.216,
       "frontend_tier": "B",
-      "design2code_score": null
+      "design2code_score": null,
+      "vision_score": 79.5
     },
     {
       "name": "Z.ai: GLM 4.6V",
