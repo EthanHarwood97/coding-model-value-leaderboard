@@ -117,6 +117,105 @@ def fetch_benchlm_swe_bench() -> dict[str, float]:
     return scores
 
 
+# ── Source 1b: BenchLM.ai — MMMU-Pro (vision/multimodal) ────────────────
+
+def fetch_benchlm_mmmu_pro() -> dict[str, float]:
+    """Scrape MMMU-Pro (vision) scores from BenchLM.ai.
+
+    Same embedded-JSON strategy as fetch_benchlm_swe_bench. MMMU-Pro is the
+    harder multimodal benchmark; scores are 0-100.
+
+    Returns dict of model_name -> score (0-100).
+    """
+    print("[INFO] Fetching BenchLM.ai MMMU-Pro scores ...")
+    html = _fetch_text("https://benchlm.ai/benchmarks/mmmuPro")
+    if not html:
+        print("[WARN] Failed to fetch BenchLM MMMU-Pro page")
+        return {}
+
+    scores = {}
+
+    # Strategy 1: embedded JSON ("model":"Name","score":94)
+    json_pattern = re.compile(
+        r'"model"\s*:\s*"([^"]+)".*?"score"\s*:\s*([\d.]+)',
+        re.DOTALL
+    )
+    for m in json_pattern.finditer(html):
+        name = m.group(1)
+        try:
+            score = float(m.group(2))
+            if 0 < score <= 100 and name not in scores:
+                scores[name] = score
+        except ValueError:
+            continue
+
+    # Strategy 2: escaped __next_f variant  \"model\":\"Name\",\"score\":94
+    if len(scores) < 10:
+        esc_pattern = re.compile(
+            r'\\"model\\"\s*:\s*\\"([^\\"]+)\\".*?\\"score\\"\s*:\s*([\d.]+)',
+            re.DOTALL
+        )
+        for m in esc_pattern.finditer(html):
+            name = m.group(1)
+            try:
+                score = float(m.group(2))
+                if 0 < score <= 100 and name not in scores:
+                    scores[name] = score
+            except ValueError:
+                continue
+
+    print(f"[INFO] Found {len(scores)} MMMU-Pro model scores on BenchLM.ai")
+    return scores
+
+
+def match_live_scores_top_level(
+    models: list[dict],
+    scores: dict[str, float],
+    key: str,
+    log_fn=None,
+) -> int:
+    """Match scraped scores to a TOP-LEVEL model field (e.g. vision_score).
+
+    Mirrors match_live_scores but writes model[key] instead of
+    model["benchmarks"][key]. Returns count of newly matched models.
+    """
+    matched = 0
+    for model in models:
+        name = model.get("name", "")
+        if not name:
+            continue
+        if model.get(key) is not None:
+            continue
+        stripped = _strip_provider(name)
+        candidates = [_norm(name), _norm(stripped)]
+        found = False
+        for scraped_name, score in scores.items():
+            scraped_norm = _norm(scraped_name)
+            if scraped_norm in candidates:
+                model[key] = round(score, 1)
+                matched += 1
+                if log_fn:
+                    log_fn(f"  {key}: {name} = {score} (live exact)")
+                found = True
+                break
+            if not found:
+                for c in candidates:
+                    if len(c) > 10 and len(scraped_norm) > 10:
+                        shorter = min(len(c), len(scraped_norm))
+                        longer = max(len(c), len(scraped_norm))
+                        if shorter / longer > 0.6:
+                            if c in scraped_norm or scraped_norm in c:
+                                model[key] = round(score, 1)
+                                matched += 1
+                                if log_fn:
+                                    log_fn(f"  {key}: {name} = {score} (live fuzzy)")
+                                found = True
+                                break
+            if found:
+                break
+    return matched
+
+
 # ── Source 2: tbench.ai — Terminal-Bench 2.1 ────────────────────────────
 
 def fetch_tbench_scores() -> dict[str, float]:
