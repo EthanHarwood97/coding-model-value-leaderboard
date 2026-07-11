@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10",
+  "last_updated": "2026-07-11",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -9,9 +9,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.09,
-        "output_per_1m": 0.18,
-        "cache_hit_per_1m": 0.018,
+        "input_per_1m": 0.077,
+        "output_per_1m": 0.154,
+        "cache_hit_per_1m": 0.0154,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.93,
-        "output_per_1m": 3.0,
-        "cache_hit_per_1m": 0.18,
+        "input_per_1m": 0.406,
+        "output_per_1m": 1.276,
+        "cache_hit_per_1m": 0.0754,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.048,
+      "cost_per_pro_point": 0.021,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.056,
+      "cost_per_quality": 0.024,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -159,8 +159,8 @@
       "open_weight": true,
       "pricing": {
         "input_per_1m": 0.72,
-        "output_per_1m": 3.49,
-        "cache_hit_per_1m": 0.159,
+        "output_per_1m": 3.5,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -5200,8 +5200,9 @@
         "terminal_bench_2_1": null,
         "livecodebench": null,
         "humaneval": null,
-        "aa_coding_index": null,
-        "scicode": null
+        "aa_coding_index": 40.0,
+        "scicode": null,
+        "livebench": 60.3
       },
       "reasoning_level": null,
       "tag": "New Release",
@@ -5210,7 +5211,40 @@
         "pricing": null,
         "benchmark": "https://huggingface.co/unsloth/MiniMax-M2.5-GGUF"
       },
-      "coding_quality_score": 35.6
+      "coding_quality_score": 44.3
+    },
+    {
+      "name": "MiniMax-M3-Coder-Small",
+      "provider": "OsaurusAI",
+      "license": "Open-weight",
+      "open_weight": true,
+      "openrouter_id": null,
+      "huggingface_id": "OsaurusAI/MiniMax-M3-Coder-Small",
+      "released": "2026-06-20",
+      "pricing": {
+        "input_per_1m": null,
+        "output_per_1m": null,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": null,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": 100.0,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": "New Release",
+      "best_for": "Newly discovered — needs review",
+      "sources": {
+        "pricing": null,
+        "benchmark": "https://huggingface.co/OsaurusAI/MiniMax-M3-Coder-Small"
+      }
     }
   ]
 }
