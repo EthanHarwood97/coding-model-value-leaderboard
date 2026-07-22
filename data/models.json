@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21",
+  "last_updated": "2026-07-22",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -9,9 +9,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.0938,
-        "output_per_1m": 0.1876,
-        "cache_hit_per_1m": 0.01876,
+        "input_per_1m": 0.098,
+        "output_per_1m": 0.196,
+        "cache_hit_per_1m": 0.0196,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.9436,
-        "output_per_1m": 2.9656,
-        "cache_hit_per_1m": 0.17524,
+        "input_per_1m": 0.8036,
+        "output_per_1m": 2.5256,
+        "cache_hit_per_1m": 0.14924,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.048,
+      "cost_per_pro_point": 0.041,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.055,
+      "cost_per_quality": 0.047,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -499,7 +499,7 @@
         "cache_hit_per_1m": 0.0028,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1050000,
       "max_output": null,
       "speed_tok_s": 43,
       "benchmarks": {
@@ -567,7 +567,7 @@
         "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
-      "context_window": 1000000,
+      "context_window": 512288,
       "max_output": 16384,
       "benchmarks": {
         "swe_bench_verified": 71.9,
@@ -1037,7 +1037,7 @@
         "cache_hit_per_1m": 0.0036,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1050000,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -1183,7 +1183,7 @@
         "cache_hit_per_1m": 0.1794,
         "currency": "USD"
       },
-      "context_window": 202752,
+      "context_window": 204800,
       "max_output": null,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -1293,7 +1293,7 @@
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
-      "context_window": 256000,
+      "context_window": 262144,
       "max_output": 80000,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -2162,7 +2162,7 @@
         "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
-      "context_window": 200000,
+      "context_window": 202752,
       "max_output": 16384,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -2269,7 +2269,7 @@
         "cache_hit_per_1m": 0.08,
         "currency": "USD"
       },
-      "context_window": 202752,
+      "context_window": 204800,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": 73.8,
@@ -2967,7 +2967,7 @@
         "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
-      "context_window": 202752,
+      "context_window": 204800,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": 55.4,
@@ -3183,7 +3183,7 @@
         "cache_hit_per_1m": 0.135,
         "currency": "USD"
       },
-      "context_window": 131072,
+      "context_window": 163840,
       "max_output": 32768,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -3284,8 +3284,8 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.0975,
-        "output_per_1m": 0.78,
+        "input_per_1m": 0.1,
+        "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
       },
@@ -3362,7 +3362,7 @@
         "cache_hit_per_1m": 0.08,
         "currency": "USD"
       },
-      "context_window": 131072,
+      "context_window": 81920,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -3649,7 +3649,7 @@
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
-      "context_window": 160000,
+      "context_window": 262144,
       "max_output": 32768,
       "benchmarks": {
         "swe_bench_verified": 60.4,
@@ -3833,7 +3833,7 @@
         "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 262144,
       "max_output": 65536,
       "benchmarks": {
         "swe_bench_verified": 55.4,
@@ -4160,7 +4160,7 @@
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
-      "context_window": 131702,
+      "context_window": 131072,
       "max_output": 40960,
       "benchmarks": {
         "swe_bench_verified": 45.0,
@@ -5378,6 +5378,105 @@
         "benchmark": "https://huggingface.co/moonshotai/Kimi-K2-Base"
       },
       "coding_quality_score": 30.2
+    },
+    {
+      "name": "Poolside: Laguna S 2.1",
+      "provider": "Poolside",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "poolside/laguna-s-2.1",
+      "huggingface_id": "poolside/Laguna-S-2.1",
+      "released": "2026-07-21",
+      "pricing": {
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.2,
+        "cache_hit_per_1m": 0.01,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/poolside/laguna-s-2.1",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Google: Gemini 3.6 Flash",
+      "provider": "Google",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "google/gemini-3.6-flash",
+      "huggingface_id": null,
+      "released": "2026-07-21",
+      "pricing": {
+        "input_per_1m": 1.5,
+        "output_per_1m": 7.5,
+        "cache_hit_per_1m": 0.15,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 65536,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/google/gemini-3.6-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Google: Gemini 3.5 Flash-Lite",
+      "provider": "Google",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "google/gemini-3.5-flash-lite",
+      "huggingface_id": null,
+      "released": "2026-07-21",
+      "pricing": {
+        "input_per_1m": 0.3,
+        "output_per_1m": 2.5,
+        "cache_hit_per_1m": 0.03,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 65536,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/google/gemini-3.5-flash-lite",
+        "benchmark": null
+      }
     }
   ]
 }
