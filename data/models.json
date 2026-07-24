@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23",
+  "last_updated": "2026-07-24",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.8106,
-        "output_per_1m": 2.5476,
-        "cache_hit_per_1m": 0.15054,
+        "input_per_1m": 0.7602,
+        "output_per_1m": 2.3892,
+        "cache_hit_per_1m": 0.14118,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.041,
+      "cost_per_pro_point": 0.038,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.048,
+      "cost_per_quality": 0.045,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -158,9 +158,9 @@
       "license": "Modified MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.82,
-        "output_per_1m": 3.75,
-        "cache_hit_per_1m": 0.16,
+        "input_per_1m": 0.71,
+        "output_per_1m": 3.49,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -183,7 +183,7 @@
       },
       "reasoning_level": "thinking",
       "coding_quality_score": 25.5,
-      "cost_per_quality": 0.147,
+      "cost_per_quality": 0.137,
       "frontend_tier": "A",
       "design2code_score": null
     },
@@ -922,8 +922,8 @@
       "huggingface_id": "Qwen/Qwen3.6-27B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 3.6,
+        "input_per_1m": 0.288,
+        "output_per_1m": 2.4,
         "cache_hit_per_1m": 0.12,
         "currency": "USD"
       },
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.047,
+      "cost_per_quality": 0.032,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1324,9 +1324,9 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.7",
       "released": "2026-03-18",
       "pricing": {
-        "input_per_1m": 0.25,
-        "output_per_1m": 1.0,
-        "cache_hit_per_1m": 0.05,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1351,7 +1351,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 57.5,
-      "cost_per_quality": 0.017,
+      "cost_per_quality": 0.021,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1647,8 +1647,8 @@
       "huggingface_id": "Qwen/Qwen3.5-27B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.26,
-        "output_per_1m": 2.6,
+        "input_per_1m": 0.195,
+        "output_per_1m": 1.56,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1673,7 +1673,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 64.2,
-      "cost_per_quality": 0.04,
+      "cost_per_quality": 0.024,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1940,8 +1940,8 @@
       "released": "2026-02-11",
       "pricing": {
         "input_per_1m": 0.95,
-        "output_per_1m": 3.15,
-        "cache_hit_per_1m": 0.19,
+        "output_per_1m": 2.55,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1966,7 +1966,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 72.6,
-      "cost_per_quality": 0.043,
+      "cost_per_quality": 0.035,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -2815,8 +2815,8 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2",
       "released": "2025-10-23",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.2,
+        "input_per_1m": 0.255,
+        "output_per_1m": 1.02,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -2842,7 +2842,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 55.2,
-      "cost_per_quality": 0.022,
+      "cost_per_quality": 0.018,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3828,8 +3828,8 @@
       "huggingface_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "released": "2025-07-23",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.0,
+        "input_per_1m": 0.38,
+        "output_per_1m": 1.55,
         "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
@@ -3854,7 +3854,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.2,
-      "cost_per_quality": 0.024,
+      "cost_per_quality": 0.038,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -4951,9 +4951,9 @@
       "huggingface_id": "tencent/Hy3",
       "released": "2026-07-06",
       "pricing": {
-        "input_per_1m": 0.14,
-        "output_per_1m": 0.58,
-        "cache_hit_per_1m": 0.035,
+        "input_per_1m": 0.132,
+        "output_per_1m": 0.528,
+        "cache_hit_per_1m": 0.033,
         "currency": "USD"
       },
       "context_window": 262144,
