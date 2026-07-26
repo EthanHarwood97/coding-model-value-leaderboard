@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25",
+  "last_updated": "2026-07-26",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -9,9 +9,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.0938,
-        "output_per_1m": 0.1876,
-        "cache_hit_per_1m": 0.01876,
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -35,7 +35,7 @@
       },
       "reasoning_level": "standard",
       "coding_quality_score": 79.1,
-      "cost_per_quality": 0.002,
+      "cost_per_quality": 0.004,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.7532,
-        "output_per_1m": 2.3672,
-        "cache_hit_per_1m": 0.13988,
+        "input_per_1m": 0.7042,
+        "output_per_1m": 2.2132,
+        "cache_hit_per_1m": 0.13078,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.038,
+      "cost_per_pro_point": 0.036,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.044,
+      "cost_per_quality": 0.041,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -158,7 +158,7 @@
       "license": "Modified MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.78,
+        "input_per_1m": 0.75,
         "output_per_1m": 3.5,
         "cache_hit_per_1m": 0.15,
         "currency": "USD"
@@ -922,9 +922,9 @@
       "huggingface_id": "Qwen/Qwen3.6-27B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.289,
-        "output_per_1m": 2.4,
-        "cache_hit_per_1m": 0.12,
+        "input_per_1m": 0.3,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.032,
+      "cost_per_quality": 0.026,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3682,8 +3682,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "released": "2025-07-29",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.3,
+        "input_per_1m": 0.0481,
+        "output_per_1m": 0.193,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -4083,8 +4083,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B",
       "released": "2025-04-28",
       "pricing": {
-        "input_per_1m": 0.13,
-        "output_per_1m": 0.52,
+        "input_per_1m": 0.12,
+        "output_per_1m": 0.5,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -5501,7 +5501,7 @@
         "livecodebench": null,
         "humaneval": null,
         "aa_coding_index": null,
-        "scicode": null
+        "scicode": 56.0
       },
       "reasoning_level": null,
       "tag": null,
@@ -5510,8 +5510,8 @@
         "pricing": "https://openrouter.ai/models/anthropic/claude-opus-5",
         "benchmark": null
       },
-      "coding_quality_score": 88.0,
-      "cost_per_quality": 0.284
+      "coding_quality_score": 89.3,
+      "cost_per_quality": 0.28
     }
   ]
 }
