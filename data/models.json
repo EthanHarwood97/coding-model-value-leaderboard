@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-26",
+  "last_updated": "2026-07-27",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.7042,
-        "output_per_1m": 2.2132,
-        "cache_hit_per_1m": 0.13078,
+        "input_per_1m": 0.8078,
+        "output_per_1m": 2.5388,
+        "cache_hit_per_1m": 0.15002,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.036,
+      "cost_per_pro_point": 0.041,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.041,
+      "cost_per_quality": 0.047,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -158,7 +158,7 @@
       "license": "Modified MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.75,
+        "input_per_1m": 0.73,
         "output_per_1m": 3.5,
         "cache_hit_per_1m": 0.15,
         "currency": "USD"
@@ -562,9 +562,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
       "released": "2026-06-04",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 3.6,
-        "cache_hit_per_1m": 0.2,
+        "input_per_1m": 0.5,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 512288,
@@ -588,7 +588,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.5,
-      "cost_per_quality": 0.057,
+      "cost_per_quality": 0.035,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2707,7 +2707,7 @@
       "pricing": {
         "input_per_1m": 1.25,
         "output_per_1m": 10.0,
-        "cache_hit_per_1m": 0.125,
+        "cache_hit_per_1m": 0.13,
         "currency": "USD"
       },
       "context_window": 400000,
@@ -2744,7 +2744,7 @@
       "pricing": {
         "input_per_1m": 0.25,
         "output_per_1m": 2.0,
-        "cache_hit_per_1m": 0.025,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 400000,
