@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29",
+  "last_updated": "2026-07-30",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.7504,
-        "output_per_1m": 2.3584,
-        "cache_hit_per_1m": 0.13936,
+        "input_per_1m": 0.6993,
+        "output_per_1m": 2.1978,
+        "cache_hit_per_1m": 0.12987,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.038,
+      "cost_per_pro_point": 0.035,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.044,
+      "cost_per_quality": 0.041,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -2049,9 +2049,9 @@
       "huggingface_id": "Qwen/Qwen3-Coder-Next",
       "released": "2026-02-04",
       "pricing": {
-        "input_per_1m": 0.18,
-        "output_per_1m": 0.9,
-        "cache_hit_per_1m": 0.036,
+        "input_per_1m": 0.12,
+        "output_per_1m": 0.8,
+        "cache_hit_per_1m": 0.07,
         "currency": "USD"
       },
       "context_window": 262144,
