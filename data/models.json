@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-02",
+  "last_updated": "2026-08-03",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.3206,
-        "output_per_1m": 1.0076,
-        "cache_hit_per_1m": 0.05954,
+        "input_per_1m": 1.19,
+        "output_per_1m": 3.74,
+        "cache_hit_per_1m": 0.221,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.016,
+      "cost_per_pro_point": 0.06,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.019,
+      "cost_per_quality": 0.07,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1684,8 +1684,8 @@
       "huggingface_id": "Qwen/Qwen3.5-122B-A10B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.26,
-        "output_per_1m": 2.08,
+        "input_per_1m": 0.4,
+        "output_per_1m": 3.2,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1710,7 +1710,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.6,
-      "cost_per_quality": 0.033,
+      "cost_per_quality": 0.05,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3865,8 +3865,8 @@
       "huggingface_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "released": "2025-07-21",
       "pricing": {
-        "input_per_1m": 0.09,
-        "output_per_1m": 0.55,
+        "input_per_1m": 0.1495,
+        "output_per_1m": 0.598,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
