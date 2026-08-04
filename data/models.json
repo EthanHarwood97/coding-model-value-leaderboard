@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-04",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 1.19,
-        "output_per_1m": 3.74,
-        "cache_hit_per_1m": 0.221,
+        "input_per_1m": 0.76,
+        "output_per_1m": 2.42,
+        "cache_hit_per_1m": 0.14,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.06,
+      "cost_per_pro_point": 0.039,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.07,
+      "cost_per_quality": 0.045,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -922,8 +922,8 @@
       "huggingface_id": "Qwen/Qwen3.6-27B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 2.0,
+        "input_per_1m": 0.289,
+        "output_per_1m": 2.4,
         "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.026,
+      "cost_per_quality": 0.032,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1102,9 +1102,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 3.41,
-        "cache_hit_per_1m": 0.2,
+        "input_per_1m": 0.589,
+        "output_per_1m": 2.48,
+        "cache_hit_per_1m": 0.0992,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1129,7 +1129,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.8,
-      "cost_per_quality": 0.082,
+      "cost_per_quality": 0.059,
       "frontend_tier": "A",
       "design2code_score": null
     },
@@ -1684,8 +1684,8 @@
       "huggingface_id": "Qwen/Qwen3.5-122B-A10B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.4,
-        "output_per_1m": 3.2,
+        "input_per_1m": 0.26,
+        "output_per_1m": 2.08,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1710,7 +1710,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.6,
-      "cost_per_quality": 0.05,
+      "cost_per_quality": 0.033,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3284,7 +3284,7 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.1,
+        "input_per_1m": 0.09,
         "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
@@ -3645,7 +3645,7 @@
       "released": "2025-07-31",
       "pricing": {
         "input_per_1m": 0.07,
-        "output_per_1m": 0.28,
+        "output_per_1m": 0.27,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -6456,6 +6456,75 @@
       },
       "coding_quality_score": 73.1,
       "cost_per_quality": 0.002
+    },
+    {
+      "name": "Qwen: Qwen3.8 Max",
+      "provider": "Qwen",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "qwen/qwen3.8-max",
+      "huggingface_id": null,
+      "released": "2026-08-03",
+      "pricing": {
+        "input_per_1m": 2.0,
+        "output_per_1m": 6.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/qwen/qwen3.8-max",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "DeepSeek: DeepSeek V4 Flash 0423",
+      "provider": "Deepseek",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "deepseek/deepseek-v4-flash",
+      "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "released": "2026-04-24",
+      "pricing": {
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.028,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 393216,
+      "benchmarks": {
+        "swe_bench_verified": 73.7,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": 47.0,
+        "scicode": null,
+        "livebench": 67.7
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/deepseek/deepseek-v4-flash",
+        "benchmark": null
+      },
+      "coding_quality_score": 73.1,
+      "cost_per_quality": 0.004
     }
   ]
 }
