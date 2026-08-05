@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04",
+  "last_updated": "2026-08-05",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -1324,9 +1324,9 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.7",
       "released": "2026-03-18",
       "pricing": {
-        "input_per_1m": 0.25,
-        "output_per_1m": 1.0,
-        "cache_hit_per_1m": 0.05,
+        "input_per_1m": 0.27,
+        "output_per_1m": 1.08,
+        "cache_hit_per_1m": 0.054,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1351,7 +1351,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 57.5,
-      "cost_per_quality": 0.017,
+      "cost_per_quality": 0.019,
       "frontend_tier": null,
       "design2code_score": null
     },
