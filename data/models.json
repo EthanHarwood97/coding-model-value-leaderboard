@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-08-07",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.76,
-        "output_per_1m": 2.42,
-        "cache_hit_per_1m": 0.14,
+        "input_per_1m": 0.6846,
+        "output_per_1m": 2.1516,
+        "cache_hit_per_1m": 0.12714,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.039,
+      "cost_per_pro_point": 0.035,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.045,
+      "cost_per_quality": 0.04,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -852,7 +852,7 @@
       "pricing": {
         "input_per_1m": 0.14,
         "output_per_1m": 1.0,
-        "cache_hit_per_1m": null,
+        "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1432,8 +1432,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.085,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.3,
+        "output_per_1m": 0.9,
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
@@ -1684,8 +1684,8 @@
       "huggingface_id": "Qwen/Qwen3.5-122B-A10B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.26,
-        "output_per_1m": 2.08,
+        "input_per_1m": 0.29,
+        "output_per_1m": 2.4,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1710,7 +1710,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.6,
-      "cost_per_quality": 0.033,
+      "cost_per_quality": 0.038,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -6395,7 +6395,7 @@
       "huggingface_id": "thinkingmachines/Inkling-Small",
       "released": "2026-07-30",
       "pricing": {
-        "input_per_1m": 0.5,
+        "input_per_1m": 0.45,
         "output_per_1m": 1.2,
         "cache_hit_per_1m": 0.1,
         "currency": "USD"
@@ -6535,12 +6535,12 @@
       "huggingface_id": "inclusionAI/Ling-3.0-flash",
       "released": "2026-07-23",
       "pricing": {
-        "input_per_1m": 0.075,
-        "output_per_1m": 0.22,
-        "cache_hit_per_1m": 0.015,
+        "input_per_1m": 0.021,
+        "output_per_1m": 0.063,
+        "cache_hit_per_1m": 0.0042,
         "currency": "USD"
       },
-      "context_window": 131072,
+      "context_window": 262144,
       "max_output": 16384,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -6556,6 +6556,705 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/inclusionai/ling-3.0-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Claude Opus 5 (batch)",
+      "provider": "Anthropic",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "anthropic/claude-opus-5:batch",
+      "huggingface_id": null,
+      "released": "2026-07-24",
+      "pricing": {
+        "input_per_1m": 2.5,
+        "output_per_1m": 12.5,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": 96.0,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/anthropic/claude-opus-5:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 88.0,
+      "cost_per_quality": 0.142
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Luna Pro (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-luna-pro:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.6,
+        "cache_hit_per_1m": 0.01,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-luna-pro:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Luna (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-luna:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.6,
+        "cache_hit_per_1m": 0.01,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-luna:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-terra-pro:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 1.0,
+        "output_per_1m": 6.0,
+        "cache_hit_per_1m": 0.1,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-terra-pro:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Terra (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-terra:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 1.0,
+        "output_per_1m": 6.0,
+        "cache_hit_per_1m": 0.1,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-terra:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Sol Pro (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-sol-pro:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 2.5,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-sol-pro:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-5.6 Sol (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5.6-sol:batch",
+      "huggingface_id": null,
+      "released": "2026-07-09",
+      "pricing": {
+        "input_per_1m": 2.5,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1050000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5.6-sol:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Z.ai: GLM 5.2 (batch)",
+      "provider": "Z Ai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "z-ai/glm-5.2:batch",
+      "huggingface_id": "zai-org/GLM-5.2",
+      "released": "2026-06-16",
+      "pricing": {
+        "input_per_1m": 0.7,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.13,
+        "currency": "USD"
+      },
+      "context_window": 512000,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/z-ai/glm-5.2:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "MoonshotAI: Kimi K2.7 Code (batch)",
+      "provider": "Moonshotai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "moonshotai/kimi-k2.7-code:batch",
+      "huggingface_id": "moonshotai/Kimi-K2.7-Code",
+      "released": "2026-06-12",
+      "pricing": {
+        "input_per_1m": 0.475,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.095,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/moonshotai/kimi-k2.7-code:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "NVIDIA: Nemotron 3 Ultra (batch)",
+      "provider": "Nvidia",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "nvidia/nemotron-3-ultra-550b-a55b:batch",
+      "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "released": "2026-06-04",
+      "pricing": {
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.8,
+        "cache_hit_per_1m": 0.1,
+        "currency": "USD"
+      },
+      "context_window": 512288,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": 71.9,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/nvidia/nemotron-3-ultra-550b-a55b:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 63.5,
+      "cost_per_quality": 0.028
+    },
+    {
+      "name": "Anthropic: Claude Sonnet 4.6 (batch)",
+      "provider": "Anthropic",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "anthropic/claude-sonnet-4.6:batch",
+      "huggingface_id": "",
+      "released": "2026-02-17",
+      "pricing": {
+        "input_per_1m": 1.5,
+        "output_per_1m": 7.5,
+        "cache_hit_per_1m": 0.15,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": 79.6,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-4.6:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 73.9,
+      "cost_per_quality": 0.101
+    },
+    {
+      "name": "OpenAI: GPT-5 Codex (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-5-codex:batch",
+      "huggingface_id": "",
+      "released": "2025-09-23",
+      "pricing": {
+        "input_per_1m": 0.625,
+        "output_per_1m": 5.0,
+        "cache_hit_per_1m": 0.0625,
+        "currency": "USD"
+      },
+      "context_window": 400000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-5-codex:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o3 Pro (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o3-pro:batch",
+      "huggingface_id": "",
+      "released": "2025-06-10",
+      "pricing": {
+        "input_per_1m": 10.0,
+        "output_per_1m": 40.0,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o3-pro:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o4 Mini High (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o4-mini-high:batch",
+      "huggingface_id": "",
+      "released": "2025-04-16",
+      "pricing": {
+        "input_per_1m": 0.55,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.1375,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o4-mini-high:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o3 (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o3:batch",
+      "huggingface_id": "",
+      "released": "2025-04-16",
+      "pricing": {
+        "input_per_1m": 1.0,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o3:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o4 Mini (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o4-mini:batch",
+      "huggingface_id": "",
+      "released": "2025-04-16",
+      "pricing": {
+        "input_per_1m": 0.55,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.1375,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o4-mini:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-4.1 (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-4.1:batch",
+      "huggingface_id": "",
+      "released": "2025-04-14",
+      "pricing": {
+        "input_per_1m": 1.0,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1047576,
+      "max_output": 32768,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-4.1:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-4.1 Mini (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-4.1-mini:batch",
+      "huggingface_id": "",
+      "released": "2025-04-14",
+      "pricing": {
+        "input_per_1m": 0.2,
+        "output_per_1m": 0.8,
+        "cache_hit_per_1m": 0.05,
+        "currency": "USD"
+      },
+      "context_window": 1047576,
+      "max_output": 32768,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-4.1-mini:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: GPT-4.1 Nano (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/gpt-4.1-nano:batch",
+      "huggingface_id": "",
+      "released": "2025-04-14",
+      "pricing": {
+        "input_per_1m": 0.05,
+        "output_per_1m": 0.2,
+        "cache_hit_per_1m": 0.0125,
+        "currency": "USD"
+      },
+      "context_window": 1047576,
+      "max_output": 32768,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/gpt-4.1-nano:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o3 Mini High (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o3-mini-high:batch",
+      "huggingface_id": "",
+      "released": "2025-02-12",
+      "pricing": {
+        "input_per_1m": 0.55,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.275,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o3-mini-high:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "OpenAI: o3 Mini (batch)",
+      "provider": "Openai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "openai/o3-mini:batch",
+      "huggingface_id": "",
+      "released": "2025-01-31",
+      "pricing": {
+        "input_per_1m": 0.55,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.275,
+        "currency": "USD"
+      },
+      "context_window": 200000,
+      "max_output": 100000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/openai/o3-mini:batch",
         "benchmark": null
       }
     }
