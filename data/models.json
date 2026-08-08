@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07",
+  "last_updated": "2026-08-08",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.6846,
-        "output_per_1m": 2.1516,
-        "cache_hit_per_1m": 0.12714,
+        "input_per_1m": 0.308,
+        "output_per_1m": 0.968,
+        "cache_hit_per_1m": 0.0572,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.035,
+      "cost_per_pro_point": 0.016,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.04,
+      "cost_per_quality": 0.018,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1102,9 +1102,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.589,
-        "output_per_1m": 2.48,
-        "cache_hit_per_1m": 0.0992,
+        "input_per_1m": 0.5795,
+        "output_per_1m": 2.44,
+        "cache_hit_per_1m": 0.0976,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1129,7 +1129,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.8,
-      "cost_per_quality": 0.059,
+      "cost_per_quality": 0.058,
       "frontend_tier": "A",
       "design2code_score": null
     },
@@ -1432,8 +1432,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 0.9,
+        "input_per_1m": 0.085,
+        "output_per_1m": 0.4,
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
@@ -2558,9 +2558,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.2",
       "released": "2025-12-01",
       "pricing": {
-        "input_per_1m": 0.269,
-        "output_per_1m": 0.4,
-        "cache_hit_per_1m": 0.1345,
+        "input_per_1m": 0.26,
+        "output_per_1m": 0.38,
+        "cache_hit_per_1m": 0.13,
         "currency": "USD"
       },
       "context_window": 163840,
@@ -2585,7 +2585,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 29.3,
-      "cost_per_quality": 0.014,
+      "cost_per_quality": 0.013,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -6480,7 +6480,7 @@
         "livecodebench": null,
         "humaneval": null,
         "aa_coding_index": null,
-        "scicode": null
+        "scicode": 53.0
       },
       "reasoning_level": null,
       "tag": null,
@@ -6499,9 +6499,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0882,
-        "output_per_1m": 0.1764,
-        "cache_hit_per_1m": 0.01764,
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6524,7 +6524,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.004
     },
     {
       "name": "Ling-3.0-flash",
