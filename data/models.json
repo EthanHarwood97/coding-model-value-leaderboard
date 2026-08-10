@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-09",
+  "last_updated": "2026-08-10",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.098,
-        "output_per_1m": 0.308,
-        "cache_hit_per_1m": 0.0182,
+        "input_per_1m": 0.76,
+        "output_per_1m": 2.42,
+        "cache_hit_per_1m": 0.14,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.005,
+      "cost_per_pro_point": 0.039,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.006,
+      "cost_per_quality": 0.045,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1102,9 +1102,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.5795,
-        "output_per_1m": 2.44,
-        "cache_hit_per_1m": 0.0976,
+        "input_per_1m": 0.95,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.16,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1129,7 +1129,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.8,
-      "cost_per_quality": 0.058,
+      "cost_per_quality": 0.096,
       "frontend_tier": "A",
       "design2code_score": null
     },
@@ -1178,9 +1178,9 @@
       "huggingface_id": "zai-org/GLM-5.1",
       "released": "2026-04-07",
       "pricing": {
-        "input_per_1m": 0.952,
-        "output_per_1m": 2.992,
-        "cache_hit_per_1m": 0.1768,
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1205,7 +1205,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 52.5,
-      "cost_per_quality": 0.057,
+      "cost_per_quality": 0.084,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1432,8 +1432,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 0.9,
+        "input_per_1m": 0.085,
+        "output_per_1m": 0.4,
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
@@ -2341,7 +2341,7 @@
       "pricing": {
         "input_per_1m": 0.05,
         "output_per_1m": 0.2,
-        "cache_hit_per_1m": 0.03,
+        "cache_hit_per_1m": 0.025,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -4155,8 +4155,8 @@
       "huggingface_id": "Qwen/Qwen3-14B",
       "released": "2025-04-28",
       "pricing": {
-        "input_per_1m": 0.2275,
-        "output_per_1m": 0.91,
+        "input_per_1m": 0.12,
+        "output_per_1m": 0.24,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -4182,7 +4182,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 35.2,
-      "cost_per_quality": 0.026,
+      "cost_per_quality": 0.007,
       "frontend_tier": null,
       "design2code_score": null
     },
