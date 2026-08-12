@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11",
+  "last_updated": "2026-08-12",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -46,9 +46,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.6414,
-        "output_per_1m": 1.2829,
-        "cache_hit_per_1m": 0.054121,
+        "input_per_1m": 0.6317,
+        "output_per_1m": 1.2634,
+        "cache_hit_per_1m": 0.053298,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -73,7 +73,7 @@
       "cost_per_pro_point": 0.023,
       "reasoning_level": "standard",
       "coding_quality_score": 87.9,
-      "cost_per_quality": 0.015,
+      "cost_per_quality": 0.014,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.76,
-        "output_per_1m": 2.42,
-        "cache_hit_per_1m": 0.14,
+        "input_per_1m": 0.5,
+        "output_per_1m": 3.15,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.039,
+      "cost_per_pro_point": 0.051,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.045,
+      "cost_per_quality": 0.059,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -2962,9 +2962,9 @@
       "huggingface_id": "zai-org/GLM-4.6",
       "released": "2025-09-30",
       "pricing": {
-        "input_per_1m": 0.5,
-        "output_per_1m": 2.0,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 0.55,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.11,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -2989,7 +2989,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 46.2,
-      "cost_per_quality": 0.043,
+      "cost_per_quality": 0.048,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3179,8 +3179,8 @@
       "released": "2025-09-22",
       "pricing": {
         "input_per_1m": 0.27,
-        "output_per_1m": 1.0,
-        "cache_hit_per_1m": 0.135,
+        "output_per_1m": 0.95,
+        "cache_hit_per_1m": 0.13,
         "currency": "USD"
       },
       "context_window": 163840,
@@ -7288,6 +7288,74 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/upstage/solar-pro4",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "NVIDIA: Nemotron 3.5 Lightning",
+      "provider": "Nvidia",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "nvidia/nemotron-3.5-lightning",
+      "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "released": "2026-08-11",
+      "pricing": {
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.25,
+        "cache_hit_per_1m": 0.05,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 262144,
+      "benchmarks": {
+        "swe_bench_verified": 52.8,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/nvidia/nemotron-3.5-lightning",
+        "benchmark": null
+      },
+      "coding_quality_score": 37.6,
+      "cost_per_quality": 0.007
+    },
+    {
+      "name": "ByteDance Seed: Seed-2.0-Code",
+      "provider": "Bytedance Seed",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "bytedance-seed/seed-2.0-code",
+      "huggingface_id": null,
+      "released": "2026-07-30",
+      "pricing": {
+        "input_per_1m": 0.5,
+        "output_per_1m": 3.0,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/bytedance-seed/seed-2.0-code",
         "benchmark": null
       }
     }
