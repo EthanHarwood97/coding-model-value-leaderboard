@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13",
+  "last_updated": "2026-08-14",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.5,
-        "output_per_1m": 3.15,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 0.63,
+        "output_per_1m": 1.98,
+        "cache_hit_per_1m": 0.0945,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.051,
+      "cost_per_pro_point": 0.032,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.059,
+      "cost_per_quality": 0.037,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -3284,7 +3284,7 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.09,
+        "input_per_1m": 0.1,
         "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
@@ -4742,7 +4742,7 @@
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
-      "context_window": 163840,
+      "context_window": 64000,
       "max_output": 16000,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -5421,9 +5421,9 @@
       "huggingface_id": null,
       "released": "2026-07-21",
       "pricing": {
-        "input_per_1m": 1.5,
-        "output_per_1m": 7.5,
-        "cache_hit_per_1m": 0.15,
+        "input_per_1m": 0.75,
+        "output_per_1m": 3.75,
+        "cache_hit_per_1m": 0.075,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -5555,9 +5555,9 @@
       "huggingface_id": null,
       "released": "2026-07-21",
       "pricing": {
-        "input_per_1m": 0.75,
-        "output_per_1m": 3.75,
-        "cache_hit_per_1m": 0.075,
+        "input_per_1m": 0.375,
+        "output_per_1m": 1.875,
+        "cache_hit_per_1m": 0.0375,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6359,9 +6359,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.08,
-        "output_per_1m": 0.18,
-        "cache_hit_per_1m": 0.016,
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6384,7 +6384,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.004
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -7305,7 +7305,7 @@
         "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1000000,
       "max_output": 262144,
       "benchmarks": {
         "swe_bench_verified": 52.8,
@@ -7370,10 +7370,10 @@
       "pricing": {
         "input_per_1m": 2.0,
         "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.2,
+        "cache_hit_per_1m": 0.25,
         "currency": "USD"
       },
-      "context_window": 1000000,
+      "context_window": 1010000,
       "max_output": 52429,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -7459,6 +7459,72 @@
       "sources": {
         "pricing": null,
         "benchmark": "https://huggingface.co/philipjohnbasile/GLM-5.2-Demolition-q4a4-soul-MLX"
+      }
+    },
+    {
+      "name": "Google: Gemini 3.7 Flash",
+      "provider": "Google",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "google/gemini-3.7-flash",
+      "huggingface_id": null,
+      "released": "2026-08-13",
+      "pricing": {
+        "input_per_1m": 0.375,
+        "output_per_1m": 1.875,
+        "cache_hit_per_1m": 0.0375,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 65536,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/google/gemini-3.7-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Google: Gemini 3.7 Flash (batch)",
+      "provider": "Google",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "google/gemini-3.7-flash:batch",
+      "huggingface_id": null,
+      "released": "2026-08-13",
+      "pricing": {
+        "input_per_1m": 0.1875,
+        "output_per_1m": 0.9375,
+        "cache_hit_per_1m": 0.01875,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 65536,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/google/gemini-3.7-flash:batch",
+        "benchmark": null
       }
     }
   ]
