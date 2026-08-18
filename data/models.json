@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-17",
+  "last_updated": "2026-08-18",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 1.19,
-        "output_per_1m": 3.74,
-        "cache_hit_per_1m": 0.221,
+        "input_per_1m": 0.5,
+        "output_per_1m": 3.15,
+        "cache_hit_per_1m": 0.115,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.06,
+      "cost_per_pro_point": 0.051,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.07,
+      "cost_per_quality": 0.059,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -922,9 +922,9 @@
       "huggingface_id": "Qwen/Qwen3.6-27B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 2.0,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.6,
+        "output_per_1m": 3.6,
+        "cache_hit_per_1m": 0.12,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.026,
+      "cost_per_quality": 0.047,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2962,9 +2962,9 @@
       "huggingface_id": "zai-org/GLM-4.6",
       "released": "2025-09-30",
       "pricing": {
-        "input_per_1m": 0.55,
-        "output_per_1m": 2.2,
-        "cache_hit_per_1m": 0.11,
+        "input_per_1m": 0.5,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -2989,7 +2989,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 46.2,
-      "cost_per_quality": 0.048,
+      "cost_per_quality": 0.043,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3179,7 +3179,7 @@
       "released": "2025-09-22",
       "pricing": {
         "input_per_1m": 0.27,
-        "output_per_1m": 0.95,
+        "output_per_1m": 1.0,
         "cache_hit_per_1m": 0.13,
         "currency": "USD"
       },
@@ -4987,9 +4987,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.6,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.2,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.02,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -5020,9 +5020,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.6,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.2,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.02,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -5053,9 +5053,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 1.0,
-        "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 2.0,
+        "output_per_1m": 12.0,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -5086,9 +5086,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 1.0,
-        "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 2.0,
+        "output_per_1m": 12.0,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -5110,7 +5110,7 @@
         "benchmark": null
       },
       "coding_quality_score": 37.3,
-      "cost_per_quality": 0.161
+      "cost_per_quality": 0.322
     },
     {
       "name": "OpenAI: GPT-5.6 Sol Pro",
@@ -5121,9 +5121,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 5.0,
-        "output_per_1m": 30.0,
-        "cache_hit_per_1m": 0.5,
+        "input_per_1m": 2.5,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.25,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -5154,9 +5154,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 5.0,
-        "output_per_1m": 30.0,
-        "cache_hit_per_1m": 0.5,
+        "input_per_1m": 2.5,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.25,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -6430,9 +6430,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0603,
-        "output_per_1m": 0.1206,
-        "cache_hit_per_1m": 0.01206,
+        "input_per_1m": 0.0786,
+        "output_per_1m": 0.1572,
+        "cache_hit_per_1m": 0.015719,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6735,9 +6735,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 2.5,
-        "output_per_1m": 15.0,
-        "cache_hit_per_1m": 0.25,
+        "input_per_1m": 1.25,
+        "output_per_1m": 7.5,
+        "cache_hit_per_1m": 0.125,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -6768,9 +6768,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 2.5,
-        "output_per_1m": 15.0,
-        "cache_hit_per_1m": 0.25,
+        "input_per_1m": 1.25,
+        "output_per_1m": 7.5,
+        "cache_hit_per_1m": 0.125,
         "currency": "USD"
       },
       "context_window": 1050000,
