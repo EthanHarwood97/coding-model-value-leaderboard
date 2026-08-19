@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18",
+  "last_updated": "2026-08-19",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.5,
-        "output_per_1m": 3.15,
-        "cache_hit_per_1m": 0.115,
+        "input_per_1m": 0.966,
+        "output_per_1m": 3.036,
+        "cache_hit_per_1m": 0.1932,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.051,
+      "cost_per_pro_point": 0.049,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.059,
+      "cost_per_quality": 0.057,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -922,9 +922,9 @@
       "huggingface_id": "Qwen/Qwen3.6-27B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 3.6,
-        "cache_hit_per_1m": 0.12,
+        "input_per_1m": 0.3,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.047,
+      "cost_per_quality": 0.026,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1684,8 +1684,8 @@
       "huggingface_id": "Qwen/Qwen3.5-122B-A10B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.29,
-        "output_per_1m": 2.4,
+        "input_per_1m": 0.26,
+        "output_per_1m": 2.08,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1710,7 +1710,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.6,
-      "cost_per_quality": 0.038,
+      "cost_per_quality": 0.033,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2084,9 +2084,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.5",
       "released": "2026-01-27",
       "pricing": {
-        "input_per_1m": 0.57,
-        "output_per_1m": 2.85,
-        "cache_hit_per_1m": 0.095,
+        "input_per_1m": 0.45,
+        "output_per_1m": 2.25,
+        "cache_hit_per_1m": 0.07,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -2111,7 +2111,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 70.6,
-      "cost_per_quality": 0.04,
+      "cost_per_quality": 0.032,
       "frontend_tier": "A",
       "design2code_score": null
     },
@@ -3284,7 +3284,7 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.1,
+        "input_per_1m": 0.09,
         "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
@@ -5656,9 +5656,9 @@
       "huggingface_id": "MiniMaxAI/Minimax-M3",
       "released": "2026-05-31",
       "pricing": {
-        "input_per_1m": 0.15,
-        "output_per_1m": 0.6,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
       "context_window": 524288,
@@ -6430,9 +6430,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0786,
-        "output_per_1m": 0.1572,
-        "cache_hit_per_1m": 0.015719,
+        "input_per_1m": 0.0765,
+        "output_per_1m": 0.153,
+        "cache_hit_per_1m": 0.0153,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6801,9 +6801,9 @@
       "huggingface_id": "zai-org/GLM-5.2",
       "released": "2026-06-16",
       "pricing": {
-        "input_per_1m": 0.7,
-        "output_per_1m": 2.2,
-        "cache_hit_per_1m": 0.13,
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
       "context_window": 512000,
@@ -6834,9 +6834,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.7-Code",
       "released": "2026-06-12",
       "pricing": {
-        "input_per_1m": 0.475,
-        "output_per_1m": 2.0,
-        "cache_hit_per_1m": 0.095,
+        "input_per_1m": 0.95,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.19,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -6867,9 +6867,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
       "released": "2026-06-04",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.8,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 0.6,
+        "output_per_1m": 3.6,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 512288,
@@ -6891,7 +6891,7 @@
         "benchmark": null
       },
       "coding_quality_score": 63.5,
-      "cost_per_quality": 0.028
+      "cost_per_quality": 0.057
     },
     {
       "name": "Anthropic: Claude Sonnet 4.6 (batch)",
@@ -7595,6 +7595,72 @@
       },
       "coding_quality_score": 76.3,
       "cost_per_quality": 0.052
+    },
+    {
+      "name": "Z.ai: GLM 5.3",
+      "provider": "Z Ai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "z-ai/glm-5.3",
+      "huggingface_id": null,
+      "released": "2026-08-18",
+      "pricing": {
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.26,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/z-ai/glm-5.3",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF",
+      "provider": "Jackrong",
+      "license": "Open-weight",
+      "open_weight": true,
+      "openrouter_id": null,
+      "huggingface_id": "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF",
+      "released": "2026-03-19",
+      "pricing": {
+        "input_per_1m": null,
+        "output_per_1m": null,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": null,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": 96.91,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": "New Release",
+      "best_for": "Newly discovered — needs review",
+      "sources": {
+        "pricing": null,
+        "benchmark": "https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-v2-GGUF"
+      }
     }
   ]
 }
