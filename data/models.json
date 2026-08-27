@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-27",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -158,9 +158,9 @@
       "license": "Modified MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.67,
+        "input_per_1m": 0.66,
         "output_per_1m": 3.4,
-        "cache_hit_per_1m": 0.19,
+        "cache_hit_per_1m": 0.18,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -850,8 +850,8 @@
       "huggingface_id": "Qwen/Qwen3.6-35B-A3B",
       "released": "2026-04-27",
       "pricing": {
-        "input_per_1m": 0.14,
-        "output_per_1m": 1.0,
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.9,
         "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
@@ -876,7 +876,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 65.5,
-      "cost_per_quality": 0.015,
+      "cost_per_quality": 0.014,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2341,7 +2341,7 @@
       "pricing": {
         "input_per_1m": 0.05,
         "output_per_1m": 0.2,
-        "cache_hit_per_1m": 0.03,
+        "cache_hit_per_1m": 0.025,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -2962,9 +2962,9 @@
       "huggingface_id": "zai-org/GLM-4.6",
       "released": "2025-09-30",
       "pricing": {
-        "input_per_1m": 0.5,
-        "output_per_1m": 2.0,
-        "cache_hit_per_1m": 0.1,
+        "input_per_1m": 0.43,
+        "output_per_1m": 1.75,
+        "cache_hit_per_1m": 0.08,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -2989,7 +2989,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 46.2,
-      "cost_per_quality": 0.043,
+      "cost_per_quality": 0.038,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3865,9 +3865,9 @@
       "huggingface_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "released": "2025-07-21",
       "pricing": {
-        "input_per_1m": 0.09,
-        "output_per_1m": 0.55,
-        "cache_hit_per_1m": null,
+        "input_per_1m": 0.0875,
+        "output_per_1m": 0.35,
+        "cache_hit_per_1m": 0.0175,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -4951,9 +4951,9 @@
       "huggingface_id": "tencent/Hy3",
       "released": "2026-07-06",
       "pricing": {
-        "input_per_1m": 0.132,
-        "output_per_1m": 0.528,
-        "cache_hit_per_1m": 0.033,
+        "input_per_1m": 0.0825,
+        "output_per_1m": 0.33,
+        "cache_hit_per_1m": 0.020625,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -6359,9 +6359,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.06,
-        "output_per_1m": 0.12,
-        "cache_hit_per_1m": 0.012,
+        "input_per_1m": 0.05,
+        "output_per_1m": 0.1,
+        "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6384,7 +6384,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -6431,7 +6431,7 @@
       "released": "2026-08-01",
       "pricing": {
         "input_per_1m": 0.03,
-        "output_per_1m": 0.075,
+        "output_per_1m": 0.1,
         "cache_hit_per_1m": 0.007,
         "currency": "USD"
       },
@@ -6499,9 +6499,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0886,
-        "output_per_1m": 0.1772,
-        "cache_hit_per_1m": 0.017721,
+        "input_per_1m": 0.078,
+        "output_per_1m": 0.156,
+        "cache_hit_per_1m": 0.015596,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7704,9 +7704,9 @@
       "huggingface_id": null,
       "released": "2026-08-21",
       "pricing": {
-        "input_per_1m": 0.44,
-        "output_per_1m": 1.32,
-        "cache_hit_per_1m": 0.014,
+        "input_per_1m": 0.22,
+        "output_per_1m": 0.66,
+        "cache_hit_per_1m": 0.007,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7729,7 +7729,73 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.018
+      "cost_per_quality": 0.009
+    },
+    {
+      "name": "Qwen: Qwen3.8 Flash",
+      "provider": "Qwen",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "qwen/qwen3.8-flash",
+      "huggingface_id": null,
+      "released": "2026-08-26",
+      "pricing": {
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.47,
+        "cache_hit_per_1m": 0.016,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/qwen/qwen3.8-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Z.ai: GLM 5.3 Flash",
+      "provider": "Z Ai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "z-ai/glm-5.3-flash",
+      "huggingface_id": "zai-org/GLM-5.3-Flash",
+      "released": "2026-08-26",
+      "pricing": {
+        "input_per_1m": 0.075,
+        "output_per_1m": 0.25,
+        "cache_hit_per_1m": 0.015,
+        "currency": "USD"
+      },
+      "context_window": 1310720,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": 46.0
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/z-ai/glm-5.3-flash",
+        "benchmark": null
+      }
     }
   ]
 }
