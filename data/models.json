@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-08-28",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -562,12 +562,12 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
       "released": "2026-06-04",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 3.6,
-        "cache_hit_per_1m": 0.2,
+        "input_per_1m": 0.5,
+        "output_per_1m": 2.2,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
-      "context_window": 512288,
+      "context_window": 262144,
       "max_output": 16384,
       "benchmarks": {
         "swe_bench_verified": 71.9,
@@ -588,7 +588,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.5,
-      "cost_per_quality": 0.057,
+      "cost_per_quality": 0.035,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1684,8 +1684,8 @@
       "huggingface_id": "Qwen/Qwen3.5-122B-A10B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.26,
-        "output_per_1m": 2.08,
+        "input_per_1m": 0.29,
+        "output_per_1m": 2.4,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -1710,7 +1710,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.6,
-      "cost_per_quality": 0.033,
+      "cost_per_quality": 0.038,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2558,9 +2558,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.2",
       "released": "2025-12-01",
       "pricing": {
-        "input_per_1m": 0.26,
-        "output_per_1m": 0.38,
-        "cache_hit_per_1m": 0.13,
+        "input_per_1m": 0.269,
+        "output_per_1m": 0.4,
+        "cache_hit_per_1m": 0.1345,
         "currency": "USD"
       },
       "context_window": 163840,
@@ -2585,7 +2585,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 29.3,
-      "cost_per_quality": 0.013,
+      "cost_per_quality": 0.014,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -4451,7 +4451,7 @@
       "pricing": {
         "input_per_1m": 0.1,
         "output_per_1m": 0.4,
-        "cache_hit_per_1m": 0.025,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 1047576,
@@ -5293,7 +5293,7 @@
         "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
-      "context_window": 256000,
+      "context_window": 262144,
       "max_output": 80000,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -6359,9 +6359,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.05,
-        "output_per_1m": 0.1,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.06,
+        "output_per_1m": 0.12,
+        "cache_hit_per_1m": 0.012,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6384,7 +6384,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.001
+      "cost_per_quality": 0.002
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -6499,9 +6499,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.078,
-        "output_per_1m": 0.156,
-        "cache_hit_per_1m": 0.015596,
+        "input_per_1m": 0.0868,
+        "output_per_1m": 0.1736,
+        "cache_hit_per_1m": 0.01736,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7300,9 +7300,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.08,
-        "output_per_1m": 0.2,
-        "cache_hit_per_1m": 0.04,
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.25,
+        "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -7324,7 +7324,7 @@
         "benchmark": null
       },
       "coding_quality_score": 37.6,
-      "cost_per_quality": 0.005
+      "cost_per_quality": 0.007
     },
     {
       "name": "ByteDance Seed: Seed-2.0-Code",
@@ -7370,7 +7370,7 @@
       "pricing": {
         "input_per_1m": 2.0,
         "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.25,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7401,9 +7401,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 1.122,
-        "output_per_1m": 3.366,
-        "cache_hit_per_1m": 0.0374,
+        "input_per_1m": 0.66,
+        "output_per_1m": 1.98,
+        "cache_hit_per_1m": 0.022,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7426,7 +7426,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.04
+      "cost_per_quality": 0.024
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7569,9 +7569,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.87,
-        "output_per_1m": 1.74,
-        "cache_hit_per_1m": 0.0725,
+        "input_per_1m": 0.7619,
+        "output_per_1m": 1.5239,
+        "cache_hit_per_1m": 0.063495,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7594,7 +7594,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.023
+      "cost_per_quality": 0.02
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7610,7 +7610,7 @@
         "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1310720,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -7671,12 +7671,12 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 1.4,
+        "input_per_1m": 1.25,
         "output_per_1m": 4.4,
         "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1310720,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -7794,6 +7794,105 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/z-ai/glm-5.3-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Qwen: Qwen3.8 2.4T A95B (batch)",
+      "provider": "Qwen",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "qwen/qwen3.8-2.4t-a95b:batch",
+      "huggingface_id": "Qwen/Qwen3.8-2.4T-A95B",
+      "released": "2026-08-12",
+      "pricing": {
+        "input_per_1m": 2.0,
+        "output_per_1m": 6.0,
+        "cache_hit_per_1m": 0.25,
+        "currency": "USD"
+      },
+      "context_window": 1010000,
+      "max_output": 909000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": 52.0
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/qwen/qwen3.8-2.4t-a95b:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Mistral: Mistral Large 3 2512 (batch)",
+      "provider": "Mistralai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "mistralai/mistral-large-2512:batch",
+      "huggingface_id": "",
+      "released": "2025-12-01",
+      "pricing": {
+        "input_per_1m": 0.5,
+        "output_per_1m": 1.5,
+        "cache_hit_per_1m": 0.05,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 209715,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/mistralai/mistral-large-2512:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Mistral: Codestral 2508 (batch)",
+      "provider": "Mistralai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "mistralai/codestral-2508:batch",
+      "huggingface_id": "",
+      "released": "2025-08-01",
+      "pricing": {
+        "input_per_1m": 0.3,
+        "output_per_1m": 0.9,
+        "cache_hit_per_1m": 0.03,
+        "currency": "USD"
+      },
+      "context_window": 256000,
+      "max_output": 204800,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/mistralai/codestral-2508:batch",
         "benchmark": null
       }
     }
