@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-28",
+  "last_updated": "2026-08-29",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -4951,9 +4951,9 @@
       "huggingface_id": "tencent/Hy3",
       "released": "2026-07-06",
       "pricing": {
-        "input_per_1m": 0.0825,
-        "output_per_1m": 0.33,
-        "cache_hit_per_1m": 0.020625,
+        "input_per_1m": 0.132,
+        "output_per_1m": 0.528,
+        "cache_hit_per_1m": 0.033,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -6359,9 +6359,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.06,
-        "output_per_1m": 0.12,
-        "cache_hit_per_1m": 0.012,
+        "input_per_1m": 0.045,
+        "output_per_1m": 0.09,
+        "cache_hit_per_1m": 0.009,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6384,7 +6384,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -6499,9 +6499,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0868,
-        "output_per_1m": 0.1736,
-        "cache_hit_per_1m": 0.01736,
+        "input_per_1m": 0.0837,
+        "output_per_1m": 0.1674,
+        "cache_hit_per_1m": 0.016744,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7300,9 +7300,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.25,
-        "cache_hit_per_1m": 0.05,
+        "input_per_1m": 0.08,
+        "output_per_1m": 0.2,
+        "cache_hit_per_1m": 0.04,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -7324,7 +7324,7 @@
         "benchmark": null
       },
       "coding_quality_score": 37.6,
-      "cost_per_quality": 0.007
+      "cost_per_quality": 0.005
     },
     {
       "name": "ByteDance Seed: Seed-2.0-Code",
@@ -7370,7 +7370,7 @@
       "pricing": {
         "input_per_1m": 2.0,
         "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.2,
+        "cache_hit_per_1m": 0.25,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7470,9 +7470,9 @@
       "huggingface_id": null,
       "released": "2026-08-13",
       "pricing": {
-        "input_per_1m": 0.375,
-        "output_per_1m": 1.875,
-        "cache_hit_per_1m": 0.0375,
+        "input_per_1m": 0.75,
+        "output_per_1m": 3.75,
+        "cache_hit_per_1m": 0.075,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7569,9 +7569,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.7619,
-        "output_per_1m": 1.5239,
-        "cache_hit_per_1m": 0.063495,
+        "input_per_1m": 0.6301,
+        "output_per_1m": 1.2601,
+        "cache_hit_per_1m": 0.052504,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7594,7 +7594,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.02
+      "cost_per_quality": 0.017
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7671,9 +7671,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 1.25,
-        "output_per_1m": 4.4,
-        "cache_hit_per_1m": 0.26,
+        "input_per_1m": 1.2,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.24,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7806,9 +7806,9 @@
       "huggingface_id": "Qwen/Qwen3.8-2.4T-A95B",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 2.0,
-        "output_per_1m": 6.0,
-        "cache_hit_per_1m": 0.25,
+        "input_per_1m": 2.5,
+        "output_per_1m": 6.25,
+        "cache_hit_per_1m": 0.5,
         "currency": "USD"
       },
       "context_window": 1010000,
@@ -7893,6 +7893,212 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/mistralai/codestral-2508:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Z.ai: GLM 5.3 Flash (batch)",
+      "provider": "Z Ai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "z-ai/glm-5.3-flash:batch",
+      "huggingface_id": "zai-org/GLM-5.3-Flash",
+      "released": "2026-08-26",
+      "pricing": {
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.03,
+        "currency": "USD"
+      },
+      "context_window": 1048575,
+      "max_output": 943717,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": 46.0
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/z-ai/glm-5.3-flash:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "DeepSeek: DeepSeek V4 Pro 0813 (batch)",
+      "provider": "Deepseek",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "deepseek/deepseek-v4-pro-0813:batch",
+      "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "released": "2026-08-12",
+      "pricing": {
+        "input_per_1m": 1.32,
+        "output_per_1m": 3.96,
+        "cache_hit_per_1m": 0.13,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 943718,
+      "benchmarks": {
+        "swe_bench_verified": 80.6,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": 52.0,
+        "scicode": null,
+        "livebench": 74.4
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/deepseek/deepseek-v4-pro-0813:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 84.1,
+      "cost_per_quality": 0.047
+    },
+    {
+      "name": "DeepSeek: DeepSeek V4 Flash 0731 (batch)",
+      "provider": "Deepseek",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "deepseek/deepseek-v4-flash-0731:batch",
+      "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "released": "2026-07-31",
+      "pricing": {
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.03,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 943718,
+      "benchmarks": {
+        "swe_bench_verified": 79.0,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": 47.0,
+        "scicode": null,
+        "livebench": 67.7
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/deepseek/deepseek-v4-flash-0731:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 79.1,
+      "cost_per_quality": 0.004
+    },
+    {
+      "name": "Thinking Machines: Inkling Small (batch)",
+      "provider": "Thinkingmachines",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "thinkingmachines/inkling-small:batch",
+      "huggingface_id": "thinkingmachines/Inkling-Small",
+      "released": "2026-07-30",
+      "pricing": {
+        "input_per_1m": 0.5,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.1,
+        "currency": "USD"
+      },
+      "context_window": 524288,
+      "max_output": 471859,
+      "benchmarks": {
+        "swe_bench_verified": 80.2,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/thinkingmachines/inkling-small:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 74.7,
+      "cost_per_quality": 0.016
+    },
+    {
+      "name": "MoonshotAI: Kimi K3 (batch)",
+      "provider": "Moonshotai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "moonshotai/kimi-k3:batch",
+      "huggingface_id": "moonshotai/Kimi-K3",
+      "released": "2026-07-16",
+      "pricing": {
+        "input_per_1m": 3.0,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.3,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 943718,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/moonshotai/kimi-k3:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Qwen: Qwen3.5-9B (batch)",
+      "provider": "Qwen",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "qwen/qwen3.5-9b:batch",
+      "huggingface_id": "Qwen/Qwen3.5-9B",
+      "released": "2026-03-10",
+      "pricing": {
+        "input_per_1m": 0.17,
+        "output_per_1m": 0.25,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 235929,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/qwen/qwen3.5-9b:batch",
         "benchmark": null
       }
     }
