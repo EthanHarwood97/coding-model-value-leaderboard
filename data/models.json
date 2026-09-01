@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -3284,7 +3284,7 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.09,
+        "input_per_1m": 0.1,
         "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
@@ -6430,7 +6430,7 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.03,
+        "input_per_1m": 0.05,
         "output_per_1m": 0.16,
         "cache_hit_per_1m": 0.013,
         "currency": "USD"
@@ -6499,9 +6499,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0886,
-        "output_per_1m": 0.1772,
-        "cache_hit_per_1m": 0.017721,
+        "input_per_1m": 0.0809,
+        "output_per_1m": 0.1618,
+        "cache_hit_per_1m": 0.016184,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7569,9 +7569,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 1.0423,
-        "output_per_1m": 2.0845,
-        "cache_hit_per_1m": 0.086855,
+        "input_per_1m": 1.6,
+        "output_per_1m": 3.2,
+        "cache_hit_per_1m": 0.135,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7594,7 +7594,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.027
+      "cost_per_quality": 0.042
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7671,9 +7671,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 1.1875,
-        "output_per_1m": 4.18,
-        "cache_hit_per_1m": 0.247,
+        "input_per_1m": 1.17,
+        "output_per_1m": 3.96,
+        "cache_hit_per_1m": 0.234,
         "currency": "USD"
       },
       "context_window": 1310720,
