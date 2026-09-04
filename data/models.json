@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-03",
+  "last_updated": "2026-09-04",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -562,9 +562,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
       "released": "2026-06-04",
       "pricing": {
-        "input_per_1m": 0.6,
-        "output_per_1m": 2.4,
-        "cache_hit_per_1m": 0.12,
+        "input_per_1m": 0.625,
+        "output_per_1m": 3.125,
+        "cache_hit_per_1m": 0.1875,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -588,7 +588,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.5,
-      "cost_per_quality": 0.038,
+      "cost_per_quality": 0.049,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3393,9 +3393,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.1",
       "released": "2025-08-21",
       "pricing": {
-        "input_per_1m": 0.25,
-        "output_per_1m": 0.95,
-        "cache_hit_per_1m": 0.13,
+        "input_per_1m": 0.55,
+        "output_per_1m": 1.65,
+        "cache_hit_per_1m": 0.55,
         "currency": "USD"
       },
       "context_window": 163840,
@@ -7536,8 +7536,8 @@
       "huggingface_id": "Qwen/Qwen3.8-27B",
       "released": "2026-08-14",
       "pricing": {
-        "input_per_1m": 0.425,
-        "output_per_1m": 2.55,
+        "input_per_1m": 0.42,
+        "output_per_1m": 3.0,
         "cache_hit_per_1m": 0.085,
         "currency": "USD"
       },
@@ -7671,9 +7671,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 1.12,
-        "output_per_1m": 3.52,
-        "cache_hit_per_1m": 0.184,
+        "input_per_1m": 1.15,
+        "output_per_1m": 3.5,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7704,9 +7704,9 @@
       "huggingface_id": null,
       "released": "2026-08-21",
       "pricing": {
-        "input_per_1m": 0.22,
-        "output_per_1m": 0.66,
-        "cache_hit_per_1m": 0.007,
+        "input_per_1m": 0.44,
+        "output_per_1m": 1.32,
+        "cache_hit_per_1m": 0.014,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7729,7 +7729,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.009
+      "cost_per_quality": 0.018
     },
     {
       "name": "Qwen: Qwen3.8 Flash",
@@ -8198,6 +8198,72 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/google/gemini-3.8-flash:batch",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Ling 3.0 Flash Fin",
+      "provider": "Inclusionai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "inclusionai/ling-3.0-flash-fin",
+      "huggingface_id": null,
+      "released": "2026-08-27",
+      "pricing": {
+        "input_per_1m": 0.06,
+        "output_per_1m": 0.18,
+        "cache_hit_per_1m": 0.012,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 235929,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/inclusionai/ling-3.0-flash-fin",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "NVIDIA: Nemotron 3.5 Content Safety",
+      "provider": "Nvidia",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "nvidia/nemotron-3.5-content-safety",
+      "huggingface_id": "nvidia/Nemotron-3.5-Content-Safety",
+      "released": "2026-06-04",
+      "pricing": {
+        "input_per_1m": 0.2,
+        "output_per_1m": 0.2,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": 131072,
+      "max_output": 117964,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/nvidia/nemotron-3.5-content-safety",
         "benchmark": null
       }
     }
