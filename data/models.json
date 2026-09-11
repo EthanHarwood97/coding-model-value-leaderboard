@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-10",
+  "last_updated": "2026-09-11",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -2162,7 +2162,7 @@
         "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
-      "context_window": 202752,
+      "context_window": 200000,
       "max_output": 16384,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -4484,8 +4484,8 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3-0324",
       "released": "2025-03-24",
       "pricing": {
-        "input_per_1m": 0.29,
-        "output_per_1m": 1.14,
+        "input_per_1m": 0.25,
+        "output_per_1m": 1.0,
         "cache_hit_per_1m": 0.11,
         "currency": "USD"
       },
@@ -4511,7 +4511,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 32.3,
-      "cost_per_quality": 0.035,
+      "cost_per_quality": 0.031,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -4855,7 +4855,7 @@
       "context_window": 262144,
       "max_output": 32768,
       "benchmarks": {
-        "swe_bench_verified": null,
+        "swe_bench_verified": 70.9,
         "swe_bench_pro": null,
         "terminal_bench_2_1": null,
         "livecodebench": null,
@@ -4870,7 +4870,9 @@
         "benchmark": null
       },
       "frontend_tier": null,
-      "design2code_score": null
+      "design2code_score": null,
+      "coding_quality_score": 62.1,
+      "cost_per_quality": 0.002
     },
     {
       "name": "Kimi-K2-Instruct",
@@ -5321,9 +5323,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 3.0,
-        "output_per_1m": 15.0,
-        "cache_hit_per_1m": 0.3,
+        "input_per_1m": 2.34,
+        "output_per_1m": 11.7,
+        "cache_hit_per_1m": 0.261,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7267,15 +7269,15 @@
       "huggingface_id": null,
       "released": "2026-08-10",
       "pricing": {
-        "input_per_1m": 0.03,
-        "output_per_1m": 0.12,
-        "cache_hit_per_1m": 0.006,
+        "input_per_1m": 0.09,
+        "output_per_1m": 0.36,
+        "cache_hit_per_1m": 0.018,
         "currency": "USD"
       },
       "context_window": 524288,
       "max_output": 131072,
       "benchmarks": {
-        "swe_bench_verified": null,
+        "swe_bench_verified": 70.6,
         "swe_bench_pro": null,
         "terminal_bench_2_1": null,
         "livecodebench": null,
@@ -7289,7 +7291,9 @@
       "sources": {
         "pricing": "https://openrouter.ai/models/upstage/solar-pro4",
         "benchmark": null
-      }
+      },
+      "coding_quality_score": 61.7,
+      "cost_per_quality": 0.006
     },
     {
       "name": "NVIDIA: Nemotron 3.5 Lightning",
@@ -7401,9 +7405,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 1.0494,
-        "output_per_1m": 3.1482,
-        "cache_hit_per_1m": 0.03498,
+        "input_per_1m": 0.66,
+        "output_per_1m": 1.98,
+        "cache_hit_per_1m": 0.066,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7426,7 +7430,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.037
+      "cost_per_quality": 0.024
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7671,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 1.085,
-        "output_per_1m": 3.41,
-        "cache_hit_per_1m": 0.2015,
+        "input_per_1m": 0.97,
+        "output_per_1m": 3.3077,
+        "cache_hit_per_1m": 0.194,
         "currency": "USD"
       },
       "context_window": 1310720,
