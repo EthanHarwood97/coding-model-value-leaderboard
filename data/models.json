@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11",
+  "last_updated": "2026-09-12",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.966,
-        "output_per_1m": 3.036,
-        "cache_hit_per_1m": 0.1932,
+        "input_per_1m": 0.6,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.049,
+      "cost_per_pro_point": 0.032,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.057,
+      "cost_per_quality": 0.037,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -3865,8 +3865,8 @@
       "huggingface_id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "released": "2025-07-21",
       "pricing": {
-        "input_per_1m": 0.22,
-        "output_per_1m": 0.88,
+        "input_per_1m": 0.0875,
+        "output_per_1m": 0.35,
         "cache_hit_per_1m": 0.0175,
         "currency": "USD"
       },
@@ -5323,9 +5323,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 2.34,
-        "output_per_1m": 11.7,
-        "cache_hit_per_1m": 0.261,
+        "input_per_1m": 2.3027,
+        "output_per_1m": 11.5502,
+        "cache_hit_per_1m": 0.263169,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6361,9 +6361,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.065,
-        "output_per_1m": 0.18,
-        "cache_hit_per_1m": 0.016,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.08,
+        "cache_hit_per_1m": 0.008,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6386,7 +6386,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -6432,9 +6432,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.05,
-        "output_per_1m": 0.16,
-        "cache_hit_per_1m": 0.013,
+        "input_per_1m": 0.03,
+        "output_per_1m": 0.07,
+        "cache_hit_per_1m": 0.003,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6457,7 +6457,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -6501,9 +6501,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0886,
-        "output_per_1m": 0.1772,
-        "cache_hit_per_1m": 0.017721,
+        "input_per_1m": 0.0668,
+        "output_per_1m": 0.1336,
+        "cache_hit_per_1m": 0.013356,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7405,9 +7405,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.66,
-        "output_per_1m": 1.98,
-        "cache_hit_per_1m": 0.066,
+        "input_per_1m": 0.5782,
+        "output_per_1m": 1.7345,
+        "cache_hit_per_1m": 0.018396,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7430,7 +7430,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.024
+      "cost_per_quality": 0.021
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7540,9 +7540,9 @@
       "huggingface_id": "Qwen/Qwen3.8-27B",
       "released": "2026-08-14",
       "pricing": {
-        "input_per_1m": 0.42,
-        "output_per_1m": 3.0,
-        "cache_hit_per_1m": 0.085,
+        "input_per_1m": 0.214,
+        "output_per_1m": 2.55,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 1000000,
@@ -7573,9 +7573,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.9553,
-        "output_per_1m": 1.9105,
-        "cache_hit_per_1m": 0.079605,
+        "input_per_1m": 0.8093,
+        "output_per_1m": 1.6185,
+        "cache_hit_per_1m": 0.067439,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7598,7 +7598,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.025
+      "cost_per_quality": 0.021
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7675,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.97,
-        "output_per_1m": 3.3077,
-        "cache_hit_per_1m": 0.194,
+        "input_per_1m": 0.8727,
+        "output_per_1m": 3.36,
+        "cache_hit_per_1m": 0.1639,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7777,9 +7777,9 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.15,
-        "output_per_1m": 0.5,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.075,
+        "output_per_1m": 0.25,
+        "cache_hit_per_1m": 0.015,
         "currency": "USD"
       },
       "context_window": 1310720,
