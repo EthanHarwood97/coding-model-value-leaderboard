@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-12",
+  "last_updated": "2026-09-13",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -1901,9 +1901,9 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.5",
       "released": "2026-02-12",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.2,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.27,
+        "output_per_1m": 1.08,
+        "cache_hit_per_1m": 0.027,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1928,7 +1928,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 71.9,
-      "cost_per_quality": 0.017,
+      "cost_per_quality": 0.015,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -3682,8 +3682,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "released": "2025-07-29",
       "pricing": {
-        "input_per_1m": 0.09,
-        "output_per_1m": 0.3,
+        "input_per_1m": 0.0481,
+        "output_per_1m": 0.193,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -5323,9 +5323,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 2.3027,
-        "output_per_1m": 11.5502,
-        "cache_hit_per_1m": 0.263169,
+        "input_per_1m": 2.6481,
+        "output_per_1m": 13.2827,
+        "cache_hit_per_1m": 0.302644,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6432,9 +6432,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.03,
-        "output_per_1m": 0.07,
-        "cache_hit_per_1m": 0.003,
+        "input_per_1m": 0.0352,
+        "output_per_1m": 0.1056,
+        "cache_hit_per_1m": 0.00112,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6501,9 +6501,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0668,
-        "output_per_1m": 0.1336,
-        "cache_hit_per_1m": 0.013356,
+        "input_per_1m": 0.049,
+        "output_per_1m": 0.098,
+        "cache_hit_per_1m": 0.0098,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6526,7 +6526,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Ling-3.0-flash",
@@ -7573,9 +7573,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.8093,
-        "output_per_1m": 1.6185,
-        "cache_hit_per_1m": 0.067439,
+        "input_per_1m": 1.6,
+        "output_per_1m": 3.2,
+        "cache_hit_per_1m": 0.135,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7598,7 +7598,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.021
+      "cost_per_quality": 0.042
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7609,9 +7609,9 @@
       "huggingface_id": null,
       "released": "2026-08-18",
       "pricing": {
-        "input_per_1m": 1.4,
-        "output_per_1m": 4.4,
-        "cache_hit_per_1m": 0.26,
+        "input_per_1m": 1.092,
+        "output_per_1m": 3.432,
+        "cache_hit_per_1m": 0.2028,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7675,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.8727,
-        "output_per_1m": 3.36,
-        "cache_hit_per_1m": 0.1639,
+        "input_per_1m": 0.936,
+        "output_per_1m": 3.168,
+        "cache_hit_per_1m": 0.1872,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7777,9 +7777,9 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.075,
-        "output_per_1m": 0.25,
-        "cache_hit_per_1m": 0.015,
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 1310720,
