@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14",
+  "last_updated": "2026-09-15",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.6832,
-        "output_per_1m": 2.1472,
-        "cache_hit_per_1m": 0.12688,
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.14,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.035,
+      "cost_per_pro_point": 0.071,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.04,
+      "cost_per_quality": 0.082,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1432,8 +1432,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.085,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.08,
+        "output_per_1m": 0.45,
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
@@ -1610,8 +1610,8 @@
       "huggingface_id": "Qwen/Qwen3.5-35B-A3B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.3125,
-        "output_per_1m": 1.25,
+        "input_per_1m": 0.1625,
+        "output_per_1m": 1.3,
         "cache_hit_per_1m": 0.15625,
         "currency": "USD"
       },
@@ -1636,7 +1636,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 59.8,
-      "cost_per_quality": 0.021,
+      "cost_per_quality": 0.022,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -6432,9 +6432,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0352,
-        "output_per_1m": 0.1056,
-        "cache_hit_per_1m": 0.00112,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.1,
+        "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7675,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.92,
-        "output_per_1m": 3.1372,
-        "cache_hit_per_1m": 0.184,
+        "input_per_1m": 0.8775,
+        "output_per_1m": 2.97,
+        "cache_hit_per_1m": 0.1755,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -8401,6 +8401,72 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/deepseek/deepseek-v4.1-flash",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "DeepSeek: DeepSeek Pro Latest",
+      "provider": "~Deepseek",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "~deepseek/deepseek-pro-latest",
+      "huggingface_id": null,
+      "released": "2026-09-14",
+      "pricing": {
+        "input_per_1m": 0.66,
+        "output_per_1m": 1.98,
+        "cache_hit_per_1m": 0.022,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 384000,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/~deepseek/deepseek-pro-latest",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "DeepSeek: DeepSeek Flash Latest",
+      "provider": "~Deepseek",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "~deepseek/deepseek-flash-latest",
+      "huggingface_id": null,
+      "released": "2026-09-14",
+      "pricing": {
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.6,
+        "cache_hit_per_1m": 0.015,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 943718,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/~deepseek/deepseek-flash-latest",
         "benchmark": null
       }
     }
