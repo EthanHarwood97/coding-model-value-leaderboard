@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16",
+  "last_updated": "2026-09-17",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -2339,8 +2339,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "released": "2025-12-14",
       "pricing": {
-        "input_per_1m": 0.05,
-        "output_per_1m": 0.2,
+        "input_per_1m": 0.06,
+        "output_per_1m": 0.24,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -2962,9 +2962,9 @@
       "huggingface_id": "zai-org/GLM-4.6",
       "released": "2025-09-30",
       "pricing": {
-        "input_per_1m": 0.43,
-        "output_per_1m": 1.75,
-        "cache_hit_per_1m": 0.08,
+        "input_per_1m": 0.5,
+        "output_per_1m": 2.0,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -2989,7 +2989,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 46.2,
-      "cost_per_quality": 0.038,
+      "cost_per_quality": 0.043,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -5323,9 +5323,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 2.6481,
-        "output_per_1m": 13.2827,
-        "cache_hit_per_1m": 0.302644,
+        "input_per_1m": 3.0,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.3,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6432,8 +6432,8 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.04,
-        "output_per_1m": 0.1,
+        "input_per_1m": 0.03,
+        "output_per_1m": 0.13,
         "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
@@ -6457,7 +6457,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.001
+      "cost_per_quality": 0.002
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -7405,9 +7405,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.9834,
-        "output_per_1m": 2.9502,
-        "cache_hit_per_1m": 0.03278,
+        "input_per_1m": 0.66,
+        "output_per_1m": 1.98,
+        "cache_hit_per_1m": 0.022,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7430,7 +7430,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.035
+      "cost_per_quality": 0.024
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7777,9 +7777,9 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.3333,
-        "cache_hit_per_1m": 0.02,
+        "input_per_1m": 0.09,
+        "output_per_1m": 0.3,
+        "cache_hit_per_1m": 0.018,
         "currency": "USD"
       },
       "context_window": 1310720,
