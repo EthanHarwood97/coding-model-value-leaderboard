@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-18",
+  "last_updated": "2026-09-19",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -121,9 +121,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.5625,
-        "output_per_1m": 1.8,
-        "cache_hit_per_1m": 0.105,
+        "input_per_1m": 0.5544,
+        "output_per_1m": 1.7424,
+        "cache_hit_per_1m": 0.10296,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -144,10 +144,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.029,
+      "cost_per_pro_point": 0.028,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.034,
+      "cost_per_quality": 0.033,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -562,9 +562,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
       "released": "2026-06-04",
       "pricing": {
-        "input_per_1m": 0.625,
-        "output_per_1m": 3.125,
-        "cache_hit_per_1m": 0.1875,
+        "input_per_1m": 0.6,
+        "output_per_1m": 2.4,
+        "cache_hit_per_1m": 0.12,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -588,7 +588,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 63.5,
-      "cost_per_quality": 0.049,
+      "cost_per_quality": 0.038,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -5323,9 +5323,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 2.1,
-        "output_per_1m": 10.95,
-        "cache_hit_per_1m": 0.23,
+        "input_per_1m": 1.7,
+        "output_per_1m": 8.5,
+        "cache_hit_per_1m": 0.17,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6361,9 +6361,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.06,
-        "output_per_1m": 0.12,
-        "cache_hit_per_1m": 0.012,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.08,
+        "cache_hit_per_1m": 0.016,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6386,7 +6386,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Thinking Machines: Inkling Small",
@@ -6432,9 +6432,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0558,
-        "output_per_1m": 0.1767,
-        "cache_hit_per_1m": 0.0088,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.08,
+        "cache_hit_per_1m": 0.016,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6457,7 +6457,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -6501,9 +6501,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0886,
-        "output_per_1m": 0.1772,
-        "cache_hit_per_1m": 0.017721,
+        "input_per_1m": 0.0451,
+        "output_per_1m": 0.0902,
+        "cache_hit_per_1m": 0.009016,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6526,7 +6526,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.002
+      "cost_per_quality": 0.001
     },
     {
       "name": "Ling-3.0-flash",
@@ -7304,7 +7304,7 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.08,
+        "input_per_1m": 0.07,
         "output_per_1m": 0.2,
         "cache_hit_per_1m": 0.04,
         "currency": "USD"
@@ -7405,9 +7405,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.66,
-        "output_per_1m": 1.98,
-        "cache_hit_per_1m": 0.022,
+        "input_per_1m": 0.5782,
+        "output_per_1m": 1.7345,
+        "cache_hit_per_1m": 0.018396,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7430,7 +7430,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.024
+      "cost_per_quality": 0.021
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7573,9 +7573,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 1.6,
-        "output_per_1m": 3.2,
-        "cache_hit_per_1m": 0.135,
+        "input_per_1m": 0.4933,
+        "output_per_1m": 0.9866,
+        "cache_hit_per_1m": 0.041107,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7598,7 +7598,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.042
+      "cost_per_quality": 0.013
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7609,9 +7609,9 @@
       "huggingface_id": null,
       "released": "2026-08-18",
       "pricing": {
-        "input_per_1m": 1.4,
-        "output_per_1m": 4.4,
-        "cache_hit_per_1m": 0.26,
+        "input_per_1m": 0.91,
+        "output_per_1m": 2.86,
+        "cache_hit_per_1m": 0.169,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7675,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.8775,
-        "output_per_1m": 2.97,
-        "cache_hit_per_1m": 0.1755,
+        "input_per_1m": 0.8918,
+        "output_per_1m": 2.8028,
+        "cache_hit_per_1m": 0.16562,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -8413,9 +8413,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.66,
-        "output_per_1m": 1.98,
-        "cache_hit_per_1m": 0.022,
+        "input_per_1m": 0.5782,
+        "output_per_1m": 1.7345,
+        "cache_hit_per_1m": 0.018396,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8446,9 +8446,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.1485,
-        "output_per_1m": 0.594,
-        "cache_hit_per_1m": 0.004455,
+        "input_per_1m": 0.13,
+        "output_per_1m": 0.52,
+        "cache_hit_per_1m": 0.0026,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8467,6 +8467,39 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/~deepseek/deepseek-flash-latest",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "Z.ai: GLM 5.3 FlashX",
+      "provider": "Z Ai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "z-ai/glm-5.3-flashx",
+      "huggingface_id": "",
+      "released": "2026-09-18",
+      "pricing": {
+        "input_per_1m": 0.37,
+        "output_per_1m": 1.25,
+        "cache_hit_per_1m": 0.075,
+        "currency": "USD"
+      },
+      "context_window": 1048576,
+      "max_output": 131072,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/z-ai/glm-5.3-flashx",
         "benchmark": null
       }
     }
