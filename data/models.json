@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-25",
+  "last_updated": "2026-09-26",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -923,7 +923,7 @@
       "released": "2026-04-27",
       "pricing": {
         "input_per_1m": 0.32,
-        "output_per_1m": 2.7,
+        "output_per_1m": 3.2,
         "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
@@ -949,7 +949,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 76.0,
-      "cost_per_quality": 0.036,
+      "cost_per_quality": 0.042,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -6361,7 +6361,7 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.03,
+        "input_per_1m": 0.021,
         "output_per_1m": 0.32,
         "cache_hit_per_1m": 0.016,
         "currency": "USD"
@@ -6402,7 +6402,7 @@
         "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 524288,
       "max_output": null,
       "benchmarks": {
         "swe_bench_verified": 80.2,
@@ -6432,7 +6432,7 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.03,
+        "input_per_1m": 0.021,
         "output_per_1m": 0.32,
         "cache_hit_per_1m": 0.016,
         "currency": "USD"
@@ -6501,9 +6501,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.049,
-        "output_per_1m": 0.098,
-        "cache_hit_per_1m": 0.0098,
+        "input_per_1m": 0.047,
+        "output_per_1m": 0.0941,
+        "cache_hit_per_1m": 0.009408,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7309,7 +7309,7 @@
         "cache_hit_per_1m": 0.04,
         "currency": "USD"
       },
-      "context_window": 262144,
+      "context_window": 1000000,
       "max_output": 262144,
       "benchmarks": {
         "swe_bench_verified": 52.8,
@@ -7405,9 +7405,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.462,
-        "output_per_1m": 1.386,
-        "cache_hit_per_1m": 0.0154,
+        "input_per_1m": 0.264,
+        "output_per_1m": 0.792,
+        "cache_hit_per_1m": 0.0088,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7430,7 +7430,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.016
+      "cost_per_quality": 0.009
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7573,9 +7573,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.783,
-        "output_per_1m": 1.566,
-        "cache_hit_per_1m": 0.06525,
+        "input_per_1m": 0.3682,
+        "output_per_1m": 0.7364,
+        "cache_hit_per_1m": 0.030682,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7598,7 +7598,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.021
+      "cost_per_quality": 0.01
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7609,9 +7609,9 @@
       "huggingface_id": null,
       "released": "2026-08-18",
       "pricing": {
-        "input_per_1m": 1.4,
-        "output_per_1m": 4.4,
-        "cache_hit_per_1m": 0.26,
+        "input_per_1m": 0.3794,
+        "output_per_1m": 1.1924,
+        "cache_hit_per_1m": 0.07046,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7675,9 +7675,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.5614,
-        "output_per_1m": 1.7644,
-        "cache_hit_per_1m": 0.10426,
+        "input_per_1m": 0.3794,
+        "output_per_1m": 1.1924,
+        "cache_hit_per_1m": 0.07046,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7777,9 +7777,9 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.045,
-        "output_per_1m": 0.14,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.015,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -8115,9 +8115,9 @@
       "huggingface_id": null,
       "released": "2026-08-27",
       "pricing": {
-        "input_per_1m": 0.045,
-        "output_per_1m": 0.14,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.04,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.015,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -8380,9 +8380,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "released": "2026-09-10",
       "pricing": {
-        "input_per_1m": 0.15,
-        "output_per_1m": 0.6,
-        "cache_hit_per_1m": 0.003,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.006,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8413,9 +8413,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.2528,
-        "output_per_1m": 2.88,
-        "cache_hit_per_1m": 0.08832,
+        "input_per_1m": 0.2495,
+        "output_per_1m": 0.7484,
+        "cache_hit_per_1m": 0.007938,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8446,9 +8446,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.04,
-        "output_per_1m": 0.49,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.035,
+        "output_per_1m": 0.29,
+        "cache_hit_per_1m": 0.001,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8583,7 +8583,7 @@
         "cache_hit_per_1m": 0.0036,
         "currency": "USD"
       },
-      "context_window": 1048576,
+      "context_window": 1050000,
       "max_output": 131072,
       "benchmarks": {
         "swe_bench_verified": null,
