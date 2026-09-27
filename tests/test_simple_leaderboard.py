@@ -235,6 +235,23 @@ def test_agentic_floor_penalty():
     assert gpt6["coder_score"] == 56.8
 
 
+def test_top_level_matcher_prefix_guard():
+    import live_benchmarks
+
+    models = [
+        {"name": "OpenAI: GPT-5.4", "vision_score": None},
+        {"name": "OpenAI: GPT-5.4 Nano", "vision_score": None},
+    ]
+    scores = {"OpenAI: GPT-5.4 Nano": 76.6, "OpenAI: GPT-5.4": 81.2}
+
+    matched = live_benchmarks.match_live_scores_top_level(models, scores, "vision_score")
+    by_name = {m["name"]: m["vision_score"] for m in models}
+
+    assert matched == 2
+    assert by_name["OpenAI: GPT-5.4"] == 81.2, by_name
+    assert by_name["OpenAI: GPT-5.4 Nano"] == 76.6, by_name
+
+
 if __name__ == "__main__":
     test_discover_latest_release()
     test_resolve_release_fallback()
@@ -249,4 +266,5 @@ if __name__ == "__main__":
     test_vision_index_priority()
     test_build_models_vision_sources()
     test_agentic_floor_penalty()
+    test_top_level_matcher_prefix_guard()
     print("All simple-leaderboard tests passed.")

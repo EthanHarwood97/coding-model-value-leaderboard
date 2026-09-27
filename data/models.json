@@ -1541,7 +1541,7 @@
       "cost_per_quality": 3.333,
       "frontend_tier": "S",
       "design2code_score": null,
-      "vision_score": 76.6
+      "vision_score": 81.2
     },
     {
       "name": "OpenAI: GPT-5.3 Chat",
@@ -2235,7 +2235,7 @@
       "cost_per_quality": 0.216,
       "frontend_tier": "A",
       "design2code_score": null,
-      "vision_score": 79.5
+      "vision_score": null
     },
     {
       "name": "MiniMax: MiniMax M2.1",
@@ -2416,7 +2416,7 @@
       "open_weight": false,
       "frontend_tier": "B",
       "design2code_score": null,
-      "vision_score": 79.5
+      "vision_score": null
     },
     {
       "name": "OpenAI: GPT-5.2",

@@ -246,45 +246,55 @@ def match_live_scores_top_level(
     key: str,
     log_fn=None,
 ) -> int:
-    """Match scraped scores to a TOP-LEVEL model field (e.g. vision_score).
+    """Match scored names to a TOP-LEVEL model field (e.g. vision_score).
 
-    Mirrors match_live_scores but writes model[key] instead of
-    model["benchmarks"][key]. Returns count of newly matched models.
+    Exact normalised matches win; fuzzy containment (ratio > 0.85) is only
+    a fallback when no exact match exists, so a shorter model name can
+    never steal a longer sibling's score (e.g. "GPT-5.4" vs "GPT-5.4 Nano").
+    Returns count of newly matched models.
     """
+    index = {}
+    for scored_name, score in scores.items():
+        for k in (_norm(scored_name), _norm(_strip_provider(scored_name))):
+            if k and k not in index:
+                index[k] = score
+
     matched = 0
     for model in models:
         name = model.get("name", "")
-        if not name:
+        if not name or model.get(key) is not None:
             continue
-        if model.get(key) is not None:
-            continue
-        stripped = _strip_provider(name)
-        candidates = [_norm(name), _norm(stripped)]
-        found = False
-        for scraped_name, score in scores.items():
-            scraped_norm = _norm(scraped_name)
-            if scraped_norm in candidates:
-                model[key] = round(score, 1)
-                matched += 1
-                if log_fn:
-                    log_fn(f"  {key}: {name} = {score} (live exact)")
-                found = True
+        candidates = [_norm(name), _norm(_strip_provider(name))]
+
+        score = None
+        how = None
+        for c in candidates:
+            if c in index:
+                score = index[c]
+                how = "exact"
                 break
-            if not found:
-                for c in candidates:
-                    if len(c) > 10 and len(scraped_norm) > 10:
-                        shorter = min(len(c), len(scraped_norm))
-                        longer = max(len(c), len(scraped_norm))
-                        if shorter / longer > 0.6:
-                            if c in scraped_norm or scraped_norm in c:
-                                model[key] = round(score, 1)
-                                matched += 1
-                                if log_fn:
-                                    log_fn(f"  {key}: {name} = {score} (live fuzzy)")
-                                found = True
-                                break
-            if found:
-                break
+
+        if score is None:
+            for c in candidates:
+                if len(c) <= 10:
+                    continue
+                for k, s in index.items():
+                    if len(k) <= 10:
+                        continue
+                    shorter = min(len(c), len(k))
+                    longer = max(len(c), len(k))
+                    if shorter / longer > 0.85 and (c in k or k in c):
+                        score = s
+                        how = "fuzzy"
+                        break
+                if score is not None:
+                    break
+
+        if score is not None:
+            model[key] = round(score, 1)
+            matched += 1
+            if log_fn:
+                log_fn(f"  {key}: {name} = {score} ({how})")
     return matched
 
 
