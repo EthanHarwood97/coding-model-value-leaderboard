@@ -2832,8 +2832,8 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2",
       "released": "2025-10-23",
       "pricing": {
-        "input_per_1m": 0.255,
-        "output_per_1m": 1.02,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -2859,7 +2859,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 55.2,
-      "cost_per_quality": 0.018,
+      "cost_per_quality": 0.022,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -4970,9 +4970,9 @@
       "huggingface_id": "tencent/Hy3",
       "released": "2026-07-06",
       "pricing": {
-        "input_per_1m": 0.132,
-        "output_per_1m": 0.528,
-        "cache_hit_per_1m": 0.033,
+        "input_per_1m": 0.0825,
+        "output_per_1m": 0.33,
+        "cache_hit_per_1m": 0.020625,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -7422,9 +7422,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.245,
+        "input_per_1m": 0.293,
         "output_per_1m": 3.5,
-        "cache_hit_per_1m": 0.24452,
+        "cache_hit_per_1m": 0.172,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7692,9 +7692,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.2737,
-        "output_per_1m": 2.574,
-        "cache_hit_per_1m": 0.044965,
+        "input_per_1m": 0.3556,
+        "output_per_1m": 1.1176,
+        "cache_hit_per_1m": 0.06604,
         "currency": "USD"
       },
       "context_window": 1310720,

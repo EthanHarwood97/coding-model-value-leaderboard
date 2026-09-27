@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-09-27 20:48",
+  "last_updated": "2026-09-27 19:50",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
