@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Model Scorecard — Agentic, Coding, Vision, Cost</title>
+  <meta name="description" content="Coding models compared on LiveBench agentic coding, LiveBench coding, MMMU-Pro vision, and output price. Coder and Frontend scores, plus value per dollar." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Coding Model Scorecard</h1>
+        <p class="tagline">Coder from the two LiveBench scores, Frontend with vision folded in. Ranked by Frontend, with value in coder points per dollar.</p>
+      </div>
+      <div class="header-controls">
+        <a href="index.html" class="nav-link">Full leaderboard</a>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="source-line" class="sources-badge">
+      <p>LiveBench <span id="release">—</span> (Coding + Agentic Coding, official CSVs) · MMMU-Pro vision: Artificial Analysis run (via BenchLM.ai), published scores fill gaps · prices: models.json when tracked, else LiveBench's cost file</p>
+    </section>
+
+    <section id="table-section">
+      <p class="table-info">Showing <span id="visible-count">0</span> models. Last updated <span id="last-updated">—</span>.</p>
+      <div class="table-wrap">
+        <table id="scorecard" class="scorecard-table">
+          <thead>
+            <tr></tr>
+          </thead>
+          <tbody id="table-body">
+            <tr><td colspan="9" class="loading-cell">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Coder = mean of the two LiveBench scores, with Agentic below 42 counted at 60%. Frontend = mean of all three tracked scores. Value = Coder ÷ output $/1M, scaled by 60% below the agentic floor; higher is more score per dollar. Click any column to sort. A vision value like 77.3+ est. is a floor and never feeds a score or the rank.</p>
+    </section>
+
+    <section id="methodology">
+      <h2>Method</h2>
+      <details>
+        <summary>Click to expand</summary>
+
+        <p><strong>Coder.</strong> The mean of the two LiveBench scores: Agentic Coding and Coding. Every row has both, so it compares cleanly across the whole table, and Value is built on it.</p>
+
+        <p><strong>Frontend.</strong> The mean of all three tracked scores, vision included, for work where reading screenshots and design references matters. Where a model has no vision result, Frontend averages the two LiveBench scores instead, so thin MMMU-Pro coverage does not push anyone out.</p>
+
+        <p><strong>Agentic floor.</strong> An Agentic Coding score below 42 counts at 60% inside Coder and Frontend. Below that line the tasks fail often enough that the raw score overstates the model, and the discount stops a strong Coding score from carrying a mistake-prone agent to the top. The Agentic column always shows the raw LiveBench number; a dotted underline marks a value that is discounted.</p>
+
+        <p><strong>Value.</strong> The Coder score divided by output price per million tokens, then scaled by 60% for models under the agentic floor. It answers the question that matters when you pay per token: how much usable coding score does one dollar buy? A model that fails agentic tasks often is not a bargain, however cheap it is. Higher is better, and free models have no price to divide by, so they show a dash.</p>
+
+        <p><strong>Agentic Coding</strong> is the mean of LiveBench's python, javascript, and typescript tasks. <strong>Coding</strong> is the mean of code_generation and code_completion. The arithmetic matches <a href="https://livebench.ai" target="_blank" rel="noopener">livebench.ai</a> exactly, computed from the same official CSVs.</p>
+
+        <p><strong>Vision</strong> is MMMU-Pro, scored 0–100: image, chart, diagram, and document understanding. The primary number comes from <a href="https://artificialanalysis.ai/evaluations/mmmu-pro" target="_blank" rel="noopener">Artificial Analysis</a>, which runs the benchmark itself under one protocol and covers the newest models. Where a model has several AA reasoning-effort results, the table uses its best. Where AA has no result, we fall back to the published standard score (BenchLM.ai, then llm-stats.com). Hover any vision cell to see which one it is.</p>
+
+        <p><strong>Vision estimates.</strong> A cell like 79.4+ est. means no MMMU-Pro result exists yet, so the model inherits the newest scored model in its own line as a floor. Read it as "no worse than 79.4". The comparison stays inside a line, never across lines or model sizes, and it assumes the newer model is at least as good. That usually holds, but not always, which is why estimates stay out of the Frontend score, the Coder score, and the rank.</p>
+
+        <p><strong>Effort configs.</strong> LiveBench tests some models at several reasoning-effort settings, and each result gets its own row here. Claude Opus 5.5 appears at Max Effort and at xHigh Effort, for example. Same model, different settings.</p>
+
+        <p><strong>Prices</strong> come from this repo's <code>data/models.json</code> when a model is tracked there, otherwise from LiveBench's own cost file for the same release. Output price per million tokens, USD.</p>
+
+        <p><strong>Freshness.</strong> The table rebuilds from those source files on the same daily schedule as the full leaderboard.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated <span id="footer-updated">—</span> · LiveBench <span id="footer-release">—</span> · <a href="index.html">Full leaderboard</a></p>
+    <p class="disclaimer">Benchmarks move. Check provider pricing before you commit.</p>
+  </footer>
+
+  <script src="simple.js"></script>
+</body>
+</html>

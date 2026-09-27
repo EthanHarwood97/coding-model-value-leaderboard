@@ -1397,7 +1397,7 @@
       "open_weight": false,
       "frontend_tier": null,
       "design2code_score": null,
-      "vision_score": 81.2
+      "vision_score": 76.6
     },
     {
       "name": "Z.ai: GLM 5 Turbo",
@@ -1541,7 +1541,7 @@
       "cost_per_quality": 3.333,
       "frontend_tier": "S",
       "design2code_score": null,
-      "vision_score": 81.2
+      "vision_score": 76.6
     },
     {
       "name": "OpenAI: GPT-5.3 Chat",

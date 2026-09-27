@@ -1,0 +1,5 @@
+model,input_price_per_million,output_price_per_million,cost_per_successful_task
+claude-opus-4-6-thinking-auto-high-effort,5.0,25.0,1.2
+deepseek-v4-flash,0.14,0.28,0.0161
+deepseek-v4-flash-0731,0.15,0.3,0.02
+some-unmatched-model,1.0,2.0,0.5

@@ -514,6 +514,102 @@ footer p {
 }
 
 /* ==========================================================================
+   Scorecard page (simple.html)
+   ========================================================================== */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.scorecard-table {
+  min-width: 980px;
+}
+
+.scorecard-table th:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.scorecard-table .vision-est {
+  color: var(--text-tertiary);
+  font-style: italic;
+  font-weight: 500;
+  border-bottom: 1px dotted var(--border-hover);
+  cursor: help;
+}
+
+.scorecard-table .agentic-penalized {
+  border-bottom: 1px dotted var(--border-hover);
+  cursor: help;
+}
+
+.scorecard-table .est-label {
+  font-size: 0.62rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 0.2rem;
+}
+
+.scorecard-table .rank-cell {
+  color: var(--text-tertiary);
+  text-align: right;
+  width: 3.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.scorecard-table td.model-cell {
+  min-width: 220px;
+}
+
+.scorecard-table .model-cell .variant {
+  display: block;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+.scorecard-table .price-cell {
+  font-variant-numeric: tabular-nums;
+}
+
+.scorecard-table .value-cell {
+  text-align: center;
+  font-weight: 600;
+  color: var(--success);
+  font-variant-numeric: tabular-nums;
+}
+
+.loading-cell {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.table-note {
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 768px) {

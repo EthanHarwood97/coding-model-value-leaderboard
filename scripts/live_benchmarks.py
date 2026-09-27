@@ -168,6 +168,78 @@ def fetch_benchlm_mmmu_pro() -> dict[str, float]:
     return scores
 
 
+# ── Source 1c: llm-stats.com — MMMU-Pro (secondary) ─────────────────────
+
+def fetch_llm_stats_mmmu_pro() -> dict[str, float]:
+    """Scrape MMMU-Pro scores from llm-stats.com (secondary source).
+
+    The leaderboard table is server-rendered: each row links to
+    /models/<slug> and the score sits in a font-mono button, 0-1 scale.
+    Returns dict of model_name -> score (0-100).
+    """
+    print("[INFO] Fetching llm-stats.com MMMU-Pro scores ...")
+    html = _fetch_text("https://llm-stats.com/benchmarks/mmmu-pro")
+    if not html:
+        print("[WARN] Failed to fetch llm-stats page")
+        return {}
+
+    row_pattern = re.compile(
+        r'<a class="[^"]*truncate"[^>]*>([^<]+)</a>.{0,600}?'
+        r'<button class="[^"]*font-mono[^"]*">([\d.]+)',
+        re.DOTALL,
+    )
+
+    scores = {}
+    for m in row_pattern.finditer(html):
+        name = m.group(1).strip()
+        try:
+            score = round(float(m.group(2)) * 100, 1)
+        except ValueError:
+            continue
+        if name and 0 < score <= 100 and name not in scores:
+            scores[name] = score
+
+    print(f"[INFO] Found {len(scores)} MMMU-Pro model scores on llm-stats.com")
+    return scores
+
+
+# ── Source 1d: AA-MMMU-Pro (Artificial Analysis run) via BenchLM mirror ──
+
+def fetch_benchlm_aa_mmmu_pro() -> dict[str, float]:
+    """Scrape AA-MMMU-Pro from BenchLM's markdown mirror.
+
+    Artificial Analysis runs MMMU-Pro itself under one protocol; BenchLM
+    mirrors the results at a stable markdown endpoint. Where a model was
+    tested at several reasoning-effort settings, multiple rows may appear
+    (e.g. "Claude Opus 4.6 (Adaptive)"); callers collapse to the best.
+
+    Returns dict of model_name -> score (0-100).
+    """
+    print("[INFO] Fetching BenchLM.ai AA-MMMU-Pro scores ...")
+    text = _fetch_text("https://benchlm.ai/md/benchmarks/aammmupro.md")
+    if not text:
+        print("[WARN] Failed to fetch BenchLM AA-MMMU-Pro markdown")
+        return {}
+
+    row_pattern = re.compile(
+        r"^\|\s*\d+\s*\|\s*\[([^\]]+)\]\([^)]+\)\s*\|\s*[^|]+\|\s*([\d.]+)%\s*\|",
+        re.MULTILINE,
+    )
+
+    scores = {}
+    for m in row_pattern.finditer(text):
+        name = m.group(1).strip()
+        try:
+            score = float(m.group(2))
+        except ValueError:
+            continue
+        if name and 0 < score <= 100 and name not in scores:
+            scores[name] = score
+
+    print(f"[INFO] Found {len(scores)} AA-MMMU-Pro model scores on BenchLM.ai")
+    return scores
+
+
 def match_live_scores_top_level(
     models: list[dict],
     scores: dict[str, float],

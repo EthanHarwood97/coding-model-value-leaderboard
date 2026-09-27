@@ -19,11 +19,11 @@ VISION_SEED = {
     "Gemini 3.1 Pro": 83.9,
     "Google: Gemini 3.1 Pro Preview": 83.9,
     "Gemini 3.5 Flash": 83.6,
-    "GPT-5.4": 81.2,
+    "OpenAI: GPT-5.4 Nano": 76.6,
+    "GPT-5.4 mini": 76.6,
     "OpenAI: GPT-5.4": 81.2,
     "GPT-5.5": 81.2,
     "Gemini 3 Pro": 81.0,
-    "GPT-5.2": 79.5,
     "OpenAI: GPT-5.2": 79.5,
     "Kimi K2.6": 79.4,
     "MoonshotAI: Kimi K2.6": 79.4,
@@ -42,8 +42,6 @@ VISION_SEED = {
     "Claude Opus 4.6": 77.3,
     "Anthropic: Claude Opus 4.6": 77.3,
     "Gemma 4 31B": 76.9,
-    "GPT-5.4 mini": 76.6,
-    "OpenAI: GPT-5.4 Nano": 76.6,
 }
 
 
