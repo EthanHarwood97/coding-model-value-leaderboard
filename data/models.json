@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-27",
+  "last_updated": "2026-09-28",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -1108,9 +1108,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.95,
-        "output_per_1m": 4.0,
-        "cache_hit_per_1m": 0.16,
+        "input_per_1m": 0.65,
+        "output_per_1m": 3.41,
+        "cache_hit_per_1m": 0.15,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1135,7 +1135,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.8,
-      "cost_per_quality": 0.096,
+      "cost_per_quality": 0.082,
       "frontend_tier": "A",
       "design2code_score": null,
       "vision_score": 79.4
@@ -1185,9 +1185,9 @@
       "huggingface_id": "zai-org/GLM-5.1",
       "released": "2026-04-07",
       "pricing": {
-        "input_per_1m": 0.9646,
-        "output_per_1m": 3.0316,
-        "cache_hit_per_1m": 0.17914,
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1212,7 +1212,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 52.5,
-      "cost_per_quality": 0.058,
+      "cost_per_quality": 0.084,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1332,9 +1332,9 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.7",
       "released": "2026-03-18",
       "pricing": {
-        "input_per_1m": 0.21,
-        "output_per_1m": 0.84,
-        "cache_hit_per_1m": 0.042,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1359,7 +1359,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 57.5,
-      "cost_per_quality": 0.015,
+      "cost_per_quality": 0.021,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1620,8 +1620,8 @@
       "huggingface_id": "Qwen/Qwen3.5-35B-A3B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.3125,
-        "output_per_1m": 1.25,
+        "input_per_1m": 0.1625,
+        "output_per_1m": 1.3,
         "cache_hit_per_1m": 0.15625,
         "currency": "USD"
       },
@@ -1646,7 +1646,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 59.8,
-      "cost_per_quality": 0.021,
+      "cost_per_quality": 0.022,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2575,9 +2575,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.2",
       "released": "2025-12-01",
       "pricing": {
-        "input_per_1m": 0.269,
-        "output_per_1m": 0.4,
-        "cache_hit_per_1m": 0.1345,
+        "input_per_1m": 0.28,
+        "output_per_1m": 0.42,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 163840,
@@ -4501,8 +4501,8 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3-0324",
       "released": "2025-03-24",
       "pricing": {
-        "input_per_1m": 0.25,
-        "output_per_1m": 1.0,
+        "input_per_1m": 0.29,
+        "output_per_1m": 1.14,
         "cache_hit_per_1m": 0.11,
         "currency": "USD"
       },
@@ -4528,7 +4528,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 32.3,
-      "cost_per_quality": 0.031,
+      "cost_per_quality": 0.035,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -4970,9 +4970,9 @@
       "huggingface_id": "tencent/Hy3",
       "released": "2026-07-06",
       "pricing": {
-        "input_per_1m": 0.0825,
-        "output_per_1m": 0.33,
-        "cache_hit_per_1m": 0.020625,
+        "input_per_1m": 0.132,
+        "output_per_1m": 0.528,
+        "cache_hit_per_1m": 0.033,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -6518,9 +6518,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0469,
-        "output_per_1m": 0.0938,
-        "cache_hit_per_1m": 0.00938,
+        "input_per_1m": 0.14,
+        "output_per_1m": 0.28,
+        "cache_hit_per_1m": 0.028,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6543,7 +6543,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.001
+      "cost_per_quality": 0.004
     },
     {
       "name": "Ling-3.0-flash",
@@ -7422,9 +7422,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.293,
-        "output_per_1m": 3.5,
-        "cache_hit_per_1m": 0.172,
+        "input_per_1m": 0.3995,
+        "output_per_1m": 4.2,
+        "cache_hit_per_1m": 0.399,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7447,7 +7447,7 @@
         "benchmark": null
       },
       "coding_quality_score": 84.1,
-      "cost_per_quality": 0.042
+      "cost_per_quality": 0.05
     },
     {
       "name": "GLM-5.2-Demolition-q4a4-soul-MLX",
@@ -7590,9 +7590,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.348,
-        "output_per_1m": 0.696,
-        "cache_hit_per_1m": 0.029,
+        "input_per_1m": 0.9553,
+        "output_per_1m": 1.9105,
+        "cache_hit_per_1m": 0.079605,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7615,7 +7615,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.009
+      "cost_per_quality": 0.025
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7692,9 +7692,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.3556,
-        "output_per_1m": 1.1176,
-        "cache_hit_per_1m": 0.06604,
+        "input_per_1m": 0.1785,
+        "output_per_1m": 2.805,
+        "cache_hit_per_1m": 0.146625,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7725,9 +7725,9 @@
       "huggingface_id": null,
       "released": "2026-08-21",
       "pricing": {
-        "input_per_1m": 0.2156,
-        "output_per_1m": 0.6468,
-        "cache_hit_per_1m": 0.00686,
+        "input_per_1m": 0.44,
+        "output_per_1m": 1.32,
+        "cache_hit_per_1m": 0.014,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7750,7 +7750,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.009
+      "cost_per_quality": 0.018
     },
     {
       "name": "Qwen: Qwen3.8 Flash",
@@ -7794,9 +7794,9 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.045,
-        "output_per_1m": 0.14,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.15,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -8430,9 +8430,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.2442,
-        "output_per_1m": 0.7326,
-        "cache_hit_per_1m": 0.00777,
+        "input_per_1m": 0.2259,
+        "output_per_1m": 1.9584,
+        "cache_hit_per_1m": 0.08832,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8820,6 +8820,40 @@
         "pricing": "https://openrouter.ai/models/qwen/qwen3.8-max-prime",
         "benchmark": null
       }
+    },
+    {
+      "name": "Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+      "provider": "ISTA-DASLab",
+      "license": "Open-weight",
+      "open_weight": true,
+      "openrouter_id": null,
+      "huggingface_id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+      "released": "2026-09-26",
+      "pricing": {
+        "input_per_1m": null,
+        "output_per_1m": null,
+        "cache_hit_per_1m": null,
+        "currency": "USD"
+      },
+      "context_window": null,
+      "max_output": null,
+      "benchmarks": {
+        "swe_bench_verified": 91.3,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": 98.7,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": "New Release",
+      "best_for": "Newly discovered — needs review",
+      "sources": {
+        "pricing": null,
+        "benchmark": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF"
+      },
+      "coding_quality_score": 88.0
     }
   ]
 }
