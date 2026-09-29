@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-28",
+  "last_updated": "2026-09-29",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -122,9 +122,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.6496,
-        "output_per_1m": 2.0416,
-        "cache_hit_per_1m": 0.12064,
+        "input_per_1m": 0.2807,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.2245,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -145,10 +145,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.033,
+      "cost_per_pro_point": 0.071,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.038,
+      "cost_per_quality": 0.082,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1332,9 +1332,9 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2.7",
       "released": "2026-03-18",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.2,
-        "cache_hit_per_1m": 0.06,
+        "input_per_1m": 0.21,
+        "output_per_1m": 0.84,
+        "cache_hit_per_1m": 0.042,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1359,7 +1359,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 57.5,
-      "cost_per_quality": 0.021,
+      "cost_per_quality": 0.015,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -2465,7 +2465,7 @@
       "pricing": {
         "input_per_1m": 0.3,
         "output_per_1m": 0.9,
-        "cache_hit_per_1m": 0.055,
+        "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
       "context_window": 131072,
@@ -3195,7 +3195,7 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.1-Terminus",
       "released": "2025-09-22",
       "pricing": {
-        "input_per_1m": 0.27,
+        "input_per_1m": 0.3,
         "output_per_1m": 1.0,
         "cache_hit_per_1m": 0.135,
         "currency": "USD"
@@ -3699,8 +3699,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "released": "2025-07-29",
       "pricing": {
-        "input_per_1m": 0.1,
-        "output_per_1m": 0.3,
+        "input_per_1m": 0.0481,
+        "output_per_1m": 0.193,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -5140,9 +5140,9 @@
       "huggingface_id": null,
       "released": "2026-07-09",
       "pricing": {
-        "input_per_1m": 2.0,
-        "output_per_1m": 10.0,
-        "cache_hit_per_1m": 0.2,
+        "input_per_1m": 4.0,
+        "output_per_1m": 20.0,
+        "cache_hit_per_1m": 0.4,
         "currency": "USD"
       },
       "context_window": 1050000,
@@ -6378,9 +6378,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.021,
+        "input_per_1m": 0.018,
         "output_per_1m": 0.32,
-        "cache_hit_per_1m": 0.016,
+        "cache_hit_per_1m": 0.018,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6449,9 +6449,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.021,
-        "output_per_1m": 0.32,
-        "cache_hit_per_1m": 0.016,
+        "input_per_1m": 0.012,
+        "output_per_1m": 1.25,
+        "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -6474,7 +6474,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.004
+      "cost_per_quality": 0.017
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -7321,9 +7321,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.08,
-        "output_per_1m": 0.2,
-        "cache_hit_per_1m": 0.04,
+        "input_per_1m": 0.06,
+        "output_per_1m": 0.16,
+        "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
       "context_window": 1000000,
@@ -7345,7 +7345,7 @@
         "benchmark": null
       },
       "coding_quality_score": 37.6,
-      "cost_per_quality": 0.005
+      "cost_per_quality": 0.004
     },
     {
       "name": "ByteDance Seed: Seed-2.0-Code",
@@ -7422,9 +7422,9 @@
       "huggingface_id": "",
       "released": "2026-08-12",
       "pricing": {
-        "input_per_1m": 0.3995,
+        "input_per_1m": 0.48,
         "output_per_1m": 4.2,
-        "cache_hit_per_1m": 0.399,
+        "cache_hit_per_1m": 0.384,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7557,9 +7557,9 @@
       "huggingface_id": "Qwen/Qwen3.8-27B",
       "released": "2026-08-14",
       "pricing": {
-        "input_per_1m": 0.42,
-        "output_per_1m": 3.0,
-        "cache_hit_per_1m": 0.085,
+        "input_per_1m": 0.0449,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.0359,
         "currency": "USD"
       },
       "context_window": 1000000,
@@ -7692,9 +7692,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.1785,
-        "output_per_1m": 2.805,
-        "cache_hit_per_1m": 0.146625,
+        "input_per_1m": 0.19,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.19,
         "currency": "USD"
       },
       "context_window": 1310720,
@@ -7725,9 +7725,9 @@
       "huggingface_id": null,
       "released": "2026-08-21",
       "pricing": {
-        "input_per_1m": 0.44,
-        "output_per_1m": 1.32,
-        "cache_hit_per_1m": 0.014,
+        "input_per_1m": 0.2156,
+        "output_per_1m": 0.6468,
+        "cache_hit_per_1m": 0.00686,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7750,7 +7750,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.018
+      "cost_per_quality": 0.009
     },
     {
       "name": "Qwen: Qwen3.8 Flash",
@@ -8132,8 +8132,8 @@
       "huggingface_id": null,
       "released": "2026-08-27",
       "pricing": {
-        "input_per_1m": 0.045,
-        "output_per_1m": 0.14,
+        "input_per_1m": 0.02,
+        "output_per_1m": 0.3,
         "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
@@ -8397,9 +8397,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "released": "2026-09-10",
       "pricing": {
-        "input_per_1m": 0.035,
-        "output_per_1m": 0.29,
-        "cache_hit_per_1m": 0.001,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.006,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8430,9 +8430,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.2259,
+        "input_per_1m": 0.096,
         "output_per_1m": 1.9584,
-        "cache_hit_per_1m": 0.08832,
+        "cache_hit_per_1m": 0.07488,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8463,9 +8463,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.035,
-        "output_per_1m": 0.29,
-        "cache_hit_per_1m": 0.001,
+        "input_per_1m": 0.02,
+        "output_per_1m": 0.6,
+        "cache_hit_per_1m": 0.02,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8854,6 +8854,76 @@
         "benchmark": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF"
       },
       "coding_quality_score": 88.0
+    },
+    {
+      "name": "Anthropic: Claude Sonnet 5.5",
+      "provider": "Anthropic",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "anthropic/claude-sonnet-5.5",
+      "huggingface_id": null,
+      "released": "2026-09-28",
+      "pricing": {
+        "input_per_1m": 2.0,
+        "output_per_1m": 10.0,
+        "cache_hit_per_1m": 0.2,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": 85.2,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-5.5",
+        "benchmark": null
+      },
+      "coding_quality_score": 81.5,
+      "cost_per_quality": 0.123
+    },
+    {
+      "name": "Anthropic: Claude Sonnet 5.5 (batch)",
+      "provider": "Anthropic",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "anthropic/claude-sonnet-5.5:batch",
+      "huggingface_id": null,
+      "released": "2026-09-28",
+      "pricing": {
+        "input_per_1m": 1.0,
+        "output_per_1m": 5.0,
+        "cache_hit_per_1m": 0.1,
+        "currency": "USD"
+      },
+      "context_window": 1000000,
+      "max_output": 128000,
+      "benchmarks": {
+        "swe_bench_verified": 85.2,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/anthropic/claude-sonnet-5.5:batch",
+        "benchmark": null
+      },
+      "coding_quality_score": 81.5,
+      "cost_per_quality": 0.061
     }
   ]
 }
