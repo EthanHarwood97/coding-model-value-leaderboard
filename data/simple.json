@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30 11:28",
+  "last_updated": "2026-10-01 11:56",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 0.396,
+      "output_price_per_1m": 0.5,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 198.74,
+      "value": 157.4,
       "rank": 3
     },
     {
@@ -160,11 +160,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 15.0,
+      "output_price_per_1m": 10.0,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 74.7,
-      "value": 4.79,
+      "value": 7.18,
       "rank": 8
     },
     {
@@ -426,11 +426,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 4.35,
+      "output_price_per_1m": 3.0,
       "price_source": "models.json (Qwen: Qwen3.8 27B)",
       "coder_score": 68.5,
       "frontend_score": 71.1,
-      "value": 15.75,
+      "value": 22.83,
       "rank": 22
     },
     {
@@ -521,11 +521,11 @@
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 4.4,
+      "output_price_per_1m": 3.39,
       "price_source": "models.json (Z.ai: GLM 5.3)",
       "coder_score": 70.0,
       "frontend_score": 70.0,
-      "value": 15.91,
+      "value": 20.65,
       "rank": 27
     },
     {
@@ -654,11 +654,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 3.41,
+      "output_price_per_1m": 1.828,
       "price_source": "models.json (MoonshotAI: Kimi K2.6)",
       "coder_score": 62.8,
       "frontend_score": 68.3,
-      "value": 18.42,
+      "value": 34.35,
       "rank": 34
     },
     {
