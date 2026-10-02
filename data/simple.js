@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-10-01 11:56",
+  "last_updated": "2026-10-02 11:27",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 0.5,
+      "output_price_per_1m": 1.2,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 157.4,
+      "value": 65.58,
       "rank": 3
     },
     {
@@ -160,11 +160,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 10.0,
+      "output_price_per_1m": 13.5,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 74.7,
-      "value": 7.18,
+      "value": 5.32,
       "rank": 8
     },
     {
@@ -521,11 +521,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 3.39,
+      "output_price_per_1m": 4.4,
       "price_source": "models.json (Z.ai: GLM 5.3)",
       "coder_score": 70.0,
       "frontend_score": 70.0,
-      "value": 20.65,
+      "value": 15.91,
       "rank": 27
     },
     {
