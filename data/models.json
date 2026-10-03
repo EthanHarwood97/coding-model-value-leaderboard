@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-02",
+  "last_updated": "2026-10-03",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -1108,9 +1108,9 @@
       "huggingface_id": "moonshotai/Kimi-K2.6",
       "released": "2026-04-20",
       "pricing": {
-        "input_per_1m": 0.4341,
-        "output_per_1m": 1.828,
-        "cache_hit_per_1m": 0.07312,
+        "input_per_1m": 0.95,
+        "output_per_1m": 4.0,
+        "cache_hit_per_1m": 0.16,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1135,7 +1135,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 41.8,
-      "cost_per_quality": 0.044,
+      "cost_per_quality": 0.096,
       "frontend_tier": "A",
       "design2code_score": null,
       "vision_score": 79.4
@@ -1185,9 +1185,9 @@
       "huggingface_id": "zai-org/GLM-5.1",
       "released": "2026-04-07",
       "pricing": {
-        "input_per_1m": 0.9646,
-        "output_per_1m": 3.0316,
-        "cache_hit_per_1m": 0.17914,
+        "input_per_1m": 1.4,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.26,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1212,7 +1212,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 52.5,
-      "cost_per_quality": 0.058,
+      "cost_per_quality": 0.084,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -3195,7 +3195,7 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V3.1-Terminus",
       "released": "2025-09-22",
       "pricing": {
-        "input_per_1m": 0.3,
+        "input_per_1m": 0.27,
         "output_per_1m": 1.0,
         "cache_hit_per_1m": 0.135,
         "currency": "USD"
@@ -6378,9 +6378,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.0171,
+        "input_per_1m": 0.0188,
         "output_per_1m": 1.28,
-        "cache_hit_per_1m": 0.0171,
+        "cache_hit_per_1m": 0.0188,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6449,9 +6449,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0038,
-        "output_per_1m": 1.6,
-        "cache_hit_per_1m": 0.003825,
+        "input_per_1m": 0.0188,
+        "output_per_1m": 1.28,
+        "cache_hit_per_1m": 0.0188,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6474,7 +6474,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.022
+      "cost_per_quality": 0.018
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -6518,9 +6518,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.042,
-        "output_per_1m": 0.084,
-        "cache_hit_per_1m": 0.0084,
+        "input_per_1m": 0.028,
+        "output_per_1m": 0.056,
+        "cache_hit_per_1m": 0.0056,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7321,9 +7321,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.06,
-        "output_per_1m": 0.16,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.0595,
+        "output_per_1m": 0.17,
+        "cache_hit_per_1m": 0.02975,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -7345,7 +7345,7 @@
         "benchmark": null
       },
       "coding_quality_score": 37.6,
-      "cost_per_quality": 0.004
+      "cost_per_quality": 0.005
     },
     {
       "name": "ByteDance Seed: Seed-2.0-Code",
@@ -8132,9 +8132,9 @@
       "huggingface_id": null,
       "released": "2026-08-27",
       "pricing": {
-        "input_per_1m": 0.0262,
-        "output_per_1m": 0.9,
-        "cache_hit_per_1m": 0.01125,
+        "input_per_1m": 0.035,
+        "output_per_1m": 0.5,
+        "cache_hit_per_1m": 0.035,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8231,9 +8231,9 @@
       "huggingface_id": null,
       "released": "2026-08-27",
       "pricing": {
-        "input_per_1m": 0.06,
-        "output_per_1m": 0.18,
-        "cache_hit_per_1m": 0.012,
+        "input_per_1m": 0.042,
+        "output_per_1m": 0.1232,
+        "cache_hit_per_1m": 0.0084,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -8430,9 +8430,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.132,
-        "output_per_1m": 0.396,
-        "cache_hit_per_1m": 0.0042,
+        "input_per_1m": 0.12,
+        "output_per_1m": 4.2,
+        "cache_hit_per_1m": 0.1,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8463,9 +8463,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.002,
-        "output_per_1m": 1.2,
-        "cache_hit_per_1m": 0.002025,
+        "input_per_1m": 0.02,
+        "output_per_1m": 0.6,
+        "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
       "context_window": 1048576,
