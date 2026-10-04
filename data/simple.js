@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-10-03 10:44",
+  "last_updated": "2026-10-04 11:25",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 1.2,
+      "output_price_per_1m": 2.4,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 65.58,
+      "value": 32.79,
       "rank": 3
     },
     {
@@ -160,11 +160,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 13.5,
+      "output_price_per_1m": 13.0,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 74.7,
-      "value": 5.32,
+      "value": 5.52,
       "rank": 8
     },
     {
@@ -426,11 +426,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 3.0,
+      "output_price_per_1m": 2.55,
       "price_source": "models.json (Qwen: Qwen3.8 27B)",
       "coder_score": 68.5,
       "frontend_score": 71.1,
-      "value": 22.83,
+      "value": 26.86,
       "rank": 22
     },
     {
@@ -888,11 +888,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 1.98,
+      "output_price_per_1m": 5.0,
       "price_source": "models.json (DeepSeek: DeepSeek V4 Pro 0813)",
       "coder_score": 66.0,
       "frontend_score": 66.0,
-      "value": 33.33,
+      "value": 13.2,
       "rank": 46
     },
     {
@@ -907,11 +907,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 3.99,
+      "output_price_per_1m": 3.49,
       "price_source": "models.json (GLM-5.2)",
       "coder_score": 65.8,
       "frontend_score": 65.8,
-      "value": 16.49,
+      "value": 18.85,
       "rank": 47
     },
     {
