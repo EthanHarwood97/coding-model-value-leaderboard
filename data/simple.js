@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-10-04 11:25",
+  "last_updated": "2026-10-05 12:50",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 2.4,
+      "output_price_per_1m": 1.2,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 32.79,
+      "value": 65.58,
       "rank": 3
     },
     {
@@ -160,11 +160,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 13.0,
+      "output_price_per_1m": 14.0,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 74.7,
-      "value": 5.52,
+      "value": 5.13,
       "rank": 8
     },
     {
@@ -521,11 +521,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 4.4,
+      "output_price_per_1m": 7.0,
       "price_source": "models.json (Z.ai: GLM 5.3)",
       "coder_score": 70.0,
       "frontend_score": 70.0,
-      "value": 15.91,
+      "value": 10.0,
       "rank": 27
     },
     {
@@ -907,11 +907,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 3.49,
+      "output_price_per_1m": 16.0,
       "price_source": "models.json (GLM-5.2)",
       "coder_score": 65.8,
       "frontend_score": 65.8,
-      "value": 18.85,
+      "value": 4.11,
       "rank": 47
     },
     {
@@ -1157,11 +1157,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 3.2,
+      "output_price_per_1m": 3.25,
       "price_source": "models.json (Qwen: Qwen3.6 27B)",
       "coder_score": 47.7,
       "frontend_score": 56.7,
-      "value": 8.94,
+      "value": 8.81,
       "rank": 60
     },
     {
