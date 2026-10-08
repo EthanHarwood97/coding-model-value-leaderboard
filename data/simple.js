@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-10-07 12:10",
+  "last_updated": "2026-10-08 12:21",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "benchlm",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 1.2,
+      "output_price_per_1m": 1.0,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 65.58,
+      "value": 78.7,
       "rank": 3
     },
     {
@@ -122,11 +122,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 15.0,
+      "output_price_per_1m": 12.3,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 75.1,
-      "value": 4.79,
+      "value": 5.84,
       "rank": 6
     },
     {
@@ -510,6 +510,25 @@ window.__SCORECARD_DATA__ = {
       "rank": 26
     },
     {
+      "name": "Mistral Large 4",
+      "variant": "High",
+      "raw": "mistral-large-4-high",
+      "provider": "Mistral",
+      "agentic_coding": 57.2,
+      "agentic_effective": null,
+      "coding": 77.2,
+      "vision_score": 76.4,
+      "vision_source": "benchlm",
+      "vision_est": null,
+      "coverage": 3,
+      "output_price_per_1m": 2.09,
+      "price_source": "models.json (Mistral: Mistral Large 4)",
+      "coder_score": 67.2,
+      "frontend_score": 70.3,
+      "value": 32.15,
+      "rank": 27
+    },
+    {
       "name": "GLM-5.3",
       "variant": null,
       "raw": "glm-5.3",
@@ -521,12 +540,12 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 7.0,
+      "output_price_per_1m": 3.39,
       "price_source": "models.json (Z.ai: GLM 5.3)",
       "coder_score": 70.0,
       "frontend_score": 70.0,
-      "value": 10.0,
-      "rank": 27
+      "value": 20.65,
+      "rank": 28
     },
     {
       "name": "GPT-6 Luna",
@@ -545,7 +564,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.1,
       "frontend_score": 70.0,
       "value": 130.2,
-      "rank": 28
+      "rank": 29
     },
     {
       "name": "GPT-5.6 Luna",
@@ -564,7 +583,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.7,
       "frontend_score": 69.9,
       "value": 54.75,
-      "rank": 29
+      "rank": 30
     },
     {
       "name": "GPT-5.2 Codex",
@@ -583,25 +602,6 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.5,
       "frontend_score": 69.8,
       "value": 4.75,
-      "rank": 30
-    },
-    {
-      "name": "Mistral Large 4",
-      "variant": "High",
-      "raw": "mistral-large-4-high",
-      "provider": "Mistral",
-      "agentic_coding": 57.2,
-      "agentic_effective": null,
-      "coding": 75.4,
-      "vision_score": 76.4,
-      "vision_source": "benchlm",
-      "vision_est": null,
-      "coverage": 3,
-      "output_price_per_1m": 2.09,
-      "price_source": "models.json (Mistral: Mistral Large 4)",
-      "coder_score": 66.3,
-      "frontend_score": 69.7,
-      "value": 31.72,
       "rank": 31
     },
     {
@@ -795,6 +795,28 @@ window.__SCORECARD_DATA__ = {
       "rank": 41
     },
     {
+      "name": "Claude Haiku 5.5",
+      "variant": "Max Effort",
+      "raw": "claude-haiku-5-5-max-effort",
+      "provider": "Anthropic",
+      "agentic_coding": 57.2,
+      "agentic_effective": null,
+      "coding": 77.9,
+      "vision_score": null,
+      "vision_source": null,
+      "vision_est": {
+        "value": 30.8,
+        "from": "Claude 3 Haiku"
+      },
+      "coverage": 2,
+      "output_price_per_1m": 0.5,
+      "price_source": "livebench",
+      "coder_score": 67.6,
+      "frontend_score": 67.6,
+      "value": 135.2,
+      "rank": 42
+    },
+    {
       "name": "Muse Spark 1.2",
       "variant": "xHigh",
       "raw": "muse-spark-1.2-xhigh",
@@ -811,7 +833,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.5,
       "frontend_score": 67.5,
       "value": 15.88,
-      "rank": 42
+      "rank": 43
     },
     {
       "name": "Grok 4.6",
@@ -833,7 +855,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.9,
       "frontend_score": 66.9,
       "value": 11.15,
-      "rank": 43
+      "rank": 44
     },
     {
       "name": "Gemini 3.5 Flash Lite",
@@ -852,7 +874,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.7,
       "frontend_score": 66.8,
       "value": 24.28,
-      "rank": 44
+      "rank": 45
     },
     {
       "name": "DeepSeek V4 Flash Vision Exp",
@@ -871,7 +893,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.7,
       "frontend_score": 66.7,
       "value": 103.12,
-      "rank": 45
+      "rank": 46
     },
     {
       "name": "Claude Opus 4.8",
@@ -893,7 +915,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.2,
       "frontend_score": 66.2,
       "value": 2.65,
-      "rank": 46
+      "rank": 47
     },
     {
       "name": "DeepSeek V4 Pro",
@@ -912,7 +934,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.0,
       "frontend_score": 66.0,
       "value": 33.33,
-      "rank": 47
+      "rank": 48
     },
     {
       "name": "GLM-5.2",
@@ -926,12 +948,12 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 7.2,
+      "output_price_per_1m": 10.0,
       "price_source": "models.json (GLM-5.2)",
       "coder_score": 65.8,
       "frontend_score": 65.8,
-      "value": 9.14,
-      "rank": 48
+      "value": 6.58,
+      "rank": 49
     },
     {
       "name": "Grok 4.7",
@@ -953,7 +975,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.6,
       "frontend_score": 65.6,
       "value": 10.93,
-      "rank": 49
+      "rank": 50
     },
     {
       "name": "Inkling",
@@ -972,7 +994,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.2,
       "frontend_score": 64.6,
       "value": 12.86,
-      "rank": 50
+      "rank": 51
     },
     {
       "name": "Claude Sonnet 4.6",
@@ -991,7 +1013,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 61.0,
       "frontend_score": 64.2,
       "value": 4.07,
-      "rank": 51
+      "rank": 52
     },
     {
       "name": "Ox Alpha",
@@ -1010,7 +1032,29 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 64.2,
       "frontend_score": 64.2,
       "value": null,
-      "rank": 52
+      "rank": 53
+    },
+    {
+      "name": "Claude Haiku 5.5",
+      "variant": "xHigh Effort",
+      "raw": "claude-haiku-5-5-xhigh-effort",
+      "provider": "Anthropic",
+      "agentic_coding": 51.4,
+      "agentic_effective": null,
+      "coding": 76.4,
+      "vision_score": null,
+      "vision_source": null,
+      "vision_est": {
+        "value": 30.8,
+        "from": "Claude 3 Haiku"
+      },
+      "coverage": 2,
+      "output_price_per_1m": 0.5,
+      "price_source": "livebench",
+      "coder_score": 63.9,
+      "frontend_score": 63.9,
+      "value": 127.8,
+      "rank": 54
     },
     {
       "name": "Claude Sonnet 5.5",
@@ -1029,7 +1073,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 56.2,
       "frontend_score": 63.3,
       "value": 3.37,
-      "rank": 53
+      "rank": 55
     },
     {
       "name": "GPT-5.4 Nano",
@@ -1048,7 +1092,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 58.8,
       "frontend_score": 61.2,
       "value": 47.04,
-      "rank": 54
+      "rank": 56
     },
     {
       "name": "DeepSeek V4 Flash",
@@ -1067,7 +1111,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.9,
       "frontend_score": 60.9,
       "value": 47.58,
-      "rank": 55
+      "rank": 57
     },
     {
       "name": "Qwen3.6 Plus",
@@ -1086,7 +1130,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 51.5,
       "frontend_score": 60.6,
       "value": 15.85,
-      "rank": 56
+      "rank": 58
     },
     {
       "name": "Kimi K2.7 Code",
@@ -1105,7 +1149,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 59.9,
       "frontend_score": 59.9,
       "value": 17.88,
-      "rank": 57
+      "rank": 59
     },
     {
       "name": "Qwen3.7",
@@ -1124,7 +1168,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 58.9,
       "frontend_score": 58.9,
       "value": 13.31,
-      "rank": 58
+      "rank": 60
     },
     {
       "name": "Claude Opus 4.5",
@@ -1143,7 +1187,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 51.8,
       "frontend_score": 58.0,
       "value": 1.24,
-      "rank": 59
+      "rank": 61
     },
     {
       "name": "GPT-5.4 Mini",
@@ -1162,7 +1206,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 48.3,
       "frontend_score": 57.7,
       "value": 6.44,
-      "rank": 60
+      "rank": 62
     },
     {
       "name": "Qwen3.6 27B",
@@ -1176,12 +1220,12 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 2.0,
+      "output_price_per_1m": 2.7,
       "price_source": "models.json (Qwen: Qwen3.6 27B)",
       "coder_score": 47.7,
       "frontend_score": 57.1,
-      "value": 14.31,
-      "rank": 61
+      "value": 10.6,
+      "rank": 63
     },
     {
       "name": "MiniMax M3",
@@ -1200,7 +1244,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 46.3,
       "frontend_score": 56.9,
       "value": 23.15,
-      "rank": 62
+      "rank": 64
     },
     {
       "name": "DeepSeek V4 Pro",
@@ -1219,7 +1263,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 56.3,
       "frontend_score": 56.3,
       "value": 24.1,
-      "rank": 63
+      "rank": 65
     },
     {
       "name": "Grok Build 0.1",
@@ -1238,7 +1282,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 55.6,
       "frontend_score": 55.6,
       "value": 27.8,
-      "rank": 64
+      "rank": 66
     },
     {
       "name": "Grok 4.3",
@@ -1257,7 +1301,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 40.5,
       "frontend_score": 53.0,
       "value": 9.72,
-      "rank": 65
+      "rank": 67
     },
     {
       "name": "Nemotron 3 Ultra 550B A55B",
@@ -1276,7 +1320,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 47.0,
       "frontend_score": 47.0,
       "value": 11.75,
-      "rank": 66
+      "rank": 68
     },
     {
       "name": "DeepSeek V4 Flash",
@@ -1295,7 +1339,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 45.9,
       "frontend_score": 45.9,
       "value": 98.36,
-      "rank": 67
+      "rank": 69
     }
   ]
 };
