@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08",
+  "last_updated": "2026-10-09",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -122,9 +122,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.03,
-        "output_per_1m": 10.0,
-        "cache_hit_per_1m": 0.03,
+        "input_per_1m": 0.06,
+        "output_per_1m": 6.0,
+        "cache_hit_per_1m": 0.059,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -145,10 +145,10 @@
         "pricing": "https://z.ai/blog/glm-5.2",
         "benchmark": "https://huggingface.co/zai-org/GLM-5.2"
       },
-      "cost_per_pro_point": 0.161,
+      "cost_per_pro_point": 0.097,
       "reasoning_level": "standard",
       "coding_quality_score": 53.6,
-      "cost_per_quality": 0.187,
+      "cost_per_quality": 0.112,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1441,8 +1441,8 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "released": "2026-03-11",
       "pricing": {
-        "input_per_1m": 0.085,
-        "output_per_1m": 0.4,
+        "input_per_1m": 0.08,
+        "output_per_1m": 0.45,
         "cache_hit_per_1m": 0.06,
         "currency": "USD"
       },
@@ -1620,9 +1620,9 @@
       "huggingface_id": "Qwen/Qwen3.5-35B-A3B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.15,
-        "output_per_1m": 1.0,
-        "cache_hit_per_1m": 0.05,
+        "input_per_1m": 0.08,
+        "output_per_1m": 0.75,
+        "cache_hit_per_1m": 0.04,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1646,7 +1646,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 59.8,
-      "cost_per_quality": 0.017,
+      "cost_per_quality": 0.013,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1877,9 +1877,9 @@
       "huggingface_id": "Qwen/Qwen3.5-397B-A17B",
       "released": "2026-02-16",
       "pricing": {
-        "input_per_1m": 0.45,
-        "output_per_1m": 3.0,
-        "cache_hit_per_1m": 0.22,
+        "input_per_1m": 0.55,
+        "output_per_1m": 3.5,
+        "cache_hit_per_1m": 0.225,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -3301,8 +3301,8 @@
       "huggingface_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "released": "2025-09-11",
       "pricing": {
-        "input_per_1m": 0.15,
-        "output_per_1m": 1.5,
+        "input_per_1m": 0.1,
+        "output_per_1m": 1.1,
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
       },
@@ -3699,8 +3699,8 @@
       "huggingface_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "released": "2025-07-29",
       "pricing": {
-        "input_per_1m": 0.0481,
-        "output_per_1m": 0.193,
+        "input_per_1m": 0.1,
+        "output_per_1m": 0.3,
         "cache_hit_per_1m": null,
         "currency": "USD"
       },
@@ -5340,9 +5340,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 0.62,
-        "output_per_1m": 12.3,
-        "cache_hit_per_1m": 0.43,
+        "input_per_1m": 0.5,
+        "output_per_1m": 12.0,
+        "cache_hit_per_1m": 0.3,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6378,9 +6378,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
       "released": "2026-07-31",
       "pricing": {
-        "input_per_1m": 0.0104,
+        "input_per_1m": 0.0046,
         "output_per_1m": 1.28,
-        "cache_hit_per_1m": 0.0104,
+        "cache_hit_per_1m": 0.0046,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6449,9 +6449,9 @@
       "huggingface_id": null,
       "released": "2026-08-01",
       "pricing": {
-        "input_per_1m": 0.0083,
-        "output_per_1m": 0.3479,
-        "cache_hit_per_1m": 0.00832,
+        "input_per_1m": 0.0046,
+        "output_per_1m": 1.28,
+        "cache_hit_per_1m": 0.0046,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6474,7 +6474,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.005
+      "cost_per_quality": 0.018
     },
     {
       "name": "Qwen: Qwen3.8 Max",
@@ -6518,9 +6518,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.0131,
+        "input_per_1m": 0.0099,
         "output_per_1m": 1.28,
-        "cache_hit_per_1m": 0.0131,
+        "cache_hit_per_1m": 0.0099,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7321,9 +7321,9 @@
       "huggingface_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "released": "2026-08-11",
       "pricing": {
-        "input_per_1m": 0.049,
-        "output_per_1m": 0.14,
-        "cache_hit_per_1m": 0.0245,
+        "input_per_1m": 0.0469,
+        "output_per_1m": 0.134,
+        "cache_hit_per_1m": 0.02345,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -7626,9 +7626,9 @@
       "huggingface_id": null,
       "released": "2026-08-18",
       "pricing": {
-        "input_per_1m": 0.049,
-        "output_per_1m": 3.39,
-        "cache_hit_per_1m": 0.048,
+        "input_per_1m": 0.039,
+        "output_per_1m": 4.8,
+        "cache_hit_per_1m": 0.038,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7692,9 +7692,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.036,
-        "output_per_1m": 12.0,
-        "cache_hit_per_1m": 0.0335,
+        "input_per_1m": 0.0312,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.029,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8133,7 +8133,7 @@
       "released": "2026-08-27",
       "pricing": {
         "input_per_1m": 0.032,
-        "output_per_1m": 3.3359,
+        "output_per_1m": 0.5535,
         "cache_hit_per_1m": 0.02,
         "currency": "USD"
       },
@@ -8397,9 +8397,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "released": "2026-09-10",
       "pricing": {
-        "input_per_1m": 0.0356,
-        "output_per_1m": 1.0,
-        "cache_hit_per_1m": 0.01,
+        "input_per_1m": 0.3,
+        "output_per_1m": 1.2,
+        "cache_hit_per_1m": 0.006,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8430,9 +8430,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.108,
+        "input_per_1m": 0.198,
         "output_per_1m": 8.0,
-        "cache_hit_per_1m": 0.081,
+        "cache_hit_per_1m": 0.2,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8463,8 +8463,8 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.0356,
-        "output_per_1m": 1.0,
+        "input_per_1m": 0.016,
+        "output_per_1m": 1.2,
         "cache_hit_per_1m": 0.01,
         "currency": "USD"
       },
@@ -8939,7 +8939,7 @@
         "cache_hit_per_1m": 0.07,
         "currency": "USD"
       },
-      "context_window": 524288,
+      "context_window": 1048576,
       "max_output": 262144,
       "benchmarks": {
         "swe_bench_verified": null,
@@ -8955,6 +8955,39 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/mistralai/mistral-large-4-0",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "inclusionAI: Ling 3.0 Flash Sante",
+      "provider": "Inclusionai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "inclusionai/ling-3.0-flash-sante",
+      "huggingface_id": null,
+      "released": "2026-09-04",
+      "pricing": {
+        "input_per_1m": 0.042,
+        "output_per_1m": 0.1232,
+        "cache_hit_per_1m": 0.0084,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 32768,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/inclusionai/ling-3.0-flash-sante",
         "benchmark": null
       }
     }
