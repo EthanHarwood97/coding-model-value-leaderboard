@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10 11:28",
+  "last_updated": "2026-10-11 11:42",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -122,11 +122,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 13.5,
+      "output_price_per_1m": 10.0,
       "price_source": "models.json (MoonshotAI: Kimi K3)",
       "coder_score": 71.8,
       "frontend_score": 75.1,
-      "value": 5.32,
+      "value": 7.18,
       "rank": 6
     },
     {
@@ -426,11 +426,11 @@
       "vision_source": "benchlm",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 2.55,
+      "output_price_per_1m": 2.3,
       "price_source": "models.json (Qwen: Qwen3.8 27B)",
       "coder_score": 68.5,
       "frontend_score": 71.1,
-      "value": 26.86,
+      "value": 29.78,
       "rank": 22
     },
     {
@@ -673,11 +673,11 @@
       "vision_source": "aa",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 2.45,
+      "output_price_per_1m": 3.41,
       "price_source": "models.json (MoonshotAI: Kimi K2.6)",
       "coder_score": 62.8,
       "frontend_score": 68.3,
-      "value": 25.63,
+      "value": 18.42,
       "rank": 35
     },
     {
@@ -1106,11 +1106,11 @@
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 1.28,
+      "output_price_per_1m": 0.64,
       "price_source": "models.json (DeepSeek: DeepSeek V4 Flash 0731)",
       "coder_score": 60.9,
       "frontend_score": 60.9,
-      "value": 47.58,
+      "value": 95.16,
       "rank": 57
     },
     {
