@@ -1,5 +1,5 @@
 window.__SCORECARD_DATA__ = {
-  "last_updated": "2026-10-12 13:41",
+  "last_updated": "2026-10-13 13:02",
   "livebench_release": "2026-06-25",
   "sources": {
     "livebench": "https://livebench.ai — table/categories/cost CSVs",
@@ -65,11 +65,11 @@ window.__SCORECARD_DATA__ = {
       "vision_source": "benchlm",
       "vision_est": null,
       "coverage": 3,
-      "output_price_per_1m": 0.6,
+      "output_price_per_1m": 0.1752,
       "price_source": "models.json (DeepSeek: DeepSeek V4.1 Flash)",
       "coder_score": 78.7,
       "frontend_score": 78.1,
-      "value": 131.17,
+      "value": 449.2,
       "rank": 3
     },
     {
@@ -377,6 +377,25 @@ window.__SCORECARD_DATA__ = {
       "rank": 19
     },
     {
+      "name": "Muse Wonder 1.0",
+      "variant": "Max",
+      "raw": "muse-wonder-1.0-max",
+      "provider": "Meta",
+      "agentic_coding": 62.7,
+      "agentic_effective": null,
+      "coding": 80.7,
+      "vision_score": null,
+      "vision_source": null,
+      "vision_est": null,
+      "coverage": 2,
+      "output_price_per_1m": 20.0,
+      "price_source": "livebench",
+      "coder_score": 71.7,
+      "frontend_score": 71.7,
+      "value": 3.58,
+      "rank": 20
+    },
+    {
       "name": "GPT-5.6 Terra",
       "variant": "Max",
       "raw": "gpt-5.6-terra-max",
@@ -393,7 +412,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.5,
       "frontend_score": 71.3,
       "value": 5.54,
-      "rank": 20
+      "rank": 21
     },
     {
       "name": "Qwen3.8 Flash Next",
@@ -412,7 +431,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.1,
       "frontend_score": 71.3,
       "value": 142.77,
-      "rank": 21
+      "rank": 22
     },
     {
       "name": "Qwen3.8 27B",
@@ -431,7 +450,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 68.5,
       "frontend_score": 71.1,
       "value": 29.78,
-      "rank": 22
+      "rank": 23
     },
     {
       "name": "GPT-5.4",
@@ -450,7 +469,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.7,
       "frontend_score": 70.8,
       "value": 4.38,
-      "rank": 23
+      "rank": 24
     },
     {
       "name": "Gemini 3.8 Flash",
@@ -469,7 +488,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 63.4,
       "frontend_score": 70.8,
       "value": 16.91,
-      "rank": 24
+      "rank": 25
     },
     {
       "name": "Claude Opus 4.7",
@@ -488,7 +507,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.4,
       "frontend_score": 70.5,
       "value": 2.66,
-      "rank": 25
+      "rank": 26
     },
     {
       "name": "Gemini 3.5 Flash",
@@ -507,7 +526,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 63.6,
       "frontend_score": 70.3,
       "value": 7.07,
-      "rank": 26
+      "rank": 27
     },
     {
       "name": "Mistral Large 4",
@@ -526,7 +545,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.2,
       "frontend_score": 70.3,
       "value": 32.15,
-      "rank": 27
+      "rank": 28
     },
     {
       "name": "GLM-5.3",
@@ -545,7 +564,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 70.0,
       "frontend_score": 70.0,
       "value": 14.58,
-      "rank": 28
+      "rank": 29
     },
     {
       "name": "GPT-6 Luna",
@@ -564,7 +583,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.1,
       "frontend_score": 70.0,
       "value": 130.2,
-      "rank": 29
+      "rank": 30
     },
     {
       "name": "GPT-5.6 Luna",
@@ -583,7 +602,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.7,
       "frontend_score": 69.9,
       "value": 54.75,
-      "rank": 30
+      "rank": 31
     },
     {
       "name": "GPT-5.2 Codex",
@@ -602,7 +621,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.5,
       "frontend_score": 69.8,
       "value": 4.75,
-      "rank": 31
+      "rank": 32
     },
     {
       "name": "Smaug Flash",
@@ -621,7 +640,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 69.1,
       "frontend_score": 69.1,
       "value": 246.79,
-      "rank": 32
+      "rank": 33
     },
     {
       "name": "GPT-5.2",
@@ -640,7 +659,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 63.2,
       "frontend_score": 68.6,
       "value": 4.51,
-      "rank": 33
+      "rank": 34
     },
     {
       "name": "Grok 4.5",
@@ -659,7 +678,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 62.5,
       "frontend_score": 68.5,
       "value": 10.42,
-      "rank": 34
+      "rank": 35
     },
     {
       "name": "Kimi K2.6",
@@ -678,7 +697,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 62.8,
       "frontend_score": 68.3,
       "value": 18.42,
-      "rank": 35
+      "rank": 36
     },
     {
       "name": "Claude Opus 4.6",
@@ -697,7 +716,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 63.6,
       "frontend_score": 68.2,
       "value": 2.54,
-      "rank": 36
+      "rank": 37
     },
     {
       "name": "Gemini 3.1 Pro",
@@ -716,7 +735,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.3,
       "frontend_score": 68.2,
       "value": 5.02,
-      "rank": 37
+      "rank": 38
     },
     {
       "name": "Gemini 3.6 Flash",
@@ -735,7 +754,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.7,
       "frontend_score": 68.2,
       "value": 16.19,
-      "rank": 38
+      "rank": 39
     },
     {
       "name": "Smaug Mini",
@@ -754,7 +773,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 68.1,
       "frontend_score": 68.1,
       "value": 104.77,
-      "rank": 39
+      "rank": 40
     },
     {
       "name": "GLM-5.3 Flash",
@@ -768,12 +787,12 @@ window.__SCORECARD_DATA__ = {
       "vision_source": null,
       "vision_est": null,
       "coverage": 2,
-      "output_price_per_1m": 1.2,
+      "output_price_per_1m": 0.9,
       "price_source": "models.json (Z.ai: GLM 5.3 Flash)",
       "coder_score": 67.9,
       "frontend_score": 67.9,
-      "value": 56.58,
-      "rank": 40
+      "value": 75.44,
+      "rank": 41
     },
     {
       "name": "Muse Spark 1.1",
@@ -792,7 +811,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.8,
       "frontend_score": 67.8,
       "value": 15.95,
-      "rank": 41
+      "rank": 42
     },
     {
       "name": "Claude Haiku 5.5",
@@ -814,7 +833,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.6,
       "frontend_score": 67.6,
       "value": 135.2,
-      "rank": 42
+      "rank": 43
     },
     {
       "name": "Muse Spark 1.2",
@@ -833,7 +852,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 67.5,
       "frontend_score": 67.5,
       "value": 15.88,
-      "rank": 43
+      "rank": 44
     },
     {
       "name": "Grok 4.6",
@@ -855,7 +874,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.9,
       "frontend_score": 66.9,
       "value": 11.15,
-      "rank": 44
+      "rank": 45
     },
     {
       "name": "Gemini 3.5 Flash Lite",
@@ -874,7 +893,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.7,
       "frontend_score": 66.8,
       "value": 24.28,
-      "rank": 45
+      "rank": 46
     },
     {
       "name": "DeepSeek V4 Flash Vision Exp",
@@ -893,7 +912,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.7,
       "frontend_score": 66.7,
       "value": 103.12,
-      "rank": 46
+      "rank": 47
     },
     {
       "name": "Claude Opus 4.8",
@@ -915,7 +934,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.2,
       "frontend_score": 66.2,
       "value": 2.65,
-      "rank": 47
+      "rank": 48
     },
     {
       "name": "DeepSeek V4 Pro",
@@ -934,7 +953,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 66.0,
       "frontend_score": 66.0,
       "value": 33.33,
-      "rank": 48
+      "rank": 49
     },
     {
       "name": "GLM-5.2",
@@ -953,7 +972,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.8,
       "frontend_score": 65.8,
       "value": 9.4,
-      "rank": 49
+      "rank": 50
     },
     {
       "name": "Grok 4.7",
@@ -975,7 +994,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 65.6,
       "frontend_score": 65.6,
       "value": 10.93,
-      "rank": 50
+      "rank": 51
     },
     {
       "name": "Inkling",
@@ -994,7 +1013,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.2,
       "frontend_score": 64.6,
       "value": 12.86,
-      "rank": 51
+      "rank": 52
     },
     {
       "name": "Claude Sonnet 4.6",
@@ -1013,7 +1032,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 61.0,
       "frontend_score": 64.2,
       "value": 4.07,
-      "rank": 52
+      "rank": 53
     },
     {
       "name": "Ox Alpha",
@@ -1032,7 +1051,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 64.2,
       "frontend_score": 64.2,
       "value": null,
-      "rank": 53
+      "rank": 54
     },
     {
       "name": "Claude Haiku 5.5",
@@ -1054,7 +1073,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 63.9,
       "frontend_score": 63.9,
       "value": 127.8,
-      "rank": 54
+      "rank": 55
     },
     {
       "name": "Claude Sonnet 5.5",
@@ -1073,7 +1092,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 56.2,
       "frontend_score": 63.3,
       "value": 3.37,
-      "rank": 55
+      "rank": 56
     },
     {
       "name": "GPT-5.4 Nano",
@@ -1092,7 +1111,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 58.8,
       "frontend_score": 61.2,
       "value": 47.04,
-      "rank": 56
+      "rank": 57
     },
     {
       "name": "DeepSeek V4 Flash",
@@ -1111,7 +1130,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 60.9,
       "frontend_score": 60.9,
       "value": 95.16,
-      "rank": 57
+      "rank": 58
     },
     {
       "name": "Qwen3.6 Plus",
@@ -1130,7 +1149,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 51.5,
       "frontend_score": 60.6,
       "value": 15.85,
-      "rank": 58
+      "rank": 59
     },
     {
       "name": "Kimi K2.7 Code",
@@ -1149,7 +1168,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 59.9,
       "frontend_score": 59.9,
       "value": 17.88,
-      "rank": 59
+      "rank": 60
     },
     {
       "name": "Qwen3.7",
@@ -1168,7 +1187,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 58.9,
       "frontend_score": 58.9,
       "value": 13.31,
-      "rank": 60
+      "rank": 61
     },
     {
       "name": "Claude Opus 4.5",
@@ -1187,7 +1206,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 51.8,
       "frontend_score": 58.0,
       "value": 1.24,
-      "rank": 61
+      "rank": 62
     },
     {
       "name": "GPT-5.4 Mini",
@@ -1206,7 +1225,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 48.3,
       "frontend_score": 57.7,
       "value": 6.44,
-      "rank": 62
+      "rank": 63
     },
     {
       "name": "Qwen3.6 27B",
@@ -1225,7 +1244,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 47.7,
       "frontend_score": 57.1,
       "value": 8.94,
-      "rank": 63
+      "rank": 64
     },
     {
       "name": "MiniMax M3",
@@ -1244,7 +1263,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 46.3,
       "frontend_score": 56.9,
       "value": 23.15,
-      "rank": 64
+      "rank": 65
     },
     {
       "name": "DeepSeek V4 Pro",
@@ -1263,7 +1282,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 56.3,
       "frontend_score": 56.3,
       "value": 24.1,
-      "rank": 65
+      "rank": 66
     },
     {
       "name": "Grok Build 0.1",
@@ -1282,7 +1301,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 55.6,
       "frontend_score": 55.6,
       "value": 27.8,
-      "rank": 66
+      "rank": 67
     },
     {
       "name": "Grok 4.3",
@@ -1301,7 +1320,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 40.5,
       "frontend_score": 53.0,
       "value": 9.72,
-      "rank": 67
+      "rank": 68
     },
     {
       "name": "Nemotron 3 Ultra 550B A55B",
@@ -1320,7 +1339,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 47.0,
       "frontend_score": 47.0,
       "value": 11.75,
-      "rank": 68
+      "rank": 69
     },
     {
       "name": "DeepSeek V4 Flash",
@@ -1339,7 +1358,7 @@ window.__SCORECARD_DATA__ = {
       "coder_score": 45.9,
       "frontend_score": 45.9,
       "value": 98.36,
-      "rank": 69
+      "rank": 70
     }
   ]
 };
