@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-13",
+  "last_updated": "2026-10-14",
   "source_notes": "Prices from official API docs as of June 2026. Benchmarks from SWE-bench, Aider Polyglot, Artificial Analysis, LiveBench, and model provider reports. Coding Quality Score blends SWE-bench Pro (40%), Aider Polyglot (35%), and LiveCodeBench (25%). See README for research-backed methodology.",
   "models": [
     {
@@ -122,9 +122,9 @@
       "license": "MIT",
       "open_weight": true,
       "pricing": {
-        "input_per_1m": 0.06,
+        "input_per_1m": 0.05,
         "output_per_1m": 7.0,
-        "cache_hit_per_1m": 0.059,
+        "cache_hit_per_1m": 0.049,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -1185,9 +1185,9 @@
       "huggingface_id": "zai-org/GLM-5.1",
       "released": "2026-04-07",
       "pricing": {
-        "input_per_1m": 0.966,
-        "output_per_1m": 3.036,
-        "cache_hit_per_1m": 0.1794,
+        "input_per_1m": 1.33,
+        "output_per_1m": 4.18,
+        "cache_hit_per_1m": 0.247,
         "currency": "USD"
       },
       "context_window": 204800,
@@ -1212,7 +1212,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 52.5,
-      "cost_per_quality": 0.058,
+      "cost_per_quality": 0.08,
       "frontend_tier": "B",
       "design2code_score": null
     },
@@ -1622,9 +1622,9 @@
       "huggingface_id": "Qwen/Qwen3.5-35B-A3B",
       "released": "2026-02-25",
       "pricing": {
-        "input_per_1m": 0.08,
-        "output_per_1m": 0.75,
-        "cache_hit_per_1m": 0.04,
+        "input_per_1m": 0.15,
+        "output_per_1m": 1.0,
+        "cache_hit_per_1m": 0.05,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -1648,7 +1648,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 59.8,
-      "cost_per_quality": 0.013,
+      "cost_per_quality": 0.017,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -1879,9 +1879,9 @@
       "huggingface_id": "Qwen/Qwen3.5-397B-A17B",
       "released": "2026-02-16",
       "pricing": {
-        "input_per_1m": 0.55,
-        "output_per_1m": 3.5,
-        "cache_hit_per_1m": 0.225,
+        "input_per_1m": 0.5,
+        "output_per_1m": 3.6,
+        "cache_hit_per_1m": 0.3,
         "currency": "USD"
       },
       "context_window": 262144,
@@ -2836,8 +2836,8 @@
       "huggingface_id": "MiniMaxAI/MiniMax-M2",
       "released": "2025-10-23",
       "pricing": {
-        "input_per_1m": 0.3,
-        "output_per_1m": 1.2,
+        "input_per_1m": 0.255,
+        "output_per_1m": 1.02,
         "cache_hit_per_1m": 0.03,
         "currency": "USD"
       },
@@ -2863,7 +2863,7 @@
       "license": "Proprietary",
       "open_weight": false,
       "coding_quality_score": 55.2,
-      "cost_per_quality": 0.022,
+      "cost_per_quality": 0.018,
       "frontend_tier": null,
       "design2code_score": null
     },
@@ -4005,7 +4005,7 @@
       "context_window": 163840,
       "max_output": 32768,
       "benchmarks": {
-        "swe_bench_verified": null,
+        "swe_bench_verified": 57.6,
         "swe_bench_pro": null,
         "terminal_bench_2_1": null,
         "livecodebench": null,
@@ -4024,7 +4024,9 @@
       "license": "Proprietary",
       "open_weight": false,
       "frontend_tier": "B",
-      "design2code_score": null
+      "design2code_score": null,
+      "coding_quality_score": 56.6,
+      "cost_per_quality": 0.038
     },
     {
       "name": "Anthropic: Claude Sonnet 4",
@@ -5348,9 +5350,9 @@
       "huggingface_id": null,
       "released": "2026-07-16",
       "pricing": {
-        "input_per_1m": 0.73,
-        "output_per_1m": 10.0,
-        "cache_hit_per_1m": 0.55,
+        "input_per_1m": 0.62,
+        "output_per_1m": 15.0,
+        "cache_hit_per_1m": 0.32,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6526,9 +6528,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Flash",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.05,
-        "output_per_1m": 1.28,
-        "cache_hit_per_1m": 0.05,
+        "input_per_1m": 0.091,
+        "output_per_1m": 0.182,
+        "cache_hit_per_1m": 0.0182,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -6551,7 +6553,7 @@
         "benchmark": null
       },
       "coding_quality_score": 73.1,
-      "cost_per_quality": 0.018
+      "cost_per_quality": 0.002
     },
     {
       "name": "Ling-3.0-flash",
@@ -7598,9 +7600,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4-Pro",
       "released": "2026-04-24",
       "pricing": {
-        "input_per_1m": 0.4461,
-        "output_per_1m": 0.8923,
-        "cache_hit_per_1m": 0.037178,
+        "input_per_1m": 0.9553,
+        "output_per_1m": 1.9105,
+        "cache_hit_per_1m": 0.079605,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7623,7 +7625,7 @@
         "benchmark": null
       },
       "coding_quality_score": 76.3,
-      "cost_per_quality": 0.012
+      "cost_per_quality": 0.025
     },
     {
       "name": "Z.ai: GLM 5.3",
@@ -7700,9 +7702,9 @@
       "huggingface_id": null,
       "released": "2026-08-19",
       "pricing": {
-        "input_per_1m": 0.055,
-        "output_per_1m": 5.0,
-        "cache_hit_per_1m": 0.06,
+        "input_per_1m": 0.0576,
+        "output_per_1m": 4.4,
+        "cache_hit_per_1m": 0.0536,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -7802,7 +7804,7 @@
       "huggingface_id": "zai-org/GLM-5.3-Flash",
       "released": "2026-08-26",
       "pricing": {
-        "input_per_1m": 0.0261,
+        "input_per_1m": 0.036,
         "output_per_1m": 0.9,
         "cache_hit_per_1m": 0.0108,
         "currency": "USD"
@@ -8140,7 +8142,7 @@
       "huggingface_id": null,
       "released": "2026-08-27",
       "pricing": {
-        "input_per_1m": 0.0261,
+        "input_per_1m": 0.036,
         "output_per_1m": 0.9,
         "cache_hit_per_1m": 0.0108,
         "currency": "USD"
@@ -8405,9 +8407,9 @@
       "huggingface_id": "deepseek-ai/DeepSeek-V4.1-Flash",
       "released": "2026-09-10",
       "pricing": {
-        "input_per_1m": 0.0438,
-        "output_per_1m": 0.1752,
-        "cache_hit_per_1m": 0.000876,
+        "input_per_1m": 0.0202,
+        "output_per_1m": 0.891,
+        "cache_hit_per_1m": 0.0054,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8438,9 +8440,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.2587,
-        "output_per_1m": 0.7762,
-        "cache_hit_per_1m": 0.008232,
+        "input_per_1m": 0.225,
+        "output_per_1m": 8.0,
+        "cache_hit_per_1m": 0.23,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8471,9 +8473,9 @@
       "huggingface_id": null,
       "released": "2026-09-14",
       "pricing": {
-        "input_per_1m": 0.0438,
-        "output_per_1m": 0.1752,
-        "cache_hit_per_1m": 0.000876,
+        "input_per_1m": 0.0202,
+        "output_per_1m": 0.891,
+        "cache_hit_per_1m": 0.0054,
         "currency": "USD"
       },
       "context_window": 1048576,
@@ -8996,6 +8998,39 @@
       "best_for": null,
       "sources": {
         "pricing": "https://openrouter.ai/models/inclusionai/ling-3.0-flash-sante",
+        "benchmark": null
+      }
+    },
+    {
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "provider": "Inclusionai",
+      "license": "Proprietary",
+      "open_weight": false,
+      "openrouter_id": "inclusionai/ling-3.1-flash",
+      "huggingface_id": null,
+      "released": "2026-10-02",
+      "pricing": {
+        "input_per_1m": 0.075,
+        "output_per_1m": 0.225,
+        "cache_hit_per_1m": 0.015,
+        "currency": "USD"
+      },
+      "context_window": 262144,
+      "max_output": 235929,
+      "benchmarks": {
+        "swe_bench_verified": null,
+        "swe_bench_pro": null,
+        "terminal_bench_2_1": null,
+        "livecodebench": null,
+        "humaneval": null,
+        "aa_coding_index": null,
+        "scicode": null
+      },
+      "reasoning_level": null,
+      "tag": null,
+      "best_for": null,
+      "sources": {
+        "pricing": "https://openrouter.ai/models/inclusionai/ling-3.1-flash",
         "benchmark": null
       }
     }
